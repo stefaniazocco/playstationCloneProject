@@ -1,0 +1,79 @@
+@import url(../../../font/stylesheet.css);
+body {
+  color: #1F1F1F;
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  font-family: "SST";
+  overflow-x: hidden;
+}
+
+.quantity-div {
+  line-height: 1.6em;
+}
+.quantity-div .quantity-label {
+  font-size: 14px;
+}
+.quantity-div .counter-div {
+  position: relative;
+  width: fit-content;
+}
+.quantity-div .counter-div button {
+  width: 35px;
+  height: 100%;
+  font-size: 40px;
+  padding-left: 2px;
+  font-weight: 100;
+  background-color: #FFFFFF;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quantity-div .counter-div button #cross {
+  height: 15px;
+  background: #1F1F1F;
+  position: relative;
+  width: 1px;
+}
+.quantity-div .counter-div button #cross:after {
+  background: #1F1F1F;
+  content: "";
+  left: -7px;
+  top: 7px;
+  height: 1px;
+  position: absolute;
+  width: 15px;
+}
+.quantity-div .counter-div button:first-of-type {
+  border-right: transparent;
+  position: absolute;
+  left: 0;
+}
+.quantity-div .counter-div button:first-of-type #cross {
+  width: 0px;
+}
+.quantity-div .counter-div button:last-of-type {
+  border-left: transparent;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.quantity-div .counter-div input {
+  width: 120px;
+  height: 50px;
+  border: transparent;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.quantity-div .counter-div input::-webkit-outer-spin-button,
+.quantity-div .counter-div input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+.quantity-div .counter-div input:focus {
+  outline: 2px solid #8fd5fd;
+}
+
+/*# sourceMappingURL=store-counter.css.map */

@@ -1,0 +1,82 @@
+@import url(../../../font/stylesheet.css);
+
+body {
+    color: #1F1F1F;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    font-family: "SST";
+    overflow-x: hidden;
+}
+
+.quantity-div{
+    line-height: 1.6em;
+    .quantity-label{
+        font-size: 14px;
+        
+    }
+    .counter-div{
+        position: relative;
+        width: fit-content;
+        button{
+            width: 35px;
+            height: 100%;
+            font-size: 40px;
+            //padding-bottom: 10px;
+            padding-left: 2px;
+            font-weight: 100;
+            background-color: #FFFFFF;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            #cross {
+                height: 15px;
+                background: #1F1F1F;
+                position: relative;
+                width: 1px;
+
+            }
+            #cross:after {
+                background: #1F1F1F;
+                content: "";
+                left: -7px;
+                top: 7px;
+                height: 1px;
+                position: absolute;
+                width: 15px;
+            }
+
+        }
+        button:first-of-type{
+            border-right: transparent;
+            position: absolute;
+            left: 0;
+            #cross{
+                width: 0px;
+            }
+        }
+        button:last-of-type{
+            border-left: transparent;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        input{
+            width: 120px;
+            height: 50px;
+            border:transparent;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            appearance: none;
+            margin: 0;
+        }
+        input:focus{
+            outline: 2px solid #8fd5fd;
+        }
+    }
+}
