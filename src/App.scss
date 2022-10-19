@@ -1,0 +1,28 @@
+@import url(./font/stylesheet.css);
+
+$colorBlack: #1F1F1F;
+$colorWhite: #FFFFFF;
+$colorWhiteHover: #e5e5e5;
+$colorBlue: #2d64e6;
+$colorBlueHover: #3951c1;
+$colorRed: #cf4500;
+$colorRedHover: #bc3c04;
+$colorFooter:#00439C ;
+$colorCookies: #0072ce;
+$colorGray: #727171;
+$colorTransparentGrey:  rgba(245,247,250,0.6);
+
+body {
+    color: $colorBlack;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    font-family: "SST";
+    overflow-x: hidden;
+    position: relative;
+}
+
+@import "./components/elements/buttons/button.scss";
+@import "./components/elements/counter/store-counter.scss";
+
+

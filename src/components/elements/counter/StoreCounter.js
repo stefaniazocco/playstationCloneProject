@@ -1,5 +1,4 @@
 import { useState } from "react"
-import "./store-counter.scss"
 
 
 export function useCounter(){
@@ -16,7 +15,6 @@ export function useCounter(){
 
     function handleInputChange(event){
         const value = event.target.value
-        console.log(value)
         setCounter(value.toString())
     }
 

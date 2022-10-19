@@ -1,19 +1,23 @@
-body {
-    color:  #1F1F1F;
-    box-sizing: border-box;
-    margin: 0;
-    width: 100%;
-    font-family: "SST";
-    overflow-x: hidden;
-    position: relative;
+@mixin color($text, $background, $hover) {
+    a div{
+        color: $text;
+        background-color: $background;
+    }
+    
+    &:hover {
+        border-color: $hover;
+        a div {
+            background-color: $hover;
+        }
+    }
 }
 
-.button {
+%button{
     padding: 2px;
     border-radius: 2rem;
+    border: 2px solid transparent;
     transition-duration: 0.3s;
     width: fit-content;
-
     a {
         text-decoration: none;
         font-size: 14px;
@@ -21,19 +25,23 @@ body {
         div {
             width: fit-content;
             border-radius: 2rem;
-            border: 2px solid transparent;
-            padding: 4px 14px;
+            padding: 10px 14px;
             font-weight: 700;
-            color: white;
-            background-color: red;
         }
     }
+}
 
-    &:hover {
-        background-color: red;
+.button-blue {
+    @include color($colorWhite, $colorBlue, $colorBlueHover);
+    @extend %button;
+}
 
-        a>div {
-            border-color:  #1F1F1F;
-        }
-    }
+.button-red {
+    @include color($colorWhite, $colorRed, $colorRedHover);
+    @extend %button;
+}
+
+.button-white {
+    @include color($colorBlack, $colorWhite, $colorWhiteHover);
+    @extend %button;
 }

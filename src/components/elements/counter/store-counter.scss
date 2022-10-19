@@ -1,14 +1,3 @@
-@import url(../../../font/stylesheet.css);
-
-body {
-    color: #1F1F1F;
-    box-sizing: border-box;
-    margin: 0;
-    width: 100%;
-    font-family: "SST";
-    overflow-x: hidden;
-}
-
 .quantity-div{
     line-height: 1.6em;
     .quantity-label{
@@ -25,20 +14,20 @@ body {
             //padding-bottom: 10px;
             padding-left: 2px;
             font-weight: 100;
-            background-color: #FFFFFF;
+            background-color: $colorWhite;
             border: 1px solid #ddd;
             display: flex;
             align-items: center;
             justify-content: center;
             #cross {
                 height: 15px;
-                background: #1F1F1F;
+                background: $colorBlack;
                 position: relative;
                 width: 1px;
 
             }
             #cross:after {
-                background: #1F1F1F;
+                background: $colorBlack;
                 content: "";
                 left: -7px;
                 top: 7px;
