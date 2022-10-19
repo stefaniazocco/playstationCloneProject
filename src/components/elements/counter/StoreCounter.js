@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "./store-counter.css"
+import "./store-counter.scss"
 
 
 export function useCounter(){

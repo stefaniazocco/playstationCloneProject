@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Button } from './components/elements/buttons/Button';
-import { Counter } from './components/elements/counter/Counter';
+import { Homepage } from './pages/homepage/Homepage';
 
 
 function App() {
@@ -9,7 +8,7 @@ function App() {
     <div>
       <Routes>
       
-        <Route path='/store' element={<Button link="#" string="ACQUISTA ORA"/>}></Route>
+        <Route path='/' element={<Homepage />} />
 
       </Routes>
       
