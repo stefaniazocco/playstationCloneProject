@@ -1,10 +1,19 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import { StoreCounter } from './components/elements/counter/Counter';
+import { Button } from './components/elements/buttons/Button';
+import { Counter } from './components/elements/counter/Counter';
+
 
 function App() {
   return (
     <div>
-      <StoreCounter />
+      <Routes>
+      
+        <Route path='/store' element={<Button link="#" string="ACQUISTA ORA"/>}></Route>
+
+      </Routes>
+      
+      
     </div>
   );
 }
