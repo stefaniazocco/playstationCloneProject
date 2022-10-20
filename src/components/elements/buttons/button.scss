@@ -1,17 +1,3 @@
-@mixin color($text, $background, $hover) {
-    a div{
-        color: $text;
-        background-color: $background;
-    }
-    
-    &:hover {
-        border-color: $hover;
-        a div {
-            background-color: $hover;
-        }
-    }
-}
-
 %button{
     padding: 2px;
     border-radius: 2rem;
@@ -31,17 +17,29 @@
     }
 }
 
+@mixin color($text, $background, $hover) {
+    @extend %button;
+    a div{
+        color: $text;
+        background-color: $background;
+    }
+    
+    &:hover {
+        border-color: $hover;
+        a div {
+            background-color: $hover;
+        }
+    }
+}
+
 .button-blue {
     @include color($colorWhite, $colorBlue, $colorBlueHover);
-    @extend %button;
 }
 
 .button-red {
     @include color($colorWhite, $colorRed, $colorRedHover);
-    @extend %button;
 }
 
 .button-white {
     @include color($colorBlack, $colorWhite, $colorWhiteHover);
-    @extend %button;
 }
