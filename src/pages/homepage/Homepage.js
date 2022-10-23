@@ -1,5 +1,6 @@
 import { Button } from "../../components/elements/buttons/Button";
 import { Counter } from "../../components/elements/counter/StoreCounter";
+import { FooterMain } from "../../components/footer/FooterMain";
 
 
 export function Homepage(){
@@ -7,6 +8,7 @@ export function Homepage(){
         <>
             <Button className="button-red" link="#" string="Maggiori informazioni"/>
             <Counter />
+            <FooterMain />
         </>
     )
 }
