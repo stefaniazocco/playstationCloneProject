@@ -1,0 +1,84 @@
+.footerGames {
+    background-color: #00439C;
+    padding-left: 60px;
+    width: 100vw;
+    height: 508px;
+    .box-logo-language {
+        display: flex;
+        padding: 40px 0px 40px 40px;
+        gap: 60px;
+        .languages {
+            .paese-regione {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+    .container-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: center;
+        gap: 300px;
+        .list-1 {
+            ul {
+                list-style-type: none;
+                .links {
+                    padding: 8px;
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .list-2 {
+            ul {
+                list-style-type: none;
+                .links {
+                    padding: 8px;
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .list-3 {
+            ul {
+                list-style-type: none;
+                .links {
+                    padding: 8px;
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .copyright {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-right: 230px;
+        a {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+}
+

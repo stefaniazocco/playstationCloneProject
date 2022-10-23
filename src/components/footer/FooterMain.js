@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import pslogo from "../../assets/images/footerLogo.svg"
-import sie from "../../assets/images/footerSie.svg"
-import globe from "../../assets/images/footerGlobe.svg"
+import pslogo from "../../assets/images/homepage/footerLogo.svg"
+import sie from "../../assets/images/homepage/footerSie.svg"
+import globe from "../../assets/images/homepage/footerGlobe.svg"
 
 export function FooterMain(){
     return(
