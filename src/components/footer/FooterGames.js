@@ -11,8 +11,9 @@ export function FooterGames() {
                 <div>
                     <img src={pslogo} alt="ps logo" width="47.68" height="36.77" />
                 </div>
-                <div className="languages"> <img src={globe} alt="globo" width="34px" height="34px" />
-                    <Link className="paese-regione" to="">Paese / Regione Italia </Link>
+                <div className="languages"> 
+                    <img src={globe} alt="globo" width="25px" height="25px" />
+                    <Link className="region" to="">Paese / Regione Italia </Link>
                 </div>
             </div>
 
