@@ -1,4 +1,4 @@
-@import url(./font/stylesheet.css);
+@import url(./assets/font/stylesheet.css);
 
 $colorBlack: #1F1F1F;
 $colorWhite: #FFFFFF;
@@ -16,7 +16,7 @@ body {
     color: $colorBlack;
     box-sizing: border-box;
     margin: 0;
-    width: 100%;
+    width: 100vw;
     font-family: "SST";
     overflow-x: hidden;
     position: relative;
@@ -24,5 +24,8 @@ body {
 
 @import "./components/elements/buttons/button.scss";
 @import "./components/elements/counter/store-counter.scss";
-
+@import "./components/footer/footerMain.scss";
+@import "./components/footer/footerGames.scss";
+@import "./components/cookies/cookies.scss";
+@import "./components/elements/sections/socials/socials.scss";
 

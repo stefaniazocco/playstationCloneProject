@@ -1,0 +1,61 @@
+.footerGames {
+    background-color: $colorFooter;
+    padding-left: 60px;
+    width: 100vw;
+    height: fit-content;
+    .box-logo-language {
+        display: flex;
+        padding: 40px 0px 40px 40px;
+        gap: 60px;
+        .languages {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .region {
+                font-size: 16px;
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+    .container-flex {
+        .list-1, .list-2, .list-3 {
+            ul {
+                list-style-type: none;
+                padding-bottom: 20px;
+                .links {
+                    padding: 8px;
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 40px;
+        a {
+            font-size: 14px;
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+}
+
+@media (min-width: 767px){
+    .footerGames {
+        .container-flex {
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+            max-width: 80vw;
+        }
+    }
+}
