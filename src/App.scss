@@ -16,7 +16,7 @@ body {
     color: $colorBlack;
     box-sizing: border-box;
     margin: 0;
-    width: 100%;
+    width: 100vw;
     font-family: "SST";
     overflow-x: hidden;
     position: relative;
@@ -26,5 +26,5 @@ body {
 @import "./components/elements/counter/store-counter.scss";
 @import "./components/footer/footerMain.scss";
 @import "./components/footer/footerGames.scss";
-
+@import "./components/cookies/cookies.scss";
 
