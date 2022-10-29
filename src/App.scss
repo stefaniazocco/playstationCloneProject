@@ -16,6 +16,7 @@ body {
     color: $colorBlack;
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     width: 100vw;
     font-family: "SST";
     overflow-x: hidden;
@@ -28,5 +29,6 @@ body {
 @import "./components/footer/footerGames.scss";
 @import "./components/cookies/cookies.scss";
 @import "./components/elements/sections/socials/socials.scss";
-@import "./components/elements/cards/cardsStoreHompage.scss"
+@import "./components/elements/cards/cardsStoreHompage.scss";
+@import "./components/elements/sections/storeHomepage/storeHomepage.scss";
 

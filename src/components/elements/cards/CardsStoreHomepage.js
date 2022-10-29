@@ -5,7 +5,7 @@ export function CardsStoreHomepage({img, product}) {
         <div class="store-card">
             <img src={img} alt={product}/>
             <p>{product}</p>
-            <Button className="button-red" link="#" string="Acquista" />
+            <Button className="button-red buttonStore" link="#" string="Acquista ora" />
         </div>
     )
 }
