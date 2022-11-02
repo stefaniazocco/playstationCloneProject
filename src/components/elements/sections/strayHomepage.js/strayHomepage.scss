@@ -1,0 +1,142 @@
+.stray-section {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    background-color: black;
+
+
+    .stray-background {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .stray-fade {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, 0);
+        background-image: linear-gradient(34deg, rgba(0, 0, 0, 0.9318102240896359) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+    }
+
+
+    .stray-text {
+        position: absolute;
+        z-index: 3;
+        color: white;
+        //padding-top: 170px;
+        width: 1300px;
+        bottom: 70px;
+
+
+        img {
+            width: 400px;
+        }
+
+        h2 {
+            font-size: 43px;
+            font-weight: 300;
+            margin: 20px 0px;
+        }
+
+        p {
+            width: 500px;
+            margin-bottom: 20px;
+        }
+
+    }
+}
+
+
+@media (max-width: 1366px) {
+    .stray-section {
+        .stray-background img {
+            width: initial;
+            height: initial;
+        }
+
+        .stray-text {
+            width: 900px;
+
+            h2 {
+                font-size: 39px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .stray-section {
+        .stray-background {
+            height: fit-content;
+            background-color: black;
+            padding-bottom: 200px;
+
+            img {
+                height: 800px;
+                width: auto;
+            }
+        }
+
+        .stray-fade {
+            height: 100%;
+            bottom: 200px;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        .stray-text {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .stray-section {
+        .stray-background {
+            height: fit-content;
+            padding-bottom: 100px;
+
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+
+        .stray-fade {
+            bottom: 100px;
+            height: 100%;
+        }
+
+        .stray-text {
+            bottom: 50px;
+
+            img {
+                width: 300px;
+            }
+
+            h2 {
+                font-size: 31px;
+            }
+
+            p {
+                font-size: 15px;
+                width: auto;
+                padding: 0 20px;
+            }
+        }
+    }
+}
