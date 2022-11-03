@@ -7,30 +7,30 @@ import straylogo from "../../../../assets/images/homepage/stray-white-logo-1.web
 import { Button } from "../../buttons/Button"
 
 
-// fare l'immagine in backgroundpicture su scss
+
 
 export function StrayHomepage() {
     return(
         <section class="stray-section">
             <div class="stray-background">
-                <picture >          
+                <picture>          
                     <source srcset={stray3000} media="(min-width: 3000px)" />
                     <source srcset={stray1367} media="(min-width: 1367px)" />
                     <source srcset={stray1024} media="(min-width: 1024px)" />
                     <source srcset={stray768} media="(min-width: 768px)" />
                     <source srcset={stray320} media="(max-width: 767px)" />
-                    <img src="" alt="background image"/>
+                    <img src={stray1367} alt="background image" />
                 </picture>
             </div>
 
             <div class="stray-fade"></div>
             <div class="stray-text">
-            //     <img src={straylogo} />
-            //     <h2>Fuggi dalla città</h2>
-            //     <p>Svela antichi misteri e trova la strada di casa 
-            //         in questa avventura felina unica, disponibile ora 
-            //         per PS5.</p>
-            //     <Button className="button-white" link="" string="Maggiori informazioni" />
+                <img src={straylogo} />
+                <h2>Fuggi dalla città</h2>
+                <p>Svela antichi misteri e trova la strada di casa 
+                    in questa avventura felina unica, disponibile ora 
+                    per PS5.</p>
+                <Button className="button-white" link="" string="Maggiori informazioni" />
             </div>
 
         </section>
