@@ -6,27 +6,26 @@
     width: fit-content;
     a {
         text-decoration: none;
+    }
+    div {
+        width: fit-content;
+        border-radius: 2rem;
+        padding: 10px 14px;
+        font-weight: 700;
         font-size: 16px;
-
-        div {
-            width: fit-content;
-            border-radius: 2rem;
-            padding: 10px 14px;
-            font-weight: 700;
-        }
     }
 }
 
 @mixin color($text, $background, $hover) {
     @extend %button;
-    a div{
+    div{
         color: $text;
         background-color: $background;
     }
     
     &:hover {
         border-color: $hover;
-        a div {
+        div {
             background-color: $hover;
         }
     }
