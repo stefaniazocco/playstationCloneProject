@@ -23,15 +23,12 @@ body {
     position: relative;
 }
 
+// utils
 @import "./components/elements/buttons/button.scss";
 @import "./components/elements/counter/store-counter.scss";
-@import "./components/footer/footerMain.scss";
 @import "./components/footer/footerGames.scss";
-@import "./components/cookies/cookies.scss";
-@import "./components/elements/sections/socials/socials.scss";
-@import "./components/elements/cards/cardsStoreHompage.scss";
-@import "./components/elements/sections/storeHomepage/storeHomepage.scss";
-@import "./components/elements/cards/cardsSliderHomepage.scss";
-@import "./components/elements/sections/sliderHomepage/sliderHomepage.scss";
-@import "./components/elements/sections/strayHomepage.js/strayHomepage.scss"
+
+//pages
+@import "./pages/homepage/homepage.scss";
+@import "./pages/country-selector/countrySelector.scss"
 

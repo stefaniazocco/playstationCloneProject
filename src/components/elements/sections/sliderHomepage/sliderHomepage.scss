@@ -1,3 +1,5 @@
+@import "../../cards/cardsSliderHomepage.scss";
+  
 .new-section {
     width: 100%;
     background-color: black;
@@ -8,13 +10,13 @@
         right: 18%;
         top: 70px;
         display: none;
-        .arr a div{
+        .arr div{
             padding: 2px 7px ;
         }
     }
     .dark{   //da fixare nelle media
         height: 100%;
-        width: 15%;
+        width: 14%;
         position: absolute;
         right: 0;
         background-color: rgba(0, 0, 0, 0.642);
@@ -24,6 +26,7 @@
 .new-section-1{
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 
     .titles-container-nuove-uscite {
         display: flex;
@@ -38,9 +41,10 @@
 
     .container-nuove-uscite {
         display: flex;
-        overflow: hidden;
+        overflow-x: hidden;
         width: fit-content;
         padding-left: 40px;
+        padding-top: 5px;
         gap: 30px;
 
         .box1,
@@ -93,6 +97,7 @@
     .new-section-1 {
         width: 75vw;
         margin-right: 10px;
+        overflow: initial;
 
         .titles-container-nuove-uscite {
             margin-left: 0px;
@@ -103,7 +108,7 @@
         }
 
         .container-nuove-uscite {
-            padding-left: 0px;
+            padding-left: 5px;
             padding-right: 0px;
             flex-direction: column;
 
@@ -143,7 +148,6 @@
         }
 
         .container-nuove-uscite {
-            padding-left: 0px;
             //padding-right: 50px;
             display: grid;
             gap: initial;
@@ -178,5 +182,17 @@
                 margin-right: 30px;
             }
         }
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1326px){
+    .new-section .dark{
+        width: 10%;
+    }
+}
+
+@media (min-width: 1800px){
+    .new-section .dark{
+        width: 17%;
     }
 }

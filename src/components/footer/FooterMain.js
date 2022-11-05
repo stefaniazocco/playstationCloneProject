@@ -10,7 +10,7 @@ export function FooterMain(){
                     <div className="footer-left">
                         <img className="footer-ps-logo" src={pslogo} alt="PlayStation logo" />
                         <div className="footer-lang">
-                            <Link to="#" className="footer-link-lang">
+                            <Link to="/country-selector" className="footer-link-lang">
                                 <img className="footer-globe" alt="" src={globe} />
                                 Country / Region: Italy
                             </Link>

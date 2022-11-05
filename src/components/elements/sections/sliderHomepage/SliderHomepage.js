@@ -1,6 +1,6 @@
 import { CardsSliderHomepage } from "../../cards/CardsSliderHomepage";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { Button } from "../../buttons/Button"
+import { ButtonClick } from "../../buttons/ButtonClick"
 
 //images
 import quarry from "../../../../assets/images/homepage/the-quarry-store-artwork-01-en-28apr22.webp"
@@ -27,26 +27,35 @@ import suicide from "../../../../assets/images/homepage/suicide-squad-KtJL-store
 import sonic from "../../../../assets/images/homepage/sonic-frontiers-store-artwork-01-en-24aug22.webp"
 import speed from "../../../../assets/images/homepage/need-for-speed-unbound-store-artwork-01-en-25oct22.webp"
 import fighter from "../../../../assets/images/homepage/street-fighter-6-pack-01-ps4-ps5-02sep22.webp"
+import { useEffect, useState } from "react";
 
 
 export function SliderHomepage(){
+    const [next, setNext] = useState()
+
+    function clickNext(){
+        setNext({ transform: "translateX(-101%)", transitionDuration: "2s"})
+    }
+    function clickPrev(){
+        setNext({ transform: "translateY(0)", transitionDuration: "2s"})
+    }
 
     return(
         <section class="new-section" id="new-section">
-            <Slide />
-            <Slide2 />
+            <Slide move={next}/>
+            <Slide2 move={next} />
             <div className="arrow1">
-                <Button className="button-white arr" link="#" string={<IoIosArrowBack style={{fontSize: 32, marginTop: 5}} />}/>
-                <Button className="button-white arr" link="#" string={<IoIosArrowForward style={{fontSize: 32, marginTop: 5}} />}/>
+                <ButtonClick className="button-white arr" click={clickPrev} string={<IoIosArrowBack style={{fontSize: 32, marginTop: 5}} />}/>
+                <ButtonClick className="button-white arr" click={clickNext} string={<IoIosArrowForward style={{fontSize: 32, marginTop: 5}} />}/>
             </div>   
             <div className="dark"></div>         
         </section>
     )
 }
 
-function Slide(){
+function Slide({move}){
     return(
-        <div class="new-section-1">
+        <div class="new-section-1" style={move} >
             <div class="titles-container-nuove-uscite">
                 <div class="new-releases">
                     <h3>Nuove uscite</h3>
@@ -91,9 +100,9 @@ function Slide(){
     )
 }
 
-function Slide2(){
+function Slide2({move}){
     return(
-        <div class="new-section-1">
+        <div class="new-section-1" style={move}>
             <div class="titles-container-nuove-uscite">
                 <div class="new-releases">
                     <h3>In arrivo</h3>
