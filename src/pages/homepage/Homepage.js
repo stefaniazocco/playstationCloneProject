@@ -7,24 +7,28 @@ import { Socials } from "../../components/elements/sections/socials/Socials";
 import { StoreHomepage } from "../../components/elements/sections/storeHomepage/StoreHomepage";
 import { FooterMain } from "../../components/footer/FooterMain";
 
+import PreviewheroCarousel from "../../components/elements/sliderHero/PreviewheroCarousel";
+import Hero from "../../components/elements/sliderHero/Hero";
+export function Homepage() {
+  const [close, setClose] = useState(true);
 
+  function hideSection() {
+    setClose(false);
+  }
 
-export function Homepage(){
-    const [close, setClose] = useState(true)
+  return (
+    <>
+      <Hero />
+      
 
-    function hideSection() {
-        setClose(false)
-    }
+      {/* <SliderHero/> */}
+      <Button className="button-red" link="#" string="Maggiori informazioni" />
+      <Counter />
+      <StoreHomepage />
+      <Socials />
+      <FooterMain />
 
-    return (
-        <>
-            <Button className="button-red" link="#" string="Maggiori informazioni"/>
-            <Counter />
-            <StoreHomepage />
-            <Socials />
-            <FooterMain />
-            
-            {close === true && <Cookies hide={hideSection} />}
-        </>
-    )
+      {close === true && <Cookies hide={hideSection} />}
+    </>
+  );
 }
