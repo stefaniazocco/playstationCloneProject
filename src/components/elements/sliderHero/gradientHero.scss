@@ -1,0 +1,24 @@
+.gradientBlack {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(51,51,51);
+  background: linear-gradient(69deg, rgba(3, 3, 3, 0.466) 0%, rgba(255, 255, 255, 0.151) 100%);
+}
+.gradientCyan {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #5cc1e5;
+  background: linear-gradient(69deg, #5cc1e5 0%, #5cc0e509 50%, #79cae715 100%);
+}
+.gradientPurple {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #1a1d30;
+  background: linear-gradient(69deg, #2e2244 0%, #2e224400 50%, #1a1d3000 100%);
+}

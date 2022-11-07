@@ -30,5 +30,7 @@ body {
 
 //pages
 @import "./pages/homepage/homepage.scss";
-@import "./pages/country-selector/countrySelector.scss"
+@import "./pages/country-selector/countrySelector.scss";
+@import "./components/navbar/navbar.scss";
+@import "./components/elements/sliderHero/carousel.scss";
 

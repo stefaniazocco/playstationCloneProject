@@ -8,27 +8,31 @@ import { Socials } from "../../components/elements/sections/socials/Socials";
 import { StoreHomepage } from "../../components/elements/sections/storeHomepage/StoreHomepage";
 import { StrayHomepage } from "../../components/elements/sections/strayHomepage.js/StrayHomepage";
 import { FooterMain } from "../../components/footer/FooterMain";
+import Navbar from "../../components/navbar/Navbar";
+import PreviewheroCarousel from "../../components/elements/sliderHero/PreviewheroCarousel";
+import Hero from "../../components/elements/sliderHero/Hero";
+export function Homepage() {
+  const [close, setClose] = useState(true);
 
+  function hideSection() {
+    setClose(false);
+  }
 
+  return (
+    <>
+    <Navbar />
+      <Hero />
 
-export function Homepage(){
-    const [close, setClose] = useState(true)
+      {/* <SliderHero/> */}
+      <Button className="button-red" link="#" string="Maggiori informazioni" />
+      <Counter />
+      <StrayHomepage />
+      <SliderHomepage />
+      <StoreHomepage />
+      <Socials />
+      <FooterMain />
 
-    function hideSection() {
-        setClose(false)
-    }
-
-    return (
-        <>
-            <Button className="button-red" link="#" string="Maggiori informazioni"/>
-            <Counter />
-            <StrayHomepage />
-            <SliderHomepage />
-            <StoreHomepage />
-            <Socials />
-            <FooterMain />
-            
-            {close === true && <Cookies hide={hideSection} />}
-        </>
-    )
+      {close === true && <Cookies hide={hideSection} />}
+    </>
+  );
 }
