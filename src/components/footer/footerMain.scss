@@ -15,7 +15,7 @@
         color: $colorWhite;
     }
     &>div{
-        width: 1560px;
+        width: 1360px;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 1fr, 1fr;
@@ -109,5 +109,11 @@
                 width: 130px;
             }
         }
+    }
+}
+
+@media (min-width: 1800px){
+    .footer>div{
+        width: 1560px;
     }
 }
