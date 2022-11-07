@@ -37,7 +37,7 @@ export function SliderHomepage(){
         setNext({ transform: "translateX(-101%)", transitionDuration: "2s"})
     }
     function clickPrev(){
-        setNext({ transform: "translateY(0)", transitionDuration: "2s"})
+        setNext({ transform: "translateX(0)", transitionDuration: "2s"})
     }
 
     return(

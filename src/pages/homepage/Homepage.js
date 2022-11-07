@@ -11,6 +11,10 @@ import { FooterMain } from "../../components/footer/FooterMain";
 import Navbar from "../../components/navbar/Navbar";
 import PreviewheroCarousel from "../../components/elements/sliderHero/PreviewheroCarousel";
 import Hero from "../../components/elements/sliderHero/Hero";
+import fighter from "../../assets/images/homepage/street-fighter-6-pack-01-ps4-ps5-02sep22.webp"
+import { StoreCardsBig, StoreCardsLittle } from "../../components/elements/cards/StoreGames";
+
+
 export function Homepage() {
   const [close, setClose] = useState(true);
 
@@ -20,8 +24,10 @@ export function Homepage() {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <Hero />
+      <StoreCardsBig title="ciao" img={fighter} />
+      <StoreCardsLittle title="ciao" img={fighter} />
 
       {/* <SliderHero/> */}
       <Button className="button-red" link="#" string="Maggiori informazioni" />
