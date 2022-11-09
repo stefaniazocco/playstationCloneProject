@@ -1,39 +1,43 @@
 .store-otherGames {
     margin: 10px 8px;
-
-    .imgStore {
-        width: 415px;
-        background-color: black;
-        opacity: .93;
-        border-radius: 15px;
-        cursor: pointer;
-
-        &:hover {
-            transition: opacity .4s ease;
-            background-color: black;
-            opacity: 1;
-        }
-    }
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-    .store-otherGames {
-        margin: 8px;
-
+    a{
         .imgStore {
-            width: 125px;
-            height: 125px;
+            // width: 415px;
             background-color: black;
-            opacity: .98;
-            border-radius: 7px;
+            opacity: .9;
+            border-radius: 15px;
             cursor: pointer;
-
+    
             &:hover {
                 transition: opacity .4s ease;
                 background-color: black;
                 opacity: 1;
             }
         }
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .store-otherGames {
+        margin: 8px;
+        a{
+            .imgStore {
+                width: 45vw;
+                // height: 125px;
+                background-color: black;
+                opacity: .98;
+                border-radius: 7px;
+                cursor: pointer;
+    
+                &:hover {
+                    transition: opacity .4s ease;
+                    background-color: black;
+                    opacity: 1;
+                }
+            }
+        }
+
     }
 }
 
@@ -42,45 +46,49 @@
     .store-otherGames {
         margin: 8px;
         line-height: 20px;
-
-        .imgStore {
-            width: 214px;
-            height: 214px;
-            background-color: black;
-            opacity: .98;
-            border-radius: 7px;
-            cursor: pointer;
-
-            &:hover {
-                transition: opacity .4s ease;
+        a{
+            .imgStore {
+                width: 45vw;
+                // height: 214px;
                 background-color: black;
-                opacity: 1;
+                opacity: .98;
+                border-radius: 7px;
+                cursor: pointer;
+    
+                &:hover {
+                    transition: opacity .4s ease;
+                    background-color: black;
+                    opacity: 1;
+                }
             }
         }
+
     }
     
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1439px) {
 
     .store-otherGames {
         margin: 8px;
         line-height: 20px;
-
-        .imgStore {
-            width: 214px;
-            height: 214px;
-            background-color: black;
-            opacity: .98;
-            border-radius: 7px;
-            cursor: pointer;
-
-            &:hover {
-                transition: opacity .4s ease;
+        a{
+            .imgStore {
+                width: 30vw;
+                // height: 214px;
                 background-color: black;
-                opacity: 1;
+                opacity: .98;
+                border-radius: 7px;
+                cursor: pointer;
+    
+                &:hover {
+                    transition: opacity .4s ease;
+                    background-color: black;
+                    opacity: 1;
+                }
             }
         }
+        
     }
     
 }
@@ -89,21 +97,23 @@
     .store-otherGames {
         margin: 8px;
         line-height: 20px;
-
-        .imgStore {
-            width: 415px;
-            height: 415px;
-            background-color: black;
-            opacity: .98;
-            border-radius: 7px;
-            cursor: pointer;
-
-            &:hover {
-                transition: opacity .4s ease;
+        a{
+            .imgStore {
+                width: 20vw;
+                // height: 415px;
                 background-color: black;
-                opacity: 1;
+                opacity: .98;
+                border-radius: 7px;
+                cursor: pointer;
+    
+                &:hover {
+                    transition: opacity .4s ease;
+                    background-color: black;
+                    opacity: 1;
+                }
             }
         }
+
     }
 }
 
