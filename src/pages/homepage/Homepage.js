@@ -22,8 +22,9 @@ export function Homepage() {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <Hero />
+      <PS5 />
 
       {/* <SliderHero/> */}
       {/* <Button className="button-red" link="/store-games" string="Maggiori informazioni" />
