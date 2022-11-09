@@ -11,8 +11,7 @@ import { FooterMain } from "../../components/footer/FooterMain";
 import Navbar from "../../components/navbar/Navbar";
 import PreviewheroCarousel from "../../components/elements/sliderHero/PreviewheroCarousel";
 import Hero from "../../components/elements/sliderHero/Hero";
-
-
+import PS5 from "../../components/elements/sliderPS5/PS5";
 
 export function Homepage() {
   const [close, setClose] = useState(true);
@@ -23,8 +22,9 @@ export function Homepage() {
 
   return (
     <>
-      <Navbar />
+    <Navbar />
       <Hero />
+
       {/* <SliderHero/> */}
       {/* <Button className="button-red" link="/store-games" string="Maggiori informazioni" />
       <Counter /> */}
