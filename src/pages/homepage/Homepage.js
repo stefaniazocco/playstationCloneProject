@@ -9,9 +9,8 @@ import { StoreHomepage } from "../../components/elements/sections/storeHomepage/
 import { StrayHomepage } from "../../components/elements/sections/strayHomepage.js/StrayHomepage";
 import { FooterMain } from "../../components/footer/FooterMain";
 import Navbar from "../../components/navbar/Navbar";
-import PreviewheroCarousel from "../../components/elements/sliderHero/PreviewheroCarousel";
-import Hero from "../../components/elements/sliderHero/Hero";
-import SecondaryNav from "../../components/navbar/SecondaryNav";
+import Hero from "../../components/elements/sections/sliderHero/Hero";
+
 export function Homepage() {
   const [close, setClose] = useState(true);
 
@@ -39,7 +38,7 @@ export function Homepage() {
       
       <Hero />
 
-      {/* <SliderHero/> */}
+     
       <Button className="button-red" link="#" string="Maggiori informazioni" />
       <Counter />
       <StrayHomepage />

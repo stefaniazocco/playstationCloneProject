@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import GOWImgThumb from "../../../assets/images/homepage/10013.webp";
-import CODMW2Thumb from "../../../assets/images/homepage/cod-icon.webp";
-import ApexThumb from "../../../assets/images/homepage/apex-legends-thumbnail.webp";
-import GenshinImpactThumbnail from "../../../assets/images/homepage/genshin-impact-3-thumbnail.webp";
-import OlliOlliThumb from "../../../assets/images/homepage/olli-olli-world-finding-the-flowzone-thumb.webp";
+import GOWImgThumb from "../../../../assets/images/homepage/10013.webp";
+import CODMW2Thumb from "../../../../assets/images/homepage/cod-icon.webp";
+import ApexThumb from "../../../../assets/images/homepage/apex-legends-thumbnail.webp";
+import GenshinImpactThumbnail from "../../../../assets/images/homepage/genshin-impact-3-thumbnail.webp";
+import OlliOlliThumb from "../../../../assets/images/homepage/olli-olli-world-finding-the-flowzone-thumb.webp";
 import React from "react";
 import { Link } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
