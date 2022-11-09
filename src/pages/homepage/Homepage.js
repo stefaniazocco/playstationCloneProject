@@ -11,6 +11,7 @@ import { FooterMain } from "../../components/footer/FooterMain";
 import Navbar from "../../components/navbar/Navbar";
 import PreviewheroCarousel from "../../components/elements/sliderHero/PreviewheroCarousel";
 import Hero from "../../components/elements/sliderHero/Hero";
+import SecondaryNav from "../../components/navbar/SecondaryNav";
 export function Homepage() {
   const [close, setClose] = useState(true);
 
@@ -18,9 +19,24 @@ export function Homepage() {
     setClose(false);
   }
 
+  function fixedNav() {
+    let navbar = document.getElementById("navbar");
+    let fixed = navbar.offsetTop;
+    if (window.pageYOffset > fixed) {
+      navbar.classList.add("fixed-nav");
+    } else {
+      navbar.classList.remove("fixed-nav");
+    }
+  }
+
+  window.onscroll = function () {
+    fixedNav();
+  };
+
   return (
     <>
-    <Navbar />
+      <Navbar />
+      
       <Hero />
 
       {/* <SliderHero/> */}
