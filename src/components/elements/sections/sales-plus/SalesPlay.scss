@@ -1,0 +1,288 @@
+.cont {
+    width: 100%;
+    margin-bottom: 5em;
+    margin-top: 5em;
+
+    .grid-cont {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+
+        .picture {
+            width: 60%;
+
+            img {
+                width: 1000px;
+                border-radius: 13px;
+            }
+
+            source {
+                width: 100%;
+            }
+
+        }
+
+
+        .text-cont {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 40%;
+
+            .text-block {
+                width: 50%;
+                .title-sales {
+                    font-size: 44px;
+                    font-weight: lighter;
+                    color:black;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .subtitle {
+                width: 50%;
+                margin-bottom: 10px;
+                .sub-sales {
+                    font-size: 17px;
+                    font-weight: 400;
+                    color: gray;
+                }
+            }
+
+            .btn-block {
+                margin-right: 200px;
+            }
+            
+        }
+    }
+}
+
+
+@media (min-width:320px) {
+    .cont {
+        width: 100%;
+        margin-bottom: 3em;
+        margin-top: 3em;
+    
+        .grid-cont {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin: 0;
+    
+            .picture {
+                width: 100%;
+                margin-left: 30px;
+    
+                img {
+                    width: 325px;
+                    border-radius: 13px;
+                }
+    
+                source {
+                    width: 100%;
+                }
+    
+            }
+    
+    
+            .text-cont {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+    
+                .text-block {
+                    width: 90%;
+                    .title-sales {
+                        font-size: 42px;
+                        font-weight: lighter;
+                        color:black;
+                        margin-bottom: 5px;
+                    }
+                }
+    
+                .subtitle {
+                    width: 90%;
+                    margin-bottom: 10px;
+                    .sub-sales {
+                        font-size: 17px;
+                        font-weight: 400;
+                        color: gray;
+                    }
+                }
+    
+                .btn-block {
+                    margin-right: 0;
+                }
+                
+            }
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .cont {
+        width: 100%;
+        margin-bottom: 3em;
+        margin-top: 3em;
+    
+        .grid-cont {
+    
+            .picture {
+                width: 90%;
+                margin-left: 0;
+                img {
+                    width: 700px;
+                    border-radius: 13px;
+                }
+    
+                source {
+                    width: 100%;
+                }
+    
+            }
+    
+            .text-cont {
+                
+                .subtitle {
+                    width: 90%;
+                    margin-bottom: 10px;
+                    .sub-sales {
+                        font-size: 22px;
+                        font-weight: 400;
+                        color: gray;
+                    }
+                }
+    
+                .btn-block {
+                    margin-right: 500px;
+                }
+                
+            }
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .cont {
+        width: 100%;
+        margin-bottom: 3em;
+        margin-top: 3em;
+    
+        .grid-cont {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0;
+            .picture {
+                width: 60%;
+    
+                img {
+                    width: 700px;
+                    border-radius: 13px;
+                }
+    
+                source {
+                    width: 100%;
+                }
+    
+            }
+    
+            .text-cont {
+                width: 40%;
+                .text-block {
+                    width: 70%;
+                    .title-sales {
+                        font-size: 44px;
+                        font-weight: lighter;
+                        color:black;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .subtitle {
+                    width: 70%;
+                    margin-bottom: 10px;
+                    .sub-sales {
+                        font-size: 19px;
+                        font-weight: 400;
+                        color: gray;
+                    }
+                }
+    
+                .btn-block {
+                    margin-right: 150px;
+                }
+                
+            }
+        }
+    }
+}
+
+@media (min-width:1367px) {
+    .cont {
+        width: 100%;
+        margin-bottom: 5em;
+        margin-top: 5em;
+    
+        .grid-cont {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            margin: 0;
+            .picture {
+                width: 65%;
+    
+                img {
+                    width: 850px;
+                    border-radius: 13px;
+                }
+    
+                source {
+                    width: 100%;
+                }
+    
+            }
+    
+            .text-cont {
+                width: 40%;
+                align-items: flex-end;
+                padding-right: 25px;
+                .text-block {
+                    width: 50%;
+                    .title-sales {
+                        font-size: 40px;
+                        font-weight: lighter;
+                        color:black;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .subtitle {
+                    width: 50%;
+                    margin-bottom: 10px;
+                    .sub-sales {
+                        font-size: 15px;
+                        font-weight: 400;
+                        color: gray;
+                    }
+                }
+    
+                .btn-block {
+                    margin-right: 180px;
+                }
+                
+            }
+        }
+    }
+}

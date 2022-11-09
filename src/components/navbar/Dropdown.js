@@ -27,7 +27,7 @@ const Dropdown = (props) => {
       <div
         className="dropdown-menu w-100 mnavcontent navbartransition "
         aria-labelledby="navbarDropdown"
-        style={{ borderTopLeftRadius: 0, borderTopRightRadius: 0 }}
+        style={{ borderTopLeftRadius: 0, borderTopRightRadius: 0, padding: 0}}
       >
         <div className="container-fluid bg-light">
           <div className="d-flex flex-row justify-content-center  text-center">

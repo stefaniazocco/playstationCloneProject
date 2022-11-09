@@ -1,0 +1,41 @@
+.game {
+  border-radius: 10px;
+}
+.game a {
+  text-decoration: none;
+  color: white;
+}
+.game a .p {
+  font-size: 18px;
+  margin-top: 10px;
+  padding-left: 5px;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.game a img {
+  border-radius: 10px;
+}
+
+.game, .game img {
+  width: calc(50vw - 70px);
+}
+
+.game img:hover {
+  scale: 102%;
+}
+
+@media (min-width: 768px) {
+  .game,
+.game img {
+    width: calc(16.6666666667vw - 20px);
+  }
+}
+@media (min-width: 1024px) {
+  .game,
+.game img {
+    width: 10vw;
+    width: 10vw;
+  }
+}/*# sourceMappingURL=cardsSliderHomepage.css.map */
