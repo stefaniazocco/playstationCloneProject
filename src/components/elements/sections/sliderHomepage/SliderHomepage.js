@@ -34,7 +34,7 @@ export function SliderHomepage(){
     const [next, setNext] = useState()
 
     function clickNext(){
-        setNext({ transform: "translateX(-101%)", transitionDuration: "2s"})
+        setNext({ transform: "translateX(-102%)", transitionDuration: "2s"})
     }
     function clickPrev(){
         setNext({ transform: "translateX(0)", transitionDuration: "2s"})

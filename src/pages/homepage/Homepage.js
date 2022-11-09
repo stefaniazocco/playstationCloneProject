@@ -25,11 +25,9 @@ export function Homepage() {
     <>
       <Navbar />
       <Hero />
-
-
       {/* <SliderHero/> */}
-      <Button className="button-red" link="/store-games" string="Maggiori informazioni" />
-      <Counter />
+      {/* <Button className="button-red" link="/store-games" string="Maggiori informazioni" />
+      <Counter /> */}
       <StrayHomepage />
       <SliderHomepage />
       <StoreHomepage />
