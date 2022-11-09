@@ -11,6 +11,8 @@ import { FooterMain } from "../../components/footer/FooterMain";
 import Navbar from "../../components/navbar/Navbar";
 import PreviewheroCarousel from "../../components/elements/sliderHero/PreviewheroCarousel";
 import Hero from "../../components/elements/sliderHero/Hero";
+import AppCarousel from "../";
+import Carousel from "../../components/slider/Carousel";
 export function Homepage() {
   const [close, setClose] = useState(true);
 
@@ -22,7 +24,8 @@ export function Homepage() {
     <>
     <Navbar />
       <Hero />
-
+      <AppCarousel/>
+      
       {/* <SliderHero/> */}
       <Button className="button-red" link="#" string="Maggiori informazioni" />
       <Counter />
