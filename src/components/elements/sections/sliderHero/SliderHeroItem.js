@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from "../buttons/Button";
-import  "./carousel.scss";
+import { Button } from "../../buttons/Button";
+import "./carousel.scss"
 
 const SliderHeroItem = (props) => {
   return (

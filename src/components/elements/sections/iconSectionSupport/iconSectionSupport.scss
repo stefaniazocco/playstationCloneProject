@@ -1,0 +1,58 @@
+.wrapperIconSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  h4 {
+    font-weight: 200;
+  }
+
+  .wrapperCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-bottom: 40px;
+
+
+    .iconSectionContent {
+      border-radius: 15px;
+      border: 1px solid rgba(0, 0, 0, 0.13);
+      width: 240px;
+      height: 160px;
+      align-content: center;
+      text-align: center;
+      margin: 15px;
+      color: #2d65e6;
+      padding: 10px;
+      &:hover {
+        border: #2d65e6ad solid 2px;
+      }
+    }
+  }
+}
+
+.wrapperLastSection {
+  display: flex;
+  justify-content: center;
+
+  img{
+    margin-top: 20px;
+    &:hover{
+      filter: blur(0.5px);
+    }
+  }
+
+  .lastSection {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+
+    h4 {
+      font-weight: 400;
+      font-size: 35px;
+    }
+  }
+}

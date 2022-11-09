@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../navbar/navbar.scss";
 import Dropdown from "./Dropdown";
 import PS5Icon from "../../assets/icons/PS_icona1.png";
@@ -8,21 +8,16 @@ import PSPlusIcon from "../../assets/icons/PS_icona4.png";
 import PSStoreIcon from "../../assets/icons/PS_icona5.png";
 import { BiSearchAlt2 } from "react-icons/bi";
 import Sonybar from "./Sonybar";
+import { navItems } from "./NavItemList";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-   
-   function fixedNav() {
-    let navbar = document.getElementById("navbar");
-    let fixed = navbar.offsetTop;
-       if (window.pageYOffset > fixed) {
-           navbar.classList.add("fixed-nav");
-       } else {
-           navbar.classList.remove("fixed-nav");
-       }
-   }
+  const [navItem, setNavItem] = useState([]);
 
-   window.onscroll = function () { fixedNav() };
-  
+  useEffect(() => {
+    setNavItem(navItems);
+  }, []);
+
   return (
     <>
       <Sonybar />
@@ -33,6 +28,7 @@ const Navbar = () => {
         {/* Collapsible wrapper */}
         <div className="collapse navbar-collapse">
           <div className="nav-item mx-3">
+            <Link to='/'>
             <svg
               className="shared-nav-ps-logo"
               width="55px"
@@ -55,37 +51,17 @@ const Navbar = () => {
                 </g>
               </g>
             </svg>
+            </Link>
           </div>
           <ul className="navbar-nav me-auto">
             {/* Dropdown Giochi */}
-            <Dropdown
-              name="Giochi"
-              icon1={PS5Icon}
-              icon2={PS4Icon}
-              icon3={PSVRIcon}
-              icon4={PSPlusIcon}
-              icon5={PSStoreIcon}
-            />
-            {/* Dropdown hardware */}
-            <Dropdown
-              name="Hardware"
-              icon1={PS5Icon}
-              icon2={PS4Icon}
-              icon3={PS5Icon}
-              icon4={PS4Icon}
-            />
-            {/* Dropdown servizi */}
-            <Dropdown name="Servizi" 
-            />
-            {/* Dropdown novita */}
-            <Dropdown name="Novità" />
-            {/* Dropdown fai acquisti */}
-            <Dropdown name="Fai acquisti" />
-            {/* Dropdown supporto */}
-            <Dropdown name="Supporto" />
+            {navItem.map((item, id) => {
+              return <Dropdown key={id} icon={item.icon} title={item.title} />;
+            })}
           </ul>
           <div className="mx-2 d-flex">
-            <button className="accedi-btn mx-3 my-3"> Accedi </button>
+            
+            <Link to="/login" className="accedi-btn mx-3 my-3"> Accedi </Link>
             <a
               className="btn-search btn rounded-0 my-2 "
               href="/"

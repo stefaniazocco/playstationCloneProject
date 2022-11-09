@@ -1,11 +1,11 @@
-import GOWImg from "../../../assets/images/homepage/godofwar-1600.webp";
-import GOWLogo from "../../../assets/images/homepage/10163.webp";
-import CODMW2 from "../../../assets/images/homepage/cod-mw2-open-beta-homepage1367px.jpg";
-import CODMW2Logo from "../../../assets/images/homepage/cod-logo-1200.webp";
-import OlliImg from "../../../assets/images/homepage/olli-olli-world-finding-the-flowzone-hero3000px.webp";
-import OlliLogo from "../../../assets/images/homepage/olli-olli-world-finding-the-flowzone-logo.webp";
-import GenshinImpactHero from "../../../assets/images/homepage/genshin-impact-3-hero-3000px.webp";
-import GenshinImpactLogo from "../../../assets/images/homepage/genshin-impact-white-logo.webp";
+import GOWImg from "../../../../assets/images/homepage/godofwar-1600.webp";
+import GOWLogo from "../../../../assets/images/homepage/10163.webp";
+import CODMW2 from "../../../../assets/images/homepage/cod-mw2-open-beta-homepage1367px.jpg";
+import CODMW2Logo from "../../../../assets/images/homepage/cod-logo-1200.webp";
+import OlliImg from "../../../../assets/images/homepage/olli-olli-world-finding-the-flowzone-hero3000px.webp";
+import OlliLogo from "../../../../assets/images/homepage/olli-olli-world-finding-the-flowzone-logo.webp";
+import GenshinImpactHero from "../../../../assets/images/homepage/genshin-impact-3-hero-3000px.webp";
+import GenshinImpactLogo from "../../../../assets/images/homepage/genshin-impact-white-logo.webp";
 
 
 export const SliderItems = [

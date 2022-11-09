@@ -9,9 +9,10 @@ import { StoreHomepage } from "../../components/elements/sections/storeHomepage/
 import { StrayHomepage } from "../../components/elements/sections/strayHomepage.js/StrayHomepage";
 import { FooterMain } from "../../components/footer/FooterMain";
 import Navbar from "../../components/navbar/Navbar";
-import PreviewheroCarousel from "../../components/elements/sliderHero/PreviewheroCarousel";
-import Hero from "../../components/elements/sliderHero/Hero";
+import Hero from "../../components/elements/sections/sliderHero/Hero";
 import PS5 from "../../components/elements/sliderPS5/PS5";
+
+
 
 export function Homepage() {
   const [close, setClose] = useState(true);
@@ -20,13 +21,28 @@ export function Homepage() {
     setClose(false);
   }
 
+  function fixedNav() {
+    let navbar = document.getElementById("navbar");
+    let fixed = navbar.offsetTop;
+    if (window.pageYOffset > fixed) {
+      navbar.classList.add("fixed-nav");
+    } else {
+      navbar.classList.remove("fixed-nav");
+    }
+  }
+
+  window.onscroll = function () {
+    fixedNav();
+  };
+
   return (
     <>
-      <Navbar />
+        <Navbar />
+      
       <Hero />
       <PS5 />
 
-      {/* <SliderHero/> */}
+     
       {/* <Button className="button-red" link="/store-games" string="Maggiori informazioni" />
       <Counter /> */}
       <StrayHomepage />
