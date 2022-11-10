@@ -2,6 +2,7 @@ import sony from "../../assets/icons/sony-logo.png"
 import ps from "../../assets/icons/logo_playstation.png"
 import wallpaper from "../../assets/images/homepage/login-wallpaper.jpg"
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Login() {
     const [input, setInput] = useState("")
@@ -16,9 +17,9 @@ export function Login() {
                 <div class="sony">
                     <img src={sony} alt="" />
                 </div>
-                <div class="playstation">
+                <Link to="/" class="playstation">
                     <img src={ps} alt="" />
-                </div>
+                </Link>
                 <div class="white-box">
                     <div class="form-div">
                         <p>Accedi a PlayStation con uno dei tuoi account Sony.</p>
