@@ -13,7 +13,7 @@ export function FooterGames() {
                 </div>
                 <div className="languages"> 
                     <img src={globe} alt="globo" width="25px" height="25px" />
-                    <Link className="region" to="">Paese / Regione Italia </Link>
+                    <Link className="region" to="/country-selector">Paese / Regione Italia </Link>
                 </div>
             </div>
 
@@ -24,7 +24,7 @@ export function FooterGames() {
                     <ul>
                         <li className="links"><Link to="">Privacy e cookie</Link></li>
                         <li className="links"><Link to="">Termini di servizio del sito Web</Link></li>
-                        <li className="links"><Link to="">Supporto</Link></li>
+                        <li className="links"><Link to="/support">Supporto</Link></li>
                         <li className="links"><Link to="">Mappa del sito</Link></li>
                         <li className="links"><Link to="">PlayStation Studios</Link></li>
                         <li className="links"><Link to="">Termini legali</Link></li>

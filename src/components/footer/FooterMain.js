@@ -24,7 +24,7 @@ export function FooterMain(){
                         <Link class="footer-maggiori-info" to="#">Maggiori info</Link>
                     </div>
                     <ul className="footer-list1">
-                        <li> <Link to="#">Supporto</Link></li>
+                        <li> <Link to="/support">Supporto</Link></li>
                         <li> <Link to="#">Termini di utilizzo del sito Web</Link></li>
                         <li> <Link to="#">PlayStation Studios</Link></li>
                         <li> <Link to="#">Informativa sulla privacy e sui cookie</Link></li>

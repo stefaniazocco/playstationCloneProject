@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../navbar/navbar.scss";
+import "./navbar.scss";
 import Dropdown from "./Dropdown";
 import PS5Icon from "../../assets/icons/PS_icona1.png";
 import PS4Icon from "../../assets/icons/PS_icona2.png";
@@ -10,6 +10,7 @@ import { BiSearchAlt2 } from "react-icons/bi";
 import Sonybar from "./Sonybar";
 import { navItems } from "./NavItemList";
 import { Link } from "react-router-dom";
+import { GoGlobe } from "react-icons/go";
 
 const Navbar = () => {
   const [navItem, setNavItem] = useState([]);
@@ -60,7 +61,7 @@ const Navbar = () => {
             })}
           </ul>
           <div className="mx-2 d-flex">
-            
+            <Link to="/country-selector" style={{alignSelf: "center"}}><GoGlobe style={{fontSize: 30, fill: "black"}} /></Link>
             <Link to="/login" className="accedi-btn mx-3 my-3"> Accedi </Link>
             <a
               className="btn-search btn rounded-0 my-2 "

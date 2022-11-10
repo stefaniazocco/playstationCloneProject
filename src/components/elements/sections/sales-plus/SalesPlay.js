@@ -46,7 +46,7 @@ export function SalesPlay() {
                             PS4 e PS5.
                         </p>
                     </div>
-                    <Button className="button-red btn-block" link="#" string="Vedi tutte le offerte" />
+                    <Button className="button-red btn-block" link="/store-games" string="Vedi tutte le offerte" />
                 </div>
             </div>
         </section>

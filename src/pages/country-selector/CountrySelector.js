@@ -1,7 +1,9 @@
 import sony from "../../assets/images/homepage/sony-logo.png"
 import logo from "../../assets/images/homepage/logo-black.svg"
+import { useNavigate } from "react-router-dom"
 
 export function CountrySelector() {
+    const navigate= useNavigate()
 
     return (
         
@@ -11,7 +13,7 @@ export function CountrySelector() {
                 <span class="logo-sony"><img class="mb-1" src={sony} alt=""/></span>
             </div>
             <div class="main">
-                <div class="image"><img src={logo} alt=""/></div>
+                <div class="image" onClick={() => navigate("/")}><img src={logo} alt=""/></div>
 
                 <div class="title">
 
