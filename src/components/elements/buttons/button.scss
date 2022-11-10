@@ -43,3 +43,6 @@
 .button-white {
     @include color($colorBlack, $colorWhite, $colorWhiteHover);
 }
+.button-purple {
+    @include color($colorWhite, $colorPurple, $colorPurpleHover);
+}

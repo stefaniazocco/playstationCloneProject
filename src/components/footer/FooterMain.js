@@ -29,7 +29,7 @@ export function FooterMain(){
                         <li> <Link to="#">PlayStation Studios</Link></li>
                         <li> <Link to="#">Informativa sulla privacy e sui cookie</Link></li>
                         <li> <Link to="#">Termini legali</Link></li>
-                        <li> <Link to="#">Chi siamo</Link></li>
+                        <li> <Link to="/presentation">Chi siamo</Link></li>
                         <li> <Link to="#">PlayStation e l'ambiente</Link></li>
                     </ul>
                     <ul className="footer-list2">

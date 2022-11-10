@@ -5,6 +5,7 @@ import { Homepage } from "./pages/homepage/Homepage";
 import { StoreGames } from "./pages/storeGames/StoreGames";
 import Support from "./pages/support/Support";
 import { Login } from './pages/login/Login';
+import { Presentation } from "./pages/presentation/Presentation";
 
 
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/country-selector" element={<CountrySelector />} />
         <Route path="/support" element={<Support />} />        
         <Route path='/login' element={<Login />} />
+        <Route path='/presentation' element={<Presentation/>} />
 
       </Routes>
     </div>
