@@ -26,11 +26,14 @@ body {
 // utils
 @import "./components/elements/buttons/button.scss";
 @import "./components/elements/counter/store-counter.scss";
-@import "./components/footer/footerGames.scss";
+@import "./components/footer/footerMain.scss";
+@import "./components/navbar/navbar.scss";
+
 
 //pages
 @import "./pages/homepage/homepage.scss";
 @import "./pages/country-selector/countrySelector.scss";
-@import "./components/navbar/navbar.scss";
-@import "./components/elements/sliderHero/carousel.scss";
+@import "./pages/storeGames/storeGames.scss";
+@import "./pages/login/login.scss"
+
 

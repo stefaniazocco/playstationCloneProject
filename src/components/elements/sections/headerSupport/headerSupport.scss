@@ -1,0 +1,54 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+
+  .contentWrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3 {
+      text-align: center;
+      font-size: 42px;
+      font-weight: 200;
+    }
+    p {
+      text-align: center;
+      font-size: 25px;
+      font-weight: 100;
+    }
+    .searchBar {
+      text-decoration: none;
+      color: black;
+      background-color: white;
+      border-radius: 50px;
+      border: 1px solid black;
+      width: 700px;
+      height: 50px;
+      text-align: center;
+      text-align: left;
+      border: none;
+      -webkit-box-shadow: 1px 5px 15px 2px rgba(0, 0, 0, 0.47);
+      box-shadow: 1px 5px 15px 2px rgba(0, 0, 0, 0.171);
+
+      &:hover {
+        outline: #2d65e6ad solid 3px;
+        outline-offset: 4px;
+        transition: ease-in;
+        line-height: 3px;
+      }
+      &:focus {
+        outline: #2d65e6ad solid 3px;
+        outline-offset: 4px;
+      }
+      input {
+        border: none;
+        font-size: 22px;
+        font-weight: 100;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

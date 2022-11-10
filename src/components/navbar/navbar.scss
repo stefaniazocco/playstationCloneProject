@@ -75,6 +75,7 @@
 }
 
 .accedi-btn {
+  text-decoration: none;
   background-color: #2d64e6;
   color: white;
   border-style: none;
@@ -90,6 +91,7 @@
 
   &:hover {
     background-color: #0f399b;
+    color: white;
   }
 }
 
@@ -184,7 +186,7 @@
 
 .nav-ps4 {
   list-style-type: none;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
 }
 

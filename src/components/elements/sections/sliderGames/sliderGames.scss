@@ -1,0 +1,315 @@
+@import "./../../cards/storeGames.scss";
+
+.small-cards-section {
+    height: fit-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+
+    .small-cards-title {
+        width: 90vw;
+        margin: 7px 0px;
+
+        h2 {
+            font-size: 20px;
+            font-weight: 300;
+            margin-left: 15px;
+        }
+
+        .small-cards-show-more-button {
+            padding: 2px;
+            background-color: transparent;
+            width: fit-content;
+            border-radius: 100%;
+            border: 2px solid transparent;
+
+            .small-cards-show-more {
+                background-color: transparent;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                border: 0px;
+
+                div {
+                    border: 1px solid $colorBlack;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(-45deg);
+                    width: 10px;
+                    height: 10px;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .small-cards-show-more:hover {
+            background-color: #ddd;
+        }
+
+        .small-cards-show-more-button:focus {
+            border-color: #004c8a;
+
+            .small-cards-show-more {
+                background-color: #004c8a;
+
+                div {
+                    border-color: white;
+                }
+            }
+        }
+
+
+
+        .show-div {
+            width: fit-content;
+            height: 40px;
+            padding: 4px 2px;
+            border-radius: 50px;
+            border: 2px solid transparent;
+            background-color: transparent;
+            display: none;
+
+            a {
+                color: #0068bd;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: bolder;
+                padding: 8px 10px;
+                letter-spacing: 1px;
+            }
+        }
+
+        .show-div:hover a {
+            background-color: rgb(238, 237, 237);
+            border-radius: 50px;
+            color: $colorBlack;
+        }
+
+        .show-div:active {
+            border-color: #004c8a;
+
+            a {
+                color: #004c8a;
+            }
+        }
+    }
+
+    .slider-container {
+        height: fit-content;
+        width: calc(90vw + 15px);
+        padding-left: 15px;
+        position: relative;
+        overflow: hidden;
+
+        //-------bottoni-------
+        .small-cards-swipe-button {
+            padding: 2px;
+            background-color: transparent;
+            width: fit-content;
+            position: absolute;
+            right: 0;
+            z-index: 3;
+            border-radius: 100%;
+            border: 2px solid transparent;
+
+            .small-cards-swipe {
+                background-color: #0070cc;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                border: 0px;
+
+                div {
+                    border: solid $colorWhite;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(-45deg);
+                    width: 10px;
+                    height: 10px;
+                    margin-right: 3px;
+                }
+            }
+        }
+
+        .small-cards-swipe:hover {
+            background-color: #004c8a;
+        }
+
+        .small-cards-swipe-button:focus {
+            border-color: #004c8a;
+
+            .small-cards-swipe {
+                background-color: #004c8a;
+            }
+        }
+
+        .small-cards-swipe-button:first-of-type {
+            left: 0px;
+
+            .small-cards-swipe div {
+                transform: rotate(135deg);
+                margin-right: 0px;
+                margin-left: 3px;
+            }
+        }
+
+        .inactivee {
+            display: none;
+        }
+
+
+        //--------slider--------------------------------
+        .slider-div {
+            display: flex;
+            gap: 12px;
+            width: 90vw;
+            height: 100%;
+            transition: all .5s;
+
+
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .slidee .small-card-img-div .small-card-img,
+    .slidee {
+        width: calc(45vw - 12px);
+    }
+
+    .darken-img {
+        width: calc(45vw - 20px);
+        height: calc(45vw - 14px);
+    }
+
+    .card-more {
+        height: calc(45vw - 12px);
+    }
+
+    .slider-container .small-cards-swipe-button {
+        top: calc((45vw - 30px) / 2);
+    }
+}
+
+@media (min-width: 768px) {
+    .small-cards-section {
+        .small-cards-title {
+            margin: 5px 35px;
+
+            h2 {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .slidee .small-card-img-div .small-card-img,
+    .slidee {
+        width: calc(30vw - 12px);
+    }
+
+    .darken-img {
+        width: calc(30vw - 20px);
+        height: calc(30vw - 14px);
+    }
+
+    .card-more {
+        height: calc(30vw - 12px);
+    }
+
+    .slider-container .small-cards-swipe-button {
+        top: calc((30vw - 30px) / 2);
+    }
+}
+
+@media (min-width: 1024px) {
+    .small-cards-section {
+        .small-cards-title {
+            .small-cards-show-more-button {
+                display: none;
+            }
+
+            .show-div {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1365px) {
+
+    .slidee .small-card-img-div .small-card-img,
+    .slidee {
+        width: calc((90vw / 4) - 12px);
+    }
+
+    .darken-img {
+        width: calc((90vw / 4) - 20px);
+        height: calc((90vw / 4) - 14px);
+    }
+
+    .card-more {
+        height: calc((90vw / 4) - 12px);
+    }
+
+    .slider-container .small-cards-swipe-button {
+        top: calc(((90vw / 4) - 30px) / 2);
+    }
+}
+
+@media (min-width: 1366px) {
+    .small-cards-section {
+        .small-cards-title {
+            h2 {
+                font-size: 26px;
+            }
+
+            .show-div {
+                height: 45px;
+
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .slider-container .slider-div .small-card {
+            .small-card-game-title {
+                font-size: 16px;
+            }
+
+            .small-card-price-div {
+                .small-card-plus {
+                    font-size: 12px;
+                }
+
+                .small-card-price {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .slidee .small-card-img-div .small-card-img,
+    .slidee {
+        width: calc((90vw / 6) - 12px);
+    }
+
+    .darken-img {
+        width: calc((90vw / 6) - 20px);
+        height: calc((90vw / 6) - 14px);
+    }
+
+    .card-more {
+        height: calc((90vw / 6) - 12px);
+    }
+
+    .slider-container .small-cards-swipe-button {
+        top: calc(((90vw / 6) - 30px) / 2);
+    }
+}

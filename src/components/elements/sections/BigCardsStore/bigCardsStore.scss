@@ -1,0 +1,40 @@
+.containerGames {
+    background: rgb(218, 218, 218);
+    background: linear-gradient(180deg, rgba(218, 218, 218, 1) 0%, rgba(255, 255, 255, 1) 3%);
+    .seeMoreTitle {
+        margin-top: 3rem;
+        font-weight: lighter;
+        font-size: 28px;
+    }
+    &:first-of-type .seeMoreTitle{
+        display: none;
+    }
+    .containerStore {
+        margin: -10px;
+        margin-bottom: 3rem;
+        padding: 50px 0;
+        
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .containerGames{
+        .containerStore {
+            /* min-width: 1200px;  */
+            margin: 15px;
+        }
+    }
+
+}
+
+@media (min-width:1440px) {
+    .containerGames{
+        .containerStore {
+            margin: 30px 50px;
+        }
+    }
+    .containerGames:last-of-type .containerStore{
+        padding: 50px 100px;
+    }
+}
