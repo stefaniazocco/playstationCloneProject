@@ -27,7 +27,7 @@ export function StoreHomepage() {
                 <source srcset={bg1024} media="(min-width: 1024px)" />
                 <source srcset={bg768} media="(min-width: 768px)" />
                 <source srcset={bg320} media="(min-width: 320px)" />
-                <img src={bg1024} />
+                <img src={bg1024} alt="" />
             </picture>
 
             {/* CONTENUTO */}
@@ -43,10 +43,10 @@ export function StoreHomepage() {
 
                 {/* CARD */}
                 <div class="store-card-div">
-                    <CardsStoreHomepage img={hoodie} product="Felpa con zip Heritage PlayStation™" />
-                    <CardsStoreHomepage img={tshirt} product="Maglietta logo PlayStation" />
-                    <CardsStoreHomepage img={hat} product="Cappello di marca PlayStation ™ 47" />
-                    <CardsStoreHomepage img={mug} product="Tazza Heritage PlayStation™" />
+                    <CardsStoreHomepage img={hoodie} product="Felpa con zip Heritage PlayStation™" link="/product" />
+                    <CardsStoreHomepage img={tshirt} product="Maglietta logo PlayStation" link="/product" />
+                    <CardsStoreHomepage img={hat} product="Cappello di marca PlayStation ™ 47" link="/product" />
+                    <CardsStoreHomepage img={mug} product="Tazza Heritage PlayStation™" link="/product" />
                 </div>
                 {/* BOTTONE */}
                 <Button className="button-white store-Button" link="#" string="Acquista la collezione" />
