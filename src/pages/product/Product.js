@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Counter } from "../../components/elements/counter/StoreCounter";
 import { ProductNav } from "../../components/elements/sections/productNav/ProductNav";
 import { Select } from "../../components/elements/select/Select";
+import { FooterProduct } from "../../components/footer/FooterProduct";
 
 const options = [
     {label : "S adulto - 70.00€", value: 1, available: true},
@@ -23,6 +24,8 @@ export function Product(){
                 <Select value={value} onChange={o => setValue(o)} options={options} />
                 <Counter />
             </div>
+
+            <FooterProduct />
         </>
     )
 }
