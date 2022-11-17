@@ -11,6 +11,8 @@ import { useState } from "react";
 
 export function ProductNav() {
     const [menu, setMenu]= useState("close")
+    const [drop1, setDrop1] = useState("close-1")
+    const [drop2, setDrop2] = useState("close-2")
 
     function handleMenu(){
         if(menu === "close"){
@@ -20,6 +22,23 @@ export function ProductNav() {
             setMenu("close")
         }
     }
+    function handleDropdown1(){
+        if(drop1 === "close-1"){
+            setDrop1("open")
+        }
+        if(drop1 === "open"){
+            setDrop1("close-1")
+        }
+    }
+    function handleDropdown2(){
+        if(drop2 === "close-2"){
+            setDrop2("open")
+        }
+        if(drop2 === "open"){
+            setDrop2("close-2")
+        }
+    }
+    
 
     return (
         <header>
@@ -45,16 +64,16 @@ export function ProductNav() {
                     </div>
                 </nav>
             </div>
-            {menu && <nav class={`${"main-nav"} ${menu}`} id="main-nav">
+            {menu && <nav class={`${"main-nav"} ${menu}`} id="main-nav" onBlur={() => {setDrop1("close-1"); setDrop2("close-2")}} >
                 <ul class="ul-1">
                     <li class="li-1 li-1-1">
                         <div class="list-top-1">
                             <a href="#">PROPRIETÀ</a>
-                            <button type="button" class="menu-dropdown-1">
+                            <button type="button" class="menu-dropdown-1" onClick={handleDropdown1}>
                                 <div class="menu-arrow-1"></div>
                             </button>
                         </div>
-                        <ul class="ul-2 close-1" id="ul-2">
+                        <ul class={`${"ul-2"} ${drop1}`} id="ul-2">
                             <li class="li-2"><a href="#">PlayStation</a></li>
                             <li class="li-2"><a href="#">Icone dei personaggi di PlayStation Studios</a></li>
                             <li class="li-2"><a href="#">ASTRO BOT Rescue Mission</a></li>
@@ -73,12 +92,12 @@ export function ProductNav() {
                     <li class="li-1 li-1-2">
                         <div class="list-top-2">
                             <a href="#">CATEGORIE</a>
-                            <button class="menu-dropdown-2">
+                            <button class="menu-dropdown-2" onClick={handleDropdown2}>
                                 <div class="menu-arrow-2"></div>
                             </button>
 
                         </div>
-                        <ul class="ul-2-2 close-2" id="ul-2-2">
+                        <ul class={`${"ul-2-2"} ${drop2}`} id="ul-2-2">
                             <li class="li-2-2"><a href="#">Nuovi arrivi</a></li>
                             <li class="li-2-2"><a href="#">Abbigliamento</a></li>
                             <li class="li-2-2"><a href="#">Accessori</a></li>
