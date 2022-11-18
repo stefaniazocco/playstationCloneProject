@@ -1,0 +1,17 @@
+.product-details{
+    padding: 28px 46px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 70px 40px;
+    .details-title{
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 767px){
+    .product-details{
+        margin: 30px 0px;
+        padding: 28px;
+    }
+}
