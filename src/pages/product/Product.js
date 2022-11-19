@@ -9,6 +9,7 @@ import { ProductTitle } from "../../components/elements/sections/productRight/Pr
 // import { Select } from "../../components/elements/select/Select";
 import { FooterProduct } from "../../components/footer/FooterProduct";
 import "./product.scss"
+import { hoodie } from "./products";
 
 
 export function Product(){
@@ -28,7 +29,7 @@ export function Product(){
                             </ul>
                         </div>
                         <div class="product-main">
-                            <ProductLeft />
+                            <ProductLeft img={hoodie.img} />
                             <ProductTitle />
                             <ProductRight hasSize={true} />
                         </div>
