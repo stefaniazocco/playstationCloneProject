@@ -1,16 +1,16 @@
 import "./productDetails.scss"
 
-export function ProductDetails(){
+export function ProductDetails({product}){
     return(
         
         <div class="product-details">
             <div class="details-title">Dettagli prodotto</div>
             <div class="details-description">
-                Nuovo ed essenziale accessorio per la primavera!
+                {product.details.title}
                 <ul>
-                    <li>Caratteristiche visiera pre-curvata, non strutturato, profilo basso</li>
-                    <li>Logo ricamato</li>
-                    <li>Bianco</li>
+                    {product.details.one && <li>{product.details.one}</li>}
+                    {product.details.two && <li>{product.details.two}</li>}
+                    {product.details.three && <li>{product.details.three}</li>}
                 </ul>
             </div>
         </div>

@@ -13,20 +13,17 @@ const options = [
     {label : "XL adulto - 70.00€", value: 4, available: true},
     {label : "2XL adulto - 72.00€", value: 5, available: true},
   ]
-export function ProductRight({hasSize}){
+export function ProductRight({product}){
 
     const [value, setValue] = useState(options[0])
 
     return(
         <div class="product-right">
-            <ProductTitle />
-
-
-            
+            <ProductTitle product={product} />
 
             <div class="product-quantity d-flex">
 
-                {hasSize ?
+                {product.hasSize ?
                     <>
                         <Select value={value} onChange={o => setValue(o)} options={options} />
                         
@@ -34,7 +31,7 @@ export function ProductRight({hasSize}){
                             <Counter />
                         </div> 
                     </> :
-                    <ProductTable />
+                    <ProductTable product={product} />
                 }
 
             </div>

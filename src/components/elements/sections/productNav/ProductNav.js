@@ -42,21 +42,21 @@ export function ProductNav() {
 
     return (
         <header>
-            <div class="header-top"><a href="#">Consegna gratuita per ordini oltre €90</a></div>
-            <div class="header-div-logo">
-                <div class="immagine-logo">
+            <div className="header-top"><a href="#">Consegna gratuita per ordini oltre €90</a></div>
+            <div className="header-div-logo">
+                <div className="immagine-logo">
                     <a href="#">
                         <img src={logo} />
                     </a>
                 </div>
 
-                <nav class="nav-mobile">
-                    <button class="hamburger" href="#" onClick={handleMenu}>
+                <nav className="nav-mobile">
+                    <button className="hamburger" href="#" onClick={handleMenu}>
                         {menu === "close" && <FiMenu />}
                         {menu === "open" && <GrClose />}
                     </button>
-                    <a class="visit-store" href="#">Visit the USA Store</a>
-                    <div class="nav-icons">
+                    <a className="visit-store" href="#">Visit the USA Store</a>
+                    <div className="nav-icons">
                         <a href="#"><BsSearch style={{fontSize: 20, color: "black"}} /></a>
                         <a href="#"><img src={ita} /></a>
                         <a href="#"><img src={user} /></a>
@@ -64,59 +64,59 @@ export function ProductNav() {
                     </div>
                 </nav>
             </div>
-            {menu && <nav class={`${"main-nav"} ${menu}`} id="main-nav" onBlur={() => {setDrop1("close-1"); setDrop2("close-2")}} >
-                <ul class="ul-1">
-                    <li class="li-1 li-1-1">
-                        <div class="list-top-1">
+            {menu && <nav className={`${"main-nav"} ${menu}`} id="main-nav" onBlur={() => {setDrop1("close-1"); setDrop2("close-2")}} >
+                <ul className="ul-1">
+                    <li className="li-1 li-1-1">
+                        <div className="list-top-1">
                             <a href="#">PROPRIETÀ</a>
-                            <button type="button" class="menu-dropdown-1" onClick={handleDropdown1}>
-                                <div class="menu-arrow-1"></div>
+                            <button type="button" className="menu-dropdown-1" onClick={handleDropdown1}>
+                                <div className="menu-arrow-1"></div>
                             </button>
                         </div>
-                        <ul class={`${"ul-2"} ${drop1}`} id="ul-2">
-                            <li class="li-2"><a href="#">PlayStation</a></li>
-                            <li class="li-2"><a href="#">Icone dei personaggi di PlayStation Studios</a></li>
-                            <li class="li-2"><a href="#">ASTRO BOT Rescue Mission</a></li>
-                            <li class="li-2"><a href="#">Demon's Souls</a></li>
-                            <li class="li-2"><a href="#">Dreams</a></li>
-                            <li class="li-2"><a href="#">Ghost of Tsushima</a></li>
-                            <li class="li-2"><a href="#">God of War</a></li>
-                            <li class="li-2"><a href="#">Gran Turismo Collection</a></li>
-                            <li class="li-2"><a href="#">Horizon Raw Materials</a></li>
-                            <li class="li-2"><a href="#">Ratchet & Clank</a></li>
-                            <li class="li-2"><a href="#">The Last of Us Part II</a></li>
-                            <li class="li-2"><a href="#">Slackboy</a></li>
-                            <li class="li-2"><a href="#">Uncharted</a></li>
+                        <ul className={`${"ul-2"} ${drop1}`} id="ul-2">
+                            <li className="li-2"><a href="#">PlayStation</a></li>
+                            <li className="li-2"><a href="#">Icone dei personaggi di PlayStation Studios</a></li>
+                            <li className="li-2"><a href="#">ASTRO BOT Rescue Mission</a></li>
+                            <li className="li-2"><a href="#">Demon's Souls</a></li>
+                            <li className="li-2"><a href="#">Dreams</a></li>
+                            <li className="li-2"><a href="#">Ghost of Tsushima</a></li>
+                            <li className="li-2"><a href="#">God of War</a></li>
+                            <li className="li-2"><a href="#">Gran Turismo Collection</a></li>
+                            <li className="li-2"><a href="#">Horizon Raw Materials</a></li>
+                            <li className="li-2"><a href="#">Ratchet & Clank</a></li>
+                            <li className="li-2"><a href="#">The Last of Us Part II</a></li>
+                            <li className="li-2"><a href="#">Slackboy</a></li>
+                            <li className="li-2"><a href="#">Uncharted</a></li>
                         </ul>
                     </li>
-                    <li class="li-1 li-1-2">
-                        <div class="list-top-2">
+                    <li className="li-1 li-1-2">
+                        <div className="list-top-2">
                             <a href="#">CATEGORIE</a>
-                            <button class="menu-dropdown-2" onClick={handleDropdown2}>
-                                <div class="menu-arrow-2"></div>
+                            <button className="menu-dropdown-2" onClick={handleDropdown2}>
+                                <div className="menu-arrow-2"></div>
                             </button>
 
                         </div>
-                        <ul class={`${"ul-2-2"} ${drop2}`} id="ul-2-2">
-                            <li class="li-2-2"><a href="#">Nuovi arrivi</a></li>
-                            <li class="li-2-2"><a href="#">Abbigliamento</a></li>
-                            <li class="li-2-2"><a href="#">Accessori</a></li>
-                            <li class="li-2-2"><a href="#">Borse</a></li>
-                            <li class="li-2-2"><a href="#">Collezionabili</a></li>
-                            <li class="li-2-2"><a href="#">Accessori bevande</a></li>
-                            <li class="li-2-2"><a href="#">Cappelli</a></li>
+                        <ul className={`${"ul-2-2"} ${drop2}`} id="ul-2-2">
+                            <li className="li-2-2"><a href="#">Nuovi arrivi</a></li>
+                            <li className="li-2-2"><a href="#">Abbigliamento</a></li>
+                            <li className="li-2-2"><a href="#">Accessori</a></li>
+                            <li className="li-2-2"><a href="#">Borse</a></li>
+                            <li className="li-2-2"><a href="#">Collezionabili</a></li>
+                            <li className="li-2-2"><a href="#">Accessori bevande</a></li>
+                            <li className="li-2-2"><a href="#">Cappelli</a></li>
                         </ul>
 
                     </li>
-                    <li class="li-1">
-                        <div class="link">
+                    <li className="li-1">
+                        <div className="link">
                             <a href="#">Offerte </a>
                             <span></span>
                         </div>
 
                     </li>
-                    <li class="li-1">
-                        <div class="link">
+                    <li className="li-1">
+                        <div className="link">
                             <a href="#">Visit the USA Store</a>
                         </div>
                     </li>

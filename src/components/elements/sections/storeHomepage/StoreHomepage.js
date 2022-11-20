@@ -12,11 +12,12 @@ import bg768 from "../../../../assets/images/homepage/storeSection-background-mi
 import bg320 from "../../../../assets/images/homepage/storeSection-background-min320.webp"
 import logo from "../../../../assets/images/homepage/store-tshirt-logo.webp"
 import { Button } from "../../buttons/Button";
-
+import { useParams } from "react-router-dom";
 
 
 
 export function StoreHomepage() {
+
     return(
         <section class="store-section">
 
@@ -43,10 +44,10 @@ export function StoreHomepage() {
 
                 {/* CARD */}
                 <div class="store-card-div">
-                    <CardsStoreHomepage img={hoodie} product="Felpa con zip Heritage PlayStation™" link="/product" />
-                    <CardsStoreHomepage img={tshirt} product="Maglietta logo PlayStation" link="/product" />
-                    <CardsStoreHomepage img={hat} product="Cappello di marca PlayStation ™ 47" link="/product" />
-                    <CardsStoreHomepage img={mug} product="Tazza Heritage PlayStation™" link="/product" />
+                    <CardsStoreHomepage img={hoodie} product="Felpa con zip Heritage PlayStation™" link="/product/hoodie" />
+                    <CardsStoreHomepage img={tshirt} product="Maglietta logo PlayStation" link="/product/tshirt" />
+                    <CardsStoreHomepage img={hat} product="Cappello di marca PlayStation ™ 47" link="/product/hat" />
+                    <CardsStoreHomepage img={mug} product="Tazza Heritage PlayStation™" link="/product/mug" />
                 </div>
                 {/* BOTTONE */}
                 <Button className="button-white store-Button" link="#" string="Acquista la collezione" />
