@@ -41,7 +41,7 @@ export function SliderHomepage(){
     }
 
     return(
-        <section class="new-section" id="new-section">
+        <section className="new-section" id="new-section">
             <Slide move={next}/>
             <Slide2 move={next} />
             <div className="arrow1">
@@ -55,24 +55,24 @@ export function SliderHomepage(){
 
 function Slide({move}){
     return(
-        <div class="new-section-1" style={move} >
-            <div class="titles-container-nuove-uscite">
-                <div class="new-releases">
+        <div className="new-section-1" style={move} >
+            <div className="titles-container-nuove-uscite">
+                <div className="new-releases">
                     <h3>Nuove uscite</h3>
                     <p>Giochi incredibili per PS4 e PS5 disponibili ora</p>
                 </div>
             </div>
 
-            <div class="container-nuove-uscite" id="change-slide">
+            <div className="container-nuove-uscite" id="change-slide">
 
-                <div class="box1 change-slide">
+                <div className="box1 change-slide">
                     <CardsSliderHomepage img={quarry} link="" title="The Quarry" />
                     <CardsSliderHomepage img={stray} link="" title="Stray" />
                     <CardsSliderHomepage img={horizon} link="" title="Horizon Forbidden West" />
                     <CardsSliderHomepage img={elden} link="" title="Elden Ring" />
                 </div>
 
-                <div class="box2 change-slide">
+                <div className="box2 change-slide">
                     <CardsSliderHomepage img={uncharted} link="" title="UNCHARTED™: Legacy of Thieves Collection" />
                     <CardsSliderHomepage img={tiny} link="" title="Tiny Tina's Wonderland" />
                     <CardsSliderHomepage img={sifu} link="" title="Sifu" />
@@ -80,7 +80,7 @@ function Slide({move}){
                     
                 </div>
 
-                <div class="box3 change-slide">
+                <div className="box3 change-slide">
                     <CardsSliderHomepage img={lego} link="" title="LEGO Star Wars: The Skywalker Saga" />
                     <CardsSliderHomepage img={ghostwire} link="" title="Ghostwire: Tokyo" />
                     <CardsSliderHomepage img={gt} link="" title="Gran Turismo® 7" />
@@ -89,10 +89,10 @@ function Slide({move}){
 
             </div>
 
-            <div class="newdots">
-                <div class="change-dot"></div>
-                <div class="change-dot"></div>
-                <div class="change-dot"></div>
+            <div className="newdots">
+                <div className="change-dot"></div>
+                <div className="change-dot"></div>
+                <div className="change-dot"></div>
             </div>
 
         </div>
@@ -102,24 +102,24 @@ function Slide({move}){
 
 function Slide2({move}){
     return(
-        <div class="new-section-1" style={move}>
-            <div class="titles-container-nuove-uscite">
-                <div class="new-releases">
+        <div className="new-section-1" style={move}>
+            <div className="titles-container-nuove-uscite">
+                <div className="new-releases">
                     <h3>In arrivo</h3>
                     <p>Nuove entusiasmanti esperienze sono appena dietro l'angolo</p>
                 </div>
             </div>
 
-            <div class="container-nuove-uscite" id="change-slide">
+            <div className="container-nuove-uscite" id="change-slide">
 
-                <div class="box1 change-slide">
+                <div className="box1 change-slide">
                     <CardsSliderHomepage img={hogwarts} link="" title="Hogwarts Legacy" />
                     <CardsSliderHomepage img={fifa} link="" title="EA SPORTS™ FIFA 23" />
                     <CardsSliderHomepage img={callisto} link="" title="The Callisto Protocol" />
                     <CardsSliderHomepage img={gotham} link="" title="Gotham Knights" />
                 </div>
 
-                <div class="box2 change-slide">
+                <div className="box2 change-slide">
                     <CardsSliderHomepage img={saints} link="" title="Saints Row" />
                     <CardsSliderHomepage img={forspoken} link="" title="Forspoken" />
                     <CardsSliderHomepage img={call} link="" title="Call of Duty: Modern Warfare II" />
@@ -127,7 +127,7 @@ function Slide2({move}){
                     
                 </div>
 
-                <div class="box3 change-slide">
+                <div className="box3 change-slide">
                     <CardsSliderHomepage img={suicide} link="" title="Suicide Squad: Kill the Justice League" />
                     <CardsSliderHomepage img={sonic} link="" title="Sonic Frontiers" />
                     <CardsSliderHomepage img={speed} link="" title="Need for Speed Unbound" />
@@ -136,10 +136,10 @@ function Slide2({move}){
 
             </div>
 
-            <div class="newdots">
-                <div class="change-dot"></div>
-                <div class="change-dot"></div>
-                <div class="change-dot"></div>
+            <div className="newdots">
+                <div className="change-dot"></div>
+                <div className="change-dot"></div>
+                <div className="change-dot"></div>
             </div>
 
         </div>

@@ -5,7 +5,7 @@ import { ScrollTop } from "./components/elements/Scroll";
 export function Root(){
     return (
         <BrowserRouter>
-        <ScrollTop />
+            <ScrollTop />
             <App />
         </BrowserRouter>
     )

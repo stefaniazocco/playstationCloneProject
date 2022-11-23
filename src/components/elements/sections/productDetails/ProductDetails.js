@@ -3,9 +3,9 @@ import "./productDetails.scss"
 export function ProductDetails({product}){
     return(
         
-        <div class="product-details">
-            <div class="details-title">Dettagli prodotto</div>
-            <div class="details-description">
+        <div className="product-details">
+            <div className="details-title">Dettagli prodotto</div>
+            <div className="details-description">
                 {product.details.title}
                 <ul>
                     {product.details.one && <li>{product.details.one}</li>}
