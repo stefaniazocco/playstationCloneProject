@@ -1,0 +1,22 @@
+.robot404-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  .robot-message {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 30%;
+    margin: 0px 0px 40px 150px;
+    color: white;
+    .robot-first-title {
+      font-weight: 350;
+    }
+    .robot-second-title {
+      font-weight: 350;
+    }
+  }
+}

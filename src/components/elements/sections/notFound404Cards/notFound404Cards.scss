@@ -1,0 +1,33 @@
+.redirection404-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 0 50px 0;
+  width: 100vw;
+  height: 95vh;
+
+
+  .cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .map-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .map {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      color: #0068bd;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
