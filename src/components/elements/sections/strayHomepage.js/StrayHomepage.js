@@ -11,8 +11,8 @@ import { Button } from "../../buttons/Button"
 
 export function StrayHomepage() {
     return(
-        <section class="stray-section">
-            <div class="stray-background">
+        <section className="stray-section">
+            <div className="stray-background">
                 <picture>          
                     <source srcset={stray3000} media="(min-width: 3000px)" />
                     <source srcset={stray1367} media="(min-width: 1367px)" />
@@ -23,8 +23,8 @@ export function StrayHomepage() {
                 </picture>
             </div>
 
-            <div class="stray-fade"></div>
-            <div class="stray-text">
+            <div className="stray-fade"></div>
+            <div className="stray-text">
                 <img src={straylogo} />
                 <h2>Fuggi dalla città</h2>
                 <p>Svela antichi misteri e trova la strada di casa 

@@ -18,16 +18,16 @@ export function ProductRight({product}){
     const [value, setValue] = useState(options[0])
 
     return(
-        <div class="product-right">
+        <div className="product-right">
             <ProductTitle product={product} />
 
-            <div class="product-quantity d-flex">
+            <div className="product-quantity d-flex">
 
                 {product.hasSize ?
                     <>
                         <Select value={value} onChange={o => setValue(o)} options={options} />
                         
-                        <div class="quantity-div">
+                        <div className="quantity-div">
                             <Counter />
                         </div> 
                     </> :
@@ -36,11 +36,11 @@ export function ProductRight({product}){
 
             </div>
 
-            <div class="price-description">
+            <div className="price-description">
                 I prezzi includono l’IVA del Regno Unito. Per spedizioni al di fuori del Regno Unito, il costo dell’IVA sarà ricalcolato in fase di checkout.
             </div>
-            <button class="add-to-cart">Aggiungi al carrello</button>
-            <div><Link class="shipping-info">Informazioni sulla spedizione</Link></div>
+            <button className="add-to-cart">Aggiungi al carrello</button>
+            <div><Link className="shipping-info">Informazioni sulla spedizione</Link></div>
         </div>
     )
 }

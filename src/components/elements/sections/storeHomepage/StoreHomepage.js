@@ -19,10 +19,10 @@ import { useParams } from "react-router-dom";
 export function StoreHomepage() {
 
     return(
-        <section class="store-section">
+        <section className="store-section">
 
             {/* BACKGROUND */}
-            <picture class="store-section-bg" data-alt="immagine di fondo">
+            <picture className="store-section-bg" data-alt="immagine di fondo">
                 <source srcset={bg3000} media="(min-width: 2400px)" />
                 <source srcset={bg1367} media="(min-width: 1367px)" />
                 <source srcset={bg1024} media="(min-width: 1024px)" />
@@ -32,10 +32,10 @@ export function StoreHomepage() {
             </picture>
 
             {/* CONTENUTO */}
-            <div class="store-section-content">
+            <div className="store-section-content">
 
                 {/* TITOLO */}
-                <div class="store-content-title">
+                <div className="store-content-title">
                     <img src={logo} alt="logo playstation store" />
                     <h2>Abbigliamento e merchandise su licenza ufficiale di PlayStation</h2>
                     <p>Visita il negozio PlayStation Gear per accessori ufficiali, oggetti collezionabili, abbigliamento e
@@ -43,7 +43,7 @@ export function StoreHomepage() {
                 </div>
 
                 {/* CARD */}
-                <div class="store-card-div">
+                <div className="store-card-div">
                     <CardsStoreHomepage img={hoodie} product="Felpa con zip Heritage PlayStation™" link="/product/hoodie" />
                     <CardsStoreHomepage img={tshirt} product="Maglietta logo PlayStation" link="/product/tshirt" />
                     <CardsStoreHomepage img={hat} product="Cappello di marca PlayStation ™ 47" link="/product/hat" />

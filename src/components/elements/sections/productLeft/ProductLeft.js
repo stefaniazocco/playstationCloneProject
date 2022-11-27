@@ -1,25 +1,62 @@
-import "./productLeft.scss"
+import { useState } from "react";
+import "./productLeft.scss";
+import ReactImageMagnify from "@vorld/react-image-magnify";
 
-export function ProductLeft({product}){
-    return(
-        <div class="product-left">
-            <div class="image-little">
-                {product.img.small1 && <img class="dot2" src={product.img.small1} alt="" />}
-                {product.img.small2 && <img class="dot2" src={product.img.small2} alt="" />}
-                {product.img.small3 && <img class="dot2" src={product.img.small3} alt="" />}
-            </div>
-            <div class="img-zoom-container">
-                {product.img.big1 &&<><div class="zoomer img-zoom-lens"></div>
-                <img class="image-big mySlides2" id="myimage" src={product.img.big1} alt="" /></>}
-                {product.img.big2 && <><div class="zoomer img-zoom-lens2"></div>
-                <img class="image-big mySlides2" id="myimage2" src={product.img.big2} alt="" /></>}
-                {product.img.big3 && <><div class="zoomer img-zoom-lens3"></div>
-                <img class="image-big mySlides2" id="myimage3" src={product.img.big3} alt="" /></>}
+export function ProductLeft({ product }) {
+  const [number, setNumber] = useState(product.img.big1);
 
-                {product.img.big1 && <div id="myresult" class="img-zoom-result show"></div>}
-                {product.img.big2 && <div id="myresult2" class="img-zoom-result show"></div>}
-                {product.img.big3 && <div id="myresult3" class="img-zoom-result show"></div>}
-            </div>                            
-        </div>
-    )
+  return (
+    <div className="product-left">
+      <div className="image-little">
+        {product.img.small1 && (
+          <img
+            onClick={() => setNumber(product.img.big1)}
+            src={product.img.small1}
+            alt=""
+          />
+        )}
+        {product.img.small2 && (
+          <img
+            onClick={() => setNumber(product.img.big2)}
+            src={product.img.small2}
+            alt=""
+          />
+        )}
+        {product.img.small3 && (
+          <img
+            onClick={() => setNumber(product.img.big3)}
+            src={product.img.small3}
+            alt=""
+          />
+        )}
+      </div>
+      <div className="img-zoom-container">
+        {/* <img className="image-big mySlides2" id="myimage" src={number} alt="" /> */}
+        <ReactImageMagnify
+          {...{
+            smallImage: {
+              alt: "Wristwatch by Ted Baker London",
+              isFluidWidth: false,
+              src: number,
+              width: 500,
+              height: 500,
+            },
+            largeImage: {
+              src: number,
+              width: 1600,
+              height: 1600,
+            },
+            shouldUsePositiveSpaceLens: true,
+            lensStyle: {
+              background: 'hsla(0, 0%, 100%, .5)',
+              border: '1px solid black',
+              zIndex: 6
+            },
+            enlargedImagePortalId: "img-zoom-result"
+          }}
+        />
+        <div id="img-zoom-result"></div>
+      </div>
+    </div>
+  );
 }
