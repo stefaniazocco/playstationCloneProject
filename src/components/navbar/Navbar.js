@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./navbar.scss";
 import Dropdown from "./Dropdown";
-import PS5Icon from "../../assets/icons/PS_icona1.png";
-import PS4Icon from "../../assets/icons/PS_icona2.png";
-import PSVRIcon from "../../assets/icons/PS_icona3.png";
-import PSPlusIcon from "../../assets/icons/PS_icona4.png";
-import PSStoreIcon from "../../assets/icons/PS_icona5.png";
 import { BiSearchAlt2 } from "react-icons/bi";
 import Sonybar from "./Sonybar";
 import { navItems } from "./NavItemList";
@@ -57,7 +52,7 @@ const Navbar = () => {
           <ul className="navbar-nav me-auto">
             {/* Dropdown Giochi */}
             {navItem.map((item, id) => {
-              return <Dropdown key={id} icon={item.icon} title={item.title} />;
+              return <Dropdown key={id} icon={item.icon} title={item.title} footerLink={item.footerLink} />;
             })}
           </ul>
           <div className="mx-2 d-flex">
