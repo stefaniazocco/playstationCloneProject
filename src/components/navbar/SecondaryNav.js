@@ -5,7 +5,7 @@ const SecondaryNav = (props) => {
     <>
       {/* PS4 Section Nav */}
       <nav id="nav-ps4-section" className="navbar-light bg-light">
-        <div className="d-flex flex-row justify-content-center px-2 ">
+        <div className="d-flex flex-row justify-content-center px-2" style={{ boxShadow: "0px 9px 14px 5px rgba(0,0,0,0.10)" }}>
           <div className="pt-2">
             <ul className="d-flex nav-ps4 py-2 px-2">
               <li className="px-2">

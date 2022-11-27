@@ -5,9 +5,9 @@ import SonyLogo from "../../assets/icons/sony-logo.png"
 const Sonybar = () => {
     
   return (
-    <div class="sony-bar">
-        <span class="logo-sony">
-          <img class="mb-1 mx-3" src={SonyLogo} alt="" />
+    <div className="sony-bar">
+        <span className="logo-sony">
+          <img className="mb-1 mx-3" src={SonyLogo} alt="" />
         </span>
       </div>
   )
