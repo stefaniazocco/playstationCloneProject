@@ -1,28 +1,28 @@
 @import url(./assets/font/stylesheet.css);
 
-$colorBlack: #1F1F1F;
-$colorWhite: #FFFFFF;
+$colorBlack: #1f1f1f;
+$colorWhite: #ffffff;
 $colorWhiteHover: #e5e5e5;
 $colorBlue: #2d64e6;
 $colorBlueHover: #3951c1;
 $colorRed: #cf4500;
 $colorRedHover: #bc3c04;
-$colorFooter:#00439C ;
+$colorFooter: #00439c;
 $colorCookies: #0072ce;
 $colorGray: #727171;
-$colorTransparentGrey:  rgba(245,247,250,0.6);
-$colorPurple:#9a60d7;
-$colorPurpleHover:#8b44d7;
+$colorTransparentGrey: rgba(245, 247, 250, 0.6);
+$colorPurple: #9a60d7;
+$colorPurpleHover: #8b44d7;
 
 body {
-    color: $colorBlack;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-family: "SST";
-    overflow-x: hidden;
-    position: relative;
+  color: $colorBlack;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "SST";
+  overflow-x: hidden;
+  position: relative;
 }
 
 // utils
@@ -31,11 +31,8 @@ body {
 @import "./components/footer/footerMain.scss";
 // @import "./components/navbar/navbar.scss";
 
-
 //pages
 @import "./pages/homepage/homepage.scss";
 @import "./pages/country-selector/countrySelector.scss";
 @import "./pages/storeGames/storeGames.scss";
-@import "./pages/login/login.scss"
-
-
+@import "./pages/login/login.scss";

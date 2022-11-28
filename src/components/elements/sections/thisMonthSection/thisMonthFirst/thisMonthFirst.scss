@@ -1,0 +1,29 @@
+.month-godOf {
+  height: 65vh;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .this-month-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 39%;
+    margin: 0px 0px 40px 150px;
+    .this-month-firstTitle {
+      font-weight: 300;
+    }
+    .this-month-secondTitle {
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 20px;
+      opacity: 0.7;
+    }
+  }
+  .more-infos {
+    text-decoration: none;
+  }
+}
