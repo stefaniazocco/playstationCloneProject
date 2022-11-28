@@ -13,7 +13,11 @@ import Navbar from "../../components/navbar/Navbar";
 
 import Hero from "../../components/elements/sections/sliderHero/Hero";
 import PS5 from "../../components/elements/sliderPS5/PS5";
-import { SalesPlay } from "../../components/elements/sections/sales-plus/SalesPlay";
+import { SalesPlay } from "../../components/elements/sections/sales-plus/SalesPlay"
+import NavbarMobile from "../../components/navbar/NavbarMobile";
+
+
+
 
 export function Homepage() {
   const [close, setClose] = useState(true);
@@ -39,6 +43,7 @@ export function Homepage() {
   return (
     <>
       <Navbar />
+      <NavbarMobile/>
       <Hero />
       <PS5 />
       {/* <PlayPlus /> */}

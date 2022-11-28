@@ -22,17 +22,17 @@ export function Product(){
         <>
             <ProductNav />
             <main>
-                <section class="d-flex product-section">
-                    <div class="centered-div">
-                        <div class="breadcrumbs-div">
-                            <ul class="d-flex">
+                <section className="d-flex product-section">
+                    <div className="centered-div">
+                        <div className="breadcrumbs-div">
+                            <ul className="d-flex">
                                 <li><Link to="/">Home</Link></li>
                                 <li><Link to="/">PROPRIETÀ</Link></li>
                                 <li><Link to="/">PlayStation</Link></li>
                                 <li>{product.title}</li>
                             </ul>
                         </div>
-                        <div class="product-main">
+                        <div className="product-main">
                             <ProductLeft product={product} />
                             <ProductTitle product={product} />
                             <ProductRight product={product} />

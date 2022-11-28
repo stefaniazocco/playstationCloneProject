@@ -1,10 +1,14 @@
 import PS5Icon from "../../../../assets/icons/PS_icona1.png";
 import PSStoreIcon from "../../../../assets/icons/PS_icona5.png";
+import PSAccountSicurezza from "../../../../assets/icons/PS_SupportIcon_AccountSicurezza.png";
+import PSSicurezzaLivelli from "../../../../assets/icons/PS_SupportIcon_SicurezzaLivelli.png";
+import PSSicurezzaGiochi from "../../../../assets/icons/PS_SupportIcon_Giochi.png";
+import PSSicurezza from "../../../../assets/icons/PS_SupportIcon_Sicurezza.png";
 
 export const IconSectionItem = [
   {
     id: 1,
-    icon: PSStoreIcon,
+    icon: PSAccountSicurezza,
     title: "Account e sicurezza",
   },
   {
@@ -14,12 +18,12 @@ export const IconSectionItem = [
   },
   {
     id: 3,
-    icon: PSStoreIcon,
+    icon: PSSicurezzaLivelli,
     title: "Servizi con più livelli",
   },
   {
     id: 4,
-    icon: PSStoreIcon,
+    icon: PSSicurezzaGiochi,
     title: "Giochi",
   },
   {
@@ -29,7 +33,7 @@ export const IconSectionItem = [
   },
   {
     id: 6,
-    icon: PSStoreIcon,
+    icon: PSSicurezza,
     title: "Sicurezza",
   },
 ];

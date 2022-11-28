@@ -18,7 +18,7 @@ export function Select({ value, onChange, options }) {
     }, [isOpen])
     return (
         <div>
-            <div class="flexa">
+            <div className="flexa">
                 <label><strong>Scegli quantità</strong></label>
                 <a href="#"><span>Guida alle taglie</span></a>
             </div>

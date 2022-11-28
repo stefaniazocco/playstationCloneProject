@@ -23,14 +23,15 @@ function Hero() {
   return (
     <>
       <Carousel
-        interval={5000}
+        interval={10000}
         controls={false}
-        fade={true}
+        style={{ backgroundColor: "black" }}
+        slide={false}
         activeIndex={activeIndex}
         onSelect={(key) => setActiveIndex(key)}
       >
         {slide.map((item) => (
-          <Carousel.Item key={item.id}>
+          <Carousel.Item key={item.id} className="fade-in">
             <Link>
               <GradientHero gradient={item.gradient} />
               <SliderHeroItem
