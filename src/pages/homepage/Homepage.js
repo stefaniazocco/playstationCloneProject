@@ -46,7 +46,7 @@ export function Homepage() {
       <NavbarMobile/>
       <Hero />
       <PS5 />
-      {/* <PlayPlus /> */}
+      <PlayPlus />
       <ThisMonthSection />
       <StrayHomepage />
       <SliderHomepage />
