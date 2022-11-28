@@ -11,33 +11,33 @@ export function Login() {
         setInput(value)
     }
     return(
-        <section class="login-page d-flex justify-content-center align-items-center">
-            <img class="background" src={wallpaper} alt="" />
-            <div class="card">
-                <div class="sony">
+        <section className="login-page d-flex justify-content-center align-items-center">
+            <img className="background" src={wallpaper} alt="" />
+            <div className="card">
+                <div className="sony">
                     <img src={sony} alt="" />
                 </div>
-                <Link to="/" class="playstation">
+                <Link to="/" className="playstation">
                     <img src={ps} alt="" />
                 </Link>
-                <div class="white-box">
-                    <div class="form-div">
+                <div className="white-box">
+                    <div className="form-div">
                         <p>Accedi a PlayStation con uno dei tuoi account Sony.</p>
-                        <a class="info" href="">Ulteriori informazioni</a>
-                        <div class="d-flex flex-column align-items-center">
+                        <a className="info" href="">Ulteriori informazioni</a>
+                        <div className="d-flex flex-column align-items-center">
                             <form>
                                 <input type="email" placeholder="ID di accesso (indirizzo di e-mail)" value={input} onChange={handleInput}  />
                                 <br />
                                 <button style={{opacity: !input && 0.3}}>Avanti</button>
                             </form>
-                            <a class="access" href="">Problemi di accesso?</a>
+                            <a className="access" href="">Problemi di accesso?</a>
                             <br />
-                            <button class="account">Crea nuovo account</button>
+                            <button className="account">Crea nuovo account</button>
                         </div>
 
                     </div>
 
-                    <a href="" class="map">Guida/Mappa del sito</a>
+                    <a href="" className="map">Guida/Mappa del sito</a>
                 </div>
             </div>
         </section>
