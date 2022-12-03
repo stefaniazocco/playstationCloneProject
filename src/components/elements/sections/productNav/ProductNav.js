@@ -7,6 +7,7 @@ import user from "../../../../assets/images/product/store-user.png"
 import "./productNav.scss";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 //classi pippo, scss, dimensioni immagini
 
@@ -39,6 +40,8 @@ export function ProductNav() {
             setDrop2("close-2")
         }
     }
+
+    const product = useSelector((state) => state.product);
     
 
     return (
@@ -61,7 +64,7 @@ export function ProductNav() {
                         <a href="#"><BsSearch style={{fontSize: 20, color: "black"}} /></a>
                         <a href="#"><img src={ita} /></a>
                         <a href="#"><img src={user} /></a>
-                        <Link to="/cart"><BsCart4 style={{fontSize: 20, color: "black"}} /> <span className="span">0</span></Link>
+                        <Link to="/cart"><BsCart4 style={{fontSize: 20, color: "black"}} /> <span className="span">{product.length}</span></Link>
                     </div>
                 </nav>
             </div>
@@ -75,7 +78,7 @@ export function ProductNav() {
                             </button>
                         </div>
                         <ul className={`${"ul-2"} ${drop1}`} id="ul-2">
-                            <li className="li-2"><a href="#">PlayStation</a></li>
+                            <li className="li-2"><Link to="/">PlayStation</Link></li>
                             <li className="li-2"><a href="#">Icone dei personaggi di PlayStation Studios</a></li>
                             <li className="li-2"><a href="#">ASTRO BOT Rescue Mission</a></li>
                             <li className="li-2"><a href="#">Demon's Souls</a></li>

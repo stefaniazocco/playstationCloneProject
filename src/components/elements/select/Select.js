@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./select.scss"
 
-export function Select({ value, onChange, options }) {
+export function Select({ value, onChange, options, product }) {
     const [isOpen, setIsOpen] = useState(false)
     const [highlightedIndex, setHighlightedIndex] = useState(0)
 
@@ -15,7 +15,9 @@ export function Select({ value, onChange, options }) {
 
     useEffect(() => {
         if (isOpen) setHighlightedIndex(0) // highlight first li every time it opens
+        localStorage.setItem(`Size${product.name}`, [value.value])
     }, [isOpen])
+
     return (
         <div>
             <div className="flexa">

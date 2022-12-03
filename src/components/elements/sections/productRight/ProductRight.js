@@ -9,11 +9,11 @@ import { ProductTable } from "./ProductTable"
 import { ProductTitle } from "./ProductTitle"
 
 const options = [
-    {label : "S adulto - 70.00€", value: 1, available: true},
-    {label : "M adulto - 70.00€", value: 2, available: true},
-    {label : "L adulto - 70.00€", value: 3, available: true},
-    {label : "XL adulto - 70.00€", value: 4, available: true},
-    {label : "2XL adulto - 72.00€", value: 5, available: true},
+    {label : "S adulto - 70.00€", value: "S adulto", available: true},
+    {label : "M adulto - 70.00€", value: "M adulto", available: true},
+    {label : "L adulto - 70.00€", value: "L adulto", available: true},
+    {label : "XL adulto - 70.00€", value: "XL adulto", available: true},
+    {label : "2XL adulto - 72.00€", value: "2XL adulto", available: true},
   ]
 export function ProductRight({product}){
 
@@ -27,7 +27,7 @@ export function ProductRight({product}){
 
                 {product.hasSize ?
                     <>
-                        <Select value={value} onChange={o => setValue(o)} options={options} />
+                        <Select product={product} value={value} onChange={o => setValue(o)} options={options} />
                         
                         <div className="quantity-div">
                             <Counter product={product} />

@@ -1,6 +1,7 @@
 import { products } from "../pages/product/products";
 
 export const ADDPRODUCT = "PRODUCT@ADDPRODUCT";
+export const REMOVEPRODUCT = "PRODUCT@REMOVEPRODUCT";
 
 export const addToCart = (name) => {
   const data = products[name];
@@ -13,7 +14,15 @@ export const addToCart = (name) => {
         image: data.img.big1,
         price: data.priceN,
         number: data.number,
-        quantity: localStorage.getItem(`${data.name}`)
+        quantity: localStorage.getItem(`Quantity${data.name}`),
+        size: localStorage.getItem(`Size${data.name}`)
     },
   };
 };
+
+export const removeFromCart = (name) => {
+  return {
+    type: REMOVEPRODUCT,
+    payload: name
+  }
+}

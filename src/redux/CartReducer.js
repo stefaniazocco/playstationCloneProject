@@ -1,4 +1,4 @@
-import { ADDPRODUCT, INCREMENT, DECREMENT } from "./cartActions"
+import { ADDPRODUCT, REMOVEPRODUCT } from "./cartActions"
 
 const defaultStateProd = []
 const defaultStateCount = 1
@@ -9,9 +9,9 @@ export function productReducer(state = defaultStateProd, action){
         case ADDPRODUCT: {
             return [...state, action.payload]
         }
-        // case REMOVE: {
-        //     return state.filter(todo => todo.id !== action.payload)
-        // }        
+        case REMOVEPRODUCT: {
+            return state.filter(product => product.name !== action.payload)
+        }        
         // case EDIT: {
         //     return state.map(todo =>{
         //         if(todo.id === action.payload.id) {
@@ -25,17 +25,3 @@ export function productReducer(state = defaultStateProd, action){
         }
     }
 }
-
-// export function counterReducer(state = defaultStateCount, action){
-//     switch(action.type) {
-//         case INCREMENT: {
-//             return state + action.payload
-//         }
-//         case DECREMENT: {
-//             return state - action.payload
-//         }
-//         default: {
-//             return state
-//         }
-//     }
-// }

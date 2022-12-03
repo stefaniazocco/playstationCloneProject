@@ -37,8 +37,8 @@ export function Counter({product}){
     // const counter = useSelector((state) => state.counter);
 
     useEffect(() => {
-        localStorage.setItem(`${product.name}`, counter)
-        console.log(product.name)
+        localStorage.setItem(`Quantity${product.name}`, [counter])
+        
     }, [counter])
 
     return (
