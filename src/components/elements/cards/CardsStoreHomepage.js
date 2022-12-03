@@ -1,11 +1,12 @@
 import { Button } from "../buttons/Button";
+import { ButtonSelf } from "../buttons/ButtonSelf";
 
 export function CardsStoreHomepage({img, product, link}) {
     return(
         <div class="store-card">
             <img src={img} alt={product}/>
             <p>{product}</p>
-            <Button className="button-red buttonStore" link={link} string="Acquista ora" />
+            <ButtonSelf className="button-red buttonStore" link={link} string="Acquista ora" />
         </div>
     )
 }

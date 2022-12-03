@@ -10,6 +10,7 @@ import { Presentation } from "./pages/presentation/Presentation";
 import { Product } from "./pages/product/Product";
 
 import { NotFound } from "./pages/notFound/NotFound";
+import { Cart } from "./pages/cart/Cart";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/store-games" element={<StoreGames />} />
         <Route path="/country-selector" element={<CountrySelector />} />
         <Route path="/product/:name" element={<Product />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/support" element={<Support />} />
         <Route path="/login" element={<Login />} />
         <Route path="/presentation" element={<Presentation />} />

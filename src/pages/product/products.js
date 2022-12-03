@@ -16,8 +16,10 @@ import mugB from "../../assets/images/product/mug-big.jpg"
 
 export const products= { 
     hoodie : {
+        name: "hoodie",
         title: "Felpa con cappuccio e zip PlayStation Heritage",
         price: "70,00€",
+        priceN: 70,
         number: 1530159,
         hasSize: true,
         details: {
@@ -37,8 +39,10 @@ export const products= {
     },
 
     tshirt : {
+        name: "tshirt",
         title: "Maglietta PlayStation ™",
         price: "25,00€",
+        priceN: 25,
         number: 1525126,
         hasSize: true,
         details: {
@@ -58,8 +62,10 @@ export const products= {
     },
 
     hat : {
+        name: "hat",
         title: "Cappello di marca PlayStation ™ 47",
         price: "25,00€",
+        priceN: 25,
         number: 1525129,
         hasSize: false,
         details: {
@@ -79,8 +85,10 @@ export const products= {
     },
 
     mug : {
+        name: "mug",
         title: "Tazza PlayStation Heritage",
         price: "20,00€",
+        priceN: 20,
         number: 1530165,
         hasSize: false,
         details: {

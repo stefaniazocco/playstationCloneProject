@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import { addToCart } from "../../../../redux/cartActions"
+import { store } from "../../../../redux/store"
 import { Counter } from "../../counter/StoreCounter"
 import { Select } from "../../select/Select"
 import "./productRight.scss"
@@ -28,7 +30,7 @@ export function ProductRight({product}){
                         <Select value={value} onChange={o => setValue(o)} options={options} />
                         
                         <div className="quantity-div">
-                            <Counter />
+                            <Counter product={product} />
                         </div> 
                     </> :
                     <ProductTable product={product} />
@@ -39,7 +41,7 @@ export function ProductRight({product}){
             <div className="price-description">
                 I prezzi includono l’IVA del Regno Unito. Per spedizioni al di fuori del Regno Unito, il costo dell’IVA sarà ricalcolato in fase di checkout.
             </div>
-            <button className="add-to-cart">Aggiungi al carrello</button>
+            <button className="add-to-cart" onClick={() =>store.dispatch(addToCart(product.name))}>Aggiungi al carrello</button>
             <div><Link className="shipping-info">Informazioni sulla spedizione</Link></div>
         </div>
     )

@@ -6,6 +6,7 @@ import ita from "../../../../assets/images/product/ita.png"
 import user from "../../../../assets/images/product/store-user.png"
 import "./productNav.scss";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 //classi pippo, scss, dimensioni immagini
 
@@ -60,7 +61,7 @@ export function ProductNav() {
                         <a href="#"><BsSearch style={{fontSize: 20, color: "black"}} /></a>
                         <a href="#"><img src={ita} /></a>
                         <a href="#"><img src={user} /></a>
-                        <a href="#"><BsCart4 style={{fontSize: 20, color: "black"}} /> <span className="span">0</span></a>
+                        <Link to="/cart"><BsCart4 style={{fontSize: 20, color: "black"}} /> <span className="span">0</span></Link>
                     </div>
                 </nav>
             </div>
