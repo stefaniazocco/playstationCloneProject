@@ -1,6 +1,8 @@
 import sony from "../../assets/images/homepage/sony-logo.png"
 import logo from "../../assets/images/homepage/logo-black.svg"
+import "./countrySelector.scss"
 import { useNavigate } from "react-router-dom"
+
 
 export function CountrySelector() {
     
@@ -9,31 +11,31 @@ export function CountrySelector() {
     return (
         
         <div className="country-selector">
-            <div classNome="sony-bar">
+            <div className="sony-bar">
 
-                <span classNome="logo-sony"><img classNome="mb-1" src={sony} alt=""/></span>
+                <span className="logo-sony"><img className="mb-1" src={sony} alt=""/></span>
             </div>
-            <div classNome="main">
-                <div classNome="image" onClick={() => navigate("/")}><img src={logo} alt=""/></div>
+            <div className="main">
+                <div className="image" onClick={() => navigate("/")}><img src={logo} alt=""/></div>
 
-                <div classNome="title">
+                <div className="title">
 
                     <h1>Please select your country / region</h1>
 
                 </div>
             </div>
             <hr />
-                <div classNome="main2">
-                    <div classNome="languages">
-                        <div classNome="letter-a">
-                            <div classNome="letterbox letterbox1">A</div>
+                <div className="main2">
+                    <div className="languages">
+                        <div className="letter-a">
+                            <div className="letterbox letterbox1">A</div>
                             <a href="#">Argentina</a>
                             <a href="#">Australia</a>
                             <a href="#">Austria (Österreich)</a>
                         </div>
 
-                        <div classNome="letterb">
-                            <div classNome="letterbox">B</div>
+                        <div className="letterb">
+                            <div className="letterbox">B</div>
                             <a href="#">Bahrain (English)</a>
                             <a href="#">Bahrain (Arabic)</a>
                             <a href="#">Belgium (Français)</a>
@@ -44,8 +46,8 @@ export function CountrySelector() {
                             <a href="#">Bulgaria (България)</a>
                         </div>
 
-                        <div classNome="letter-c">
-                            <div classNome="letterbox">C</div>
+                        <div className="letter-c">
+                            <div className="letterbox">C</div>
                             <a href="#">Canada</a>
                             <a href="#">Canada (French)</a>
                             <a href="#">Chile</a>
@@ -59,35 +61,35 @@ export function CountrySelector() {
                             <a href="#">Czech Republic (Ceská Republika)</a>
                         </div>
 
-                        <div classNome="letter-d">
-                            <div classNome="letterbox">D</div>
+                        <div className="letter-d">
+                            <div className="letterbox">D</div>
                             <a href="#">Denmark (Danmark)</a>
                             <a href="#">Denmark (English)</a>
                         </div>
 
-                        <div classNome="letter-e">
-                            <div classNome="letterbox">E</div>
+                        <div className="letter-e">
+                            <div className="letterbox">E</div>
                             <a href="#">Ecuador</a>
                             <a href="#">El Salvador</a>
                         </div>
 
-                        <div classNome="letter-f">
-                            <div classNome="letterbox">F</div>
+                        <div className="letter-f">
+                            <div className="letterbox">F</div>
                             <a href="#">Finland (English)</a>
                             <a href="#">Finland (Suomi)</a>
                             <a href="#">France</a>
                         </div>
 
-                        <div classNome="letter-g">
-                            <div classNome="letterbox">G</div>
+                        <div className="letter-g">
+                            <div className="letterbox">G</div>
                             <a href="#">Germany (Deutschland)</a>
                             <a href="#">Greece (English)</a>
                             <a href="#">Greece (Ελλαδα)</a>
                             <a href="#">Guatemala</a>
                         </div>
 
-                        <div classNome="letter-h">
-                            <div classNome="letterbox">H</div>
+                        <div className="letter-h">
+                            <div className="letterbox">H</div>
                             <a href="#">Honduras</a>
                             <a href="#">Hong Kong (English)</a>
                             <a href="#">Hong Kong (简体中文)</a>
@@ -98,8 +100,8 @@ export function CountrySelector() {
                             <a href="#">Hungary (Magyarország)</a>
                         </div>
 
-                        <div classNome="letter-i">
-                            <div classNome="letterbox">I</div>
+                        <div className="letter-i">
+                            <div className="letterbox">I</div>
                             <a href="#">Iceland (English)</a>
                             <a href="#">India</a>
                             <a href="#">Indonesia (English)</a>
@@ -109,35 +111,35 @@ export function CountrySelector() {
                             <a href="../homepage/index.html">Italy</a>
                         </div>
 
-                        <div classNome="letter-j">
-                            <div classNome="letterbox">J</div>
+                        <div className="letter-j">
+                            <div className="letterbox">J</div>
                             <a href="#">Japan (日本)</a>
                         </div>
 
-                        <div classNome="letter-k">
-                            <div classNome="letterbox">K</div>
+                        <div className="letter-k">
+                            <div className="letterbox">K</div>
                             <a href="#">Korea (한국어)</a>
                             <a href="#">Kuwait (Arabic)</a>
                             <a href="#">Kuwait (English)</a>
                         </div>
 
-                        <div classNome="letter-l">
-                            <div classNome="letterbox">L</div>
+                        <div className="letter-l">
+                            <div className="letterbox">L</div>
                             <a href="#">Lebanon (Arabic)</a>
                             <a href="#">Lebanon (English)</a>
                             <a href="#">Luxembourg (Deutsch)</a>
                             <a href="#">Luxembourg (Français)</a>
                         </div>
 
-                        <div classNome="letter-m">
-                            <div classNome="letterbox">M</div>
+                        <div className="letter-m">
+                            <div className="letterbox">M</div>
                             <a href="#">Malaysia (English)</a>
                             <a href="#">Malta</a>
                             <a href="#">Mexico (México)</a>
                         </div>
 
-                        <div classNome="letter-n">
-                            <div classNome="letterbox">N</div>
+                        <div className="letter-n">
+                            <div className="letterbox">N</div>
                             <a href="#">Nederland</a>
                             <a href="#">New Zealand</a>
                             <a href="#">Nicaragua</a>
@@ -145,14 +147,14 @@ export function CountrySelector() {
                             <a href="#">Norway (Norge)</a>
                         </div>
 
-                        <div classNome="letter-o">
-                            <div classNome="letterbox">O</div>
+                        <div className="letter-o">
+                            <div className="letterbox">O</div>
                             <a href="#">Oman (Arabic)</a>
                             <a href="#">Oman (English)</a>
                         </div>
 
-                        <div classNome="letter-p">
-                            <div classNome="letterbox">P</div>
+                        <div className="letter-p">
+                            <div className="letterbox">P</div>
                             <a href="#">Panama (Panamá)</a>
                             <a href="#">Paraguay</a>
                             <a href="#">Peru (Perú)</a>
@@ -162,21 +164,21 @@ export function CountrySelector() {
                             <a href="#">Portugal</a>
                         </div>
 
-                        <div classNome="letter-q">
-                            <div classNome="letterbox">Q</div>
+                        <div className="letter-q">
+                            <div className="letterbox">Q</div>
                             <a href="#">Qatar (Arabic)</a>
                             <a href="#">Qatar (English)</a>
                         </div>
 
-                        <div classNome="letter-r">
-                            <div classNome="letterbox">R</div>
+                        <div className="letter-r">
+                            <div className="letterbox">R</div>
                             <a href="#">Romania (English)</a>
                             <a href="#">Romania (România)</a>
                             <a href="#">Russia (Россия)</a>
                         </div>
 
-                        <div classNome="letter-s">
-                            <div classNome="letterbox">S</div>
+                        <div className="letter-s">
+                            <div className="letterbox">S</div>
                             <a href="#">Saudi Arabia (Arabic)</a>
                             <a href="#">Saudi Arabia (English)</a>
                             <a href="#">Serbia (Srbija)</a>
@@ -194,8 +196,8 @@ export function CountrySelector() {
                             <a href="#">Switzerland (Italiano)</a>
                         </div>
 
-                        <div classNome="letter-t">
-                            <div classNome="letterbox">T</div>
+                        <div className="letter-t">
+                            <div className="letterbox">T</div>
                             <a href="#">Taiwan (English)</a>
                             <a href="#">Taiwan (台灣繁體中文)</a>
                             <a href="#">Thailand (English)</a>
@@ -204,8 +206,8 @@ export function CountrySelector() {
                             <a href="#">Turkey (Türkiye)</a>
                         </div>
 
-                        <div classNome="letter-u">
-                            <div classNome="letterbox">U</div>
+                        <div className="letter-u">
+                            <div className="letterbox">U</div>
                             <a href="#">Ukraine (Російська мова)</a>
                             <a href="#">Ukraine (Українська мова)</a>
                             <a href="#">United Arab Emirates/ Middle East (Arabic)</a>
@@ -214,8 +216,8 @@ export function CountrySelector() {
                             <a href="#">United Kingdom</a>
                             <a href="#">Uruguay</a>
                         </div>
-                        <div classNome="letter-v">
-                            <div classNome="letterbox">V</div>
+                        <div className="letter-v">
+                            <div className="letterbox">V</div>
                             <a href="#">Vietnam (English)</a>
                         </div>
                     </div>
@@ -223,13 +225,13 @@ export function CountrySelector() {
 
 
                 <footer>
-                    <div classNome="footer-div">
+                    <div className="footer-div">
                         <div>
-                            <div classNome="foot"><a href="#">Terms and Conditions</a></div>
-                            <div classNome="foot"><a href="#">Corporate Information</a></div>
-                            <div classNome="foot"><a href="#">Global Home</a></div>
+                            <div className="foot"><a href="#">Terms and Conditions</a></div>
+                            <div className="foot"><a href="#">Corporate Information</a></div>
+                            <div className="foot"><a href="#">Global Home</a></div>
                         </div>
-                        <div classNome="copy">© 2022 Sony Interactive Entertainment Inc.</div>
+                        <div className="copy">© 2022 Sony Interactive Entertainment Inc.</div>
                     </div>
                 </footer>
         </div>
