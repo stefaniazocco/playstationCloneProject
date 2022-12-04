@@ -39,7 +39,7 @@
   .store-card {
     width: calc(250px + 2vw);
     max-width: 370px;
-    height: 400px;
+    height: 450px;
     text-align: center;
     position: relative;
     justify-content: initial;

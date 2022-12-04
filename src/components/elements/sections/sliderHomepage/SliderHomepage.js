@@ -28,6 +28,7 @@ import sonic from "../../../../assets/images/homepage/sonic-frontiers-store-artw
 import speed from "../../../../assets/images/homepage/need-for-speed-unbound-store-artwork-01-en-25oct22.webp"
 import fighter from "../../../../assets/images/homepage/street-fighter-6-pack-01-ps4-ps5-02sep22.webp"
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 
 export function SliderHomepage(){
@@ -54,12 +55,13 @@ export function SliderHomepage(){
 }
 
 function Slide({move}){
+    const { t } = useTranslation();
     return(
         <div className="new-section-1" style={move} >
             <div className="titles-container-nuove-uscite">
                 <div className="new-releases">
-                    <h3>Nuove uscite</h3>
-                    <p>Giochi incredibili per PS4 e PS5 disponibili ora</p>
+                    <h3>{t("title-slider")}</h3>
+                    <p>{t("sub-slider")}</p>
                 </div>
             </div>
 
@@ -101,12 +103,13 @@ function Slide({move}){
 }
 
 function Slide2({move}){
+    const { t } = useTranslation();
     return(
         <div className="new-section-1" style={move}>
             <div className="titles-container-nuove-uscite">
                 <div className="new-releases">
-                    <h3>In arrivo</h3>
-                    <p>Nuove entusiasmanti esperienze sono appena dietro l'angolo</p>
+                    <h3>{t("title-slider2")}</h3>
+                    <p>{t("sub-slider2")}</p>
                 </div>
             </div>
 

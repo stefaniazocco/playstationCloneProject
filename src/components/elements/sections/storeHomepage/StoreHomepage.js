@@ -1,4 +1,5 @@
 import { CardsStoreHomepage } from "../../cards/CardsStoreHomepage";
+import { useTranslation } from "react-i18next";
 
 //images
 import tshirt from "../../../../assets/images/homepage/store-ps-logo-tshirt.webp"
@@ -17,7 +18,7 @@ import { useParams } from "react-router-dom";
 
 
 export function StoreHomepage() {
-
+    const { t } = useTranslation();
     return(
         <section className="store-section">
 
@@ -37,20 +38,19 @@ export function StoreHomepage() {
                 {/* TITOLO */}
                 <div className="store-content-title">
                     <img src={logo} alt="logo playstation store" />
-                    <h2>Abbigliamento e merchandise su licenza ufficiale di PlayStation</h2>
-                    <p>Visita il negozio PlayStation Gear per accessori ufficiali, oggetti collezionabili, abbigliamento e
-                        molto altro ancora</p>
+                    <h2>{t("store-title")}</h2>
+                    <p>{t("sub-title")}</p>
                 </div>
 
                 {/* CARD */}
                 <div className="store-card-div">
-                    <CardsStoreHomepage img={hoodie} product="Felpa con zip Heritage PlayStation™" link="/product/hoodie" />
-                    <CardsStoreHomepage img={tshirt} product="Maglietta logo PlayStation" link="/product/tshirt" />
-                    <CardsStoreHomepage img={hat} product="Cappello di marca PlayStation ™ 47" link="/product/hat" />
-                    <CardsStoreHomepage img={mug} product="Tazza Heritage PlayStation™" link="/product/mug" />
+                    <CardsStoreHomepage img={hoodie} product={t("product1")} link="/product/hoodie" string={t("acquista")}/>
+                    <CardsStoreHomepage img={tshirt} product={t("product2")} link="/product/tshirt" string={t("acquista")}/>
+                    <CardsStoreHomepage img={hat} product={t("product3")} link="/product/hat" string={t("acquista")}/>
+                    <CardsStoreHomepage img={mug} product={t("product4")} link="/product/mug" string={t("acquista")}/>
                 </div>
                 {/* BOTTONE */}
-                <Button className="button-white store-Button" link="#" string="Acquista la collezione" />
+                <Button className="button-white store-Button" link="#" string={t("collection")} />
 
             </div>
 

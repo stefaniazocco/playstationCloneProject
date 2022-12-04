@@ -12,8 +12,13 @@ import SliderHeroItem from "./SliderHeroItem";
 import GradientHero from "./GradientHero";
 import { SliderItems } from "./DataHero";
 import PreviewheroCarousel from "./PreviewheroCarousel";
+import { useTranslation } from "react-i18next";
+
 
 function Hero() {
+  
+  const { t } = useTranslation();
+  
   const [slide, setSlide] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
   useEffect(() => {
@@ -37,9 +42,9 @@ function Hero() {
               <SliderHeroItem
                 background={item.background}
                 logo={item.logo}
-                title={item.title}
-                content={item.content}
-                btnString={item.btnString}
+                title={t(item.title)}
+                content={t(item.content)}
+                btnString={t(item.btnString)}
               />
             </Link>
           </Carousel.Item>

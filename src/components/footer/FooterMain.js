@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import pslogo from "../../assets/images/homepage/footerLogo.svg"
 import sie from "../../assets/images/homepage/footerSie.svg"
 import globe from "../../assets/images/homepage/footerGlobe.svg"
+import { useTranslation } from "react-i18next";
 
 export function FooterMain(){
+    const { t } = useTranslation();
     return(
             <footer className="footer">
                 <div>
@@ -18,28 +20,26 @@ export function FooterMain(){
                     </div>
                     <div className="footer-bottom">
                         <img className="footer-sie" src={sie} alt="Sony Interactive Entertainment logo" />
-                        Website ©2022 Sony Interactive Entertainment Europe Limited. Tutti i contenuti, nomi dei giochi, nomi
-                        commerciali e/o di abbigliamento, marchi registrati, grafica e immagini associati sono marchi registrati
-                        e/o materiale protetto da copyright dei rispettivi proprietari. Tutti i diritti riservati. 
-                        <Link class="footer-maggiori-info" to="#">Maggiori info</Link>
+                        {t("website")}
+                        <Link class="footer-maggiori-info" to="#">{t("more-info")}</Link>
                     </div>
                     <ul className="footer-list1">
-                        <li> <Link to="/support">Supporto</Link></li>
-                        <li> <Link to="#">Termini di utilizzo del sito Web</Link></li>
+                        <li> <Link to="/support">{t("support")}</Link></li>
+                        <li> <Link to="#">{t("terms")}</Link></li>
                         <li> <Link to="#">PlayStation Studios</Link></li>
-                        <li> <Link to="#">Informativa sulla privacy e sui cookie</Link></li>
-                        <li> <Link to="#">Termini legali</Link></li>
-                        <li> <Link to="/presentation">Chi siamo</Link></li>
-                        <li> <Link to="#">PlayStation e l'ambiente</Link></li>
+                        <li> <Link to="#">{t("privacy")}</Link></li>
+                        <li> <Link to="#">{t("legals")}</Link></li>
+                        <li> <Link to="/presentation">{t("about")}</Link></li>
+                        <li> <Link to="#">{t("enviroment")}</Link></li>
                     </ul>
                     <ul className="footer-list2">
-                        <li> <Link to="#">Termini di servizio di PSN</Link></li>
-                        <li> <Link to="#">Termini di annullamento del PS Store</Link></li>
-                        <li> <Link to="#">Avvertenze per la salute</Link></li>
-                        <li> <Link to="#">Classificazioni per età</Link></li>
-                        <li> <Link to="#">Termini d'uso del Software</Link></li>
-                        <li> <Link to="#">Lavora con PlayStation</Link></li>
-                        <li> <Link to="#">Mappa del sito</Link></li>
+                        <li> <Link to="#">{t("psn")}</Link></li>
+                        <li> <Link to="#">{t("terms-unsub")}</Link></li>
+                        <li> <Link to="#">{t("health-warn")}</Link></li>
+                        <li> <Link to="#">{t("class-age")}</Link></li>
+                        <li> <Link to="#">{t("terms-software")}</Link></li>
+                        <li> <Link to="#">{t("work-play")}</Link></li>
+                        <li> <Link to="#">{t("website-map")}</Link></li>
                     </ul>
                     <ul className="footer-list3">
                         <li> <Link to="#">Facebook</Link></li>

@@ -1,0 +1,29 @@
+.card404-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  width: 22%;
+  height: 450px;
+  text-align: center;
+}
+.card404-wrapper .card-logo {
+  width: 150px;
+  height: 150px;
+}
+.card404-wrapper .card-second-title {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+.card404-wrapper .card-first-title {
+  font-weight: 350;
+}
+
+.card-second-title-blue {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #0072ce;
+}/*# sourceMappingURL=Cards404.css.map */

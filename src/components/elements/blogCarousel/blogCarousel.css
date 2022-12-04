@@ -1,0 +1,14 @@
+.slider-wrapper {
+  padding: 60px;
+}
+.slider-wrapper .slider-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 350;
+}
+.slider-wrapper .slider {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  gap: 5%;
+}/*# sourceMappingURL=blogCarousel.css.map */

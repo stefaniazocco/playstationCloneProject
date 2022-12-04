@@ -1,0 +1,26 @@
+.gradientBlack {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(51, 51, 51);
+  background: linear-gradient(69deg, rgba(3, 3, 3, 0.466) 0%, rgba(255, 255, 255, 0.151) 100%);
+}
+
+.gradientCyan {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #5cc1e5;
+  background: linear-gradient(69deg, #5cc1e5 0%, rgba(92, 192, 229, 0.0352941176) 50%, rgba(121, 202, 231, 0.0823529412) 100%);
+}
+
+.gradientPurple {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #1a1d30;
+  background: linear-gradient(69deg, #2e2244 0%, rgba(46, 34, 68, 0) 50%, rgba(26, 29, 48, 0) 100%);
+}/*# sourceMappingURL=gradientHero.css.map */

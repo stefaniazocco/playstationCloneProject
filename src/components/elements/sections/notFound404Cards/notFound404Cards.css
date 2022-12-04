@@ -1,0 +1,28 @@
+.redirection404-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 0 50px 0;
+  width: 100vw;
+  height: 95vh;
+}
+.redirection404-wrapper .cards-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.redirection404-wrapper .map-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.redirection404-wrapper .map-wrapper .map {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  color: #0068bd;
+}
+.redirection404-wrapper .map-wrapper .map:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=notFound404Cards.css.map */

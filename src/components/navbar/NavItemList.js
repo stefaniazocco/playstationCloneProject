@@ -12,23 +12,28 @@ import PSNIcon from "../../assets/icons/Ps_Icona6.png";
 import PSStarsIcon from "../../assets/icons/PSIcon_Stars.png";
 import PSVR2Icon from "../../assets/icons/PSIcon_PSVR2.png";
 
+
+
+
+
 export const navItems = [
+  
   {
     id: 1,
-    title: "Giochi",
+    title: "games",
     icon: [
       { img: PS5Icon, title: "PS5", path: "/ps5" },
       { img: PS4Icon, title: "PS4", path: "/ps4" },
       { img: PSVRIcon, title: "PS VR", path: "/psvr" },
       { img: PSPlusIcon, title: "PS Plus", path: "/psplus" },
-      { img: PSStoreIcon, title: "Compra giochi", path: "/store-games" },
+      { img: PSStoreIcon, title: "buy-games", path: "/store-games" },
     ],
     footerLink: [
-      { link: "Indie", path: "/" },
-      { link: "Titoli per PS4 su PS5", path: "/" },
+      { link: "indie", path: "/" },
+      { link: "titoli", path: "/" },
       { link: "Free to Play", path: "/" },
-      { link: "PlayStation su PC", path: "/" },
-      { link: "Promozioni e offerte", path: "/" },
+      { link: "pc", path: "/" },
+      { link: "promo", path: "/" },
     ],
   },
   {
@@ -41,41 +46,41 @@ export const navItems = [
       { img: PSVR2Icon, title: "PS VR2", path: "/" },
     ],
     footerLink: [
-      { link: "Controller wireless DualSense", path: "/" },
-      { link: "Cuffie wireless con microfono Pulse 3D", path: "/" },
-      { link: "Controller wireless DUALSHOCK 4", path: "/" },
-      { link: "Accessori per PS5 e PS4", path: "/" },
+      { link: "controller1", path: "/" },
+      { link: "headphones", path: "/" },
+      { link: "controller2", path: "/" },
+      { link: "acc-ps", path: "/" },
       { link: "PlayStation VR", path: "/" },
     ],
   },
   {
     id: 3,
-    title: "Servizi",
+    title: "service",
     icon: [
       { img: PSPlusIcon, title: "PS Plus", path: "/" },
       { img: PSStarsIcon, title: "PS Stars", path: "/" },
     ],
     footerLink: [
-      { link: "Intrattenimento per PS5", path: "/" },
-      { link: "Intrattenimento per PS4", path: "/" },
+      { link: "entertaiment1", path: "/" },
+      { link: "entertaiment2", path: "/" },
     ],
   },
   {
     id: 4,
-    title: "Novità",
+    title: "new",
     icon: [
       { img: PSBlog, title: "PS Blog", path: "/" },
-      { img: PSThisMonth, title: "Questo mese su PlayStation", path: "/" },
+      { img: PSThisMonth, title: "this-month", path: "/" },
     ],
     footerLink: [
       { link: "Gamer Board", path: "/" },
-      { link: "Accessibilità", path: "/" },
-      { link: "Privacy e sicurezza", path: "/" },
+      { link: "access", path: "/" },
+      { link: "privacy", path: "/" },
     ],
   },
   {
     id: 5,
-    title: "Fai acquisti",
+    title: "shopping",
     icon: [
       {
         img: PSStoreIcon,
@@ -85,25 +90,25 @@ export const navItems = [
       { img: PSGear, title: "PS Gear", path: "/" },
     ],
     footerLink: [
-      { link: "Ultime uscite", path: "/" },
-      { link: "Nuovi sconti", path: "/" },
-      { link: "Raccolte", path: "/" },
-      { link: "Acquista carta regalo", path: "/" },
-      { link: "Abbonamento a PS Plus", path: "/" },
+      { link: "latest", path: "/" },
+      { link: "new-sales", path: "/" },
+      { link: "raccolte", path: "/" },
+      { link: "buy-card", path: "/" },
+      { link: "subscribe", path: "/" },
     ],
   },
   {
     id: 6,
-    title: "Supporto",
+    title: "support",
     icon: [
-      { img: PSSupport, title: "Supporto", path: "/support" },
-      { img: PSNIcon, title: "Stato del PSN", path: "/" },
+      { img: PSSupport, title: "support2", path: "/support" },
+      { img: PSNIcon, title: "state", path: "/" },
     ],
     footerLink: [
       { link: "Account", path: "/" },
-      { link: "Acquisti", path: "/" },
-      { link: "Abbonamenti", path: "/" },
-      { link: "Giochi", path: "/" },
+      { link: "store", path: "/" },
+      { link: "subscriptions", path: "/" },
+      { link: "games", path: "/" },
       { link: "Hardware", path: "/" },
     ],
   },

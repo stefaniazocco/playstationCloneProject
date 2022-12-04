@@ -1,0 +1,53 @@
+.wrapperIconSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.wrapperIconSection h4 {
+  font-weight: 200;
+}
+.wrapperIconSection .wrapperCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin-bottom: 40px;
+}
+.wrapperIconSection .wrapperCards .iconSectionContent {
+  border-radius: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.13);
+  width: 240px;
+  height: 160px;
+  align-content: center;
+  text-align: center;
+  margin: 15px;
+  color: #2d65e6;
+  padding: 15px;
+  cursor: pointer;
+}
+.wrapperIconSection .wrapperCards .iconSectionContent:hover {
+  border: rgba(45, 101, 230, 0.6784313725) solid 2px;
+}
+
+.wrapperLastSection {
+  display: flex;
+  justify-content: center;
+}
+.wrapperLastSection img {
+  margin-top: 20px;
+}
+.wrapperLastSection img:hover {
+  filter: blur(0.5px);
+}
+.wrapperLastSection .lastSection {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+.wrapperLastSection .lastSection h4 {
+  font-weight: 400;
+  font-size: 35px;
+}/*# sourceMappingURL=iconSectionSupport.css.map */
