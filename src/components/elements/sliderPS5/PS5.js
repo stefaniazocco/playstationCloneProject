@@ -12,8 +12,11 @@ import SliderIcons from "./SliderIcons";
 import { SliderObject } from "./SliderObjects";
 import SliderPS5Item from "./SliderPS5Item";
 import "./ps5.scss";
+import { useTranslation } from "react-i18next";
 
 function PS5() {
+  const { t } = useTranslation();
+
   const [slide, setSlide] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -33,10 +36,10 @@ function PS5() {
           <Carousel.Item key={item.id}>
             <Link>
               <SliderPS5Item
-                title={item.title}
-                description={item.description}
+                title={t(item.title)}
+                description={t(item.description)}
                 image={item.image}
-                btnString={item.btnString}
+                btnString={t(item.btnString)}
               />
             </Link>
           </Carousel.Item>
@@ -51,7 +54,7 @@ function PS5() {
             alt="placeholder"
             /* style={{ width: "100%" }} */
           />
-          <p className="parag2" >Console PS5</p>
+          <p className="parag2" >{t("ps5-1")}</p>
         </div>
         <div onClick={() => setActiveIndex(1)} className="active">
           <img
@@ -60,7 +63,7 @@ function PS5() {
             alt="placeholder"
             /* style={{ width: "100%" }} */
           />
-          <p className="parag" >Controller wireless DualSense™</p>
+          <p className="parag" >{t("ps5-2")}</p>
         </div>
 
         <div onClick={() => setActiveIndex(2)}>
@@ -70,7 +73,7 @@ function PS5() {
             alt="placeholder"
             /* style={{ width: "100%" }} */
           />
-          <p className="parag" >Cuffie wireless PULSE 3D™</p>
+          <p className="parag" >{t("ps5-3")}</p>
         </div>
         <div onClick={() => setActiveIndex(3)}>
           <img
@@ -79,7 +82,7 @@ function PS5() {
             alt="placeholder"
             /* style={{ width: "100%" }} */
           />
-          <p className="parag" >Telecomando multimediale</p>
+          <p className="parag" >{t("ps5-4")}</p>
         </div>
         <div onClick={() => setActiveIndex(4)}>
           <img
@@ -88,7 +91,7 @@ function PS5() {
             alt="placeholder"
             /* style={{ width: "100%" }} */
           />
-          <p className="parag2" >Fotocamera HD</p>
+          <p className="parag2" >{t("ps5-5")}</p>
         </div>
         <div onClick={() => setActiveIndex(5)}>
           <img
@@ -97,7 +100,7 @@ function PS5() {
             alt="placeholder"
             /* style={{ width: "100%" }} */
           />
-          <p className="parag2" >Cover PS5</p>
+          <p className="parag2" >{t("ps5-6")}</p>
         </div>
       </SliderIcons>
     </>

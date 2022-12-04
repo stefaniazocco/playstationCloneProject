@@ -1,0 +1,27 @@
+.month-godOf {
+  height: 65vh;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.month-godOf .this-month-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 39%;
+  margin: 0px 0px 40px 150px;
+}
+.month-godOf .this-month-card .this-month-firstTitle {
+  font-weight: 300;
+}
+.month-godOf .this-month-card .this-month-secondTitle {
+  font-weight: 600;
+}
+.month-godOf .this-month-card p {
+  font-size: 20px;
+  opacity: 0.7;
+}
+.month-godOf .more-infos {
+  text-decoration: none;
+}/*# sourceMappingURL=thisMonthFirst.css.map */

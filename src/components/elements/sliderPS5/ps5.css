@@ -1,0 +1,53 @@
+.content-container-ps5 {
+  color: #000000;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+.content-container-ps5 .title-slider-ps5 {
+  margin-top: 5px;
+  font-size: 45px;
+  font-weight: 300;
+  text-align: left;
+  width: 500px;
+}
+.content-container-ps5 .description-slider-ps5 {
+  width: 500px;
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+}
+.content-container-ps5 .button-blue div {
+  font-size: 18px;
+}
+
+.imagePS5 {
+  width: 1000px;
+  margin-left: 800px;
+  margin-top: 8rem;
+}
+
+.parag {
+  justify-content: center;
+  width: 150px;
+  text-align: center;
+  margin-left: 2rem;
+  margin-top: 3rem;
+}
+
+.parag2 {
+  justify-content: center;
+  width: 100%;
+  margin-left: 62px;
+  margin-top: 3rem;
+}
+
+.dot2 {
+  margin-top: 5rem;
+  width: 215px;
+}
+
+.carousel-indicators button {
+  visibility: hidden;
+}/*# sourceMappingURL=ps5.css.map */

@@ -4,9 +4,12 @@ import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import "../navbar/navbar.scss";
 import { navItems } from "./NavItemList";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Dropdown = (props) => {
+  const { t } = useTranslation();
   const [isActive, setIsActive] = useState(null);
+
 
   return (
     <li className=" nav-item d-flex  fs-nav-link fw-nav-link dropdown position-static">
@@ -40,7 +43,7 @@ const Dropdown = (props) => {
                   alt=""
                   height="70px"
                 />
-                <p>{item.title}</p>
+                <p>{t(item.title)}</p>
               </a>
             ))}
           </div>
@@ -50,7 +53,7 @@ const Dropdown = (props) => {
               {props.footerLink.map((item) => (
                 <Link to={item.path} className="nav-footer-link mx-3">
                   <li className="li-circle-blue list-inline-item">
-                    {item.link}
+                    {t(item.link)}
                   </li>
                 </Link>
               ))}

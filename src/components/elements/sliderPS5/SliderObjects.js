@@ -8,50 +8,50 @@ import covers from "../../../assets/images/homepage/PS5-Console/10036.png";
 export const SliderObject = [
   {
     id: 1,
-    title: "Console PlayStation 5",
+    title: "ps5-1",
     description:
-      "Scopri una nuovissima generazione di incredibili giochi PlayStation",
+      "description1",
     image: console,
-    btnString: "Scopri di più",
+    btnString: "btn-explore",
   },
   {
     id: 2,
-    title: "Controller wireless DualSense™",
+    title: "ps5-2",
     description:
-      "Immergiti nell'esperienza di gioco con un controller che supporta il feedback aptico reattivo e gli effetti del grilletto dinamico.",
+      "description2",
     image:controller,
-    btnString: "Scopri di più",
+    btnString: "btn-explore",
   },
   {
     id: 3,
-    title: "Cuffie wireless con microfono PULSE 3D™",
+    title: "ps5-3",
     description:
-      "Goditi un'esperienza wireless perfetta con un paio di cuffie con microfono ottimizzate per l'audio 3D della console PS5.",
+      "description3",
     image: headset,
-    btnString: "Scopri di più",
+    btnString: "btn-explore",
   },
   {
     id: 4,
-    title: "Telecomando Media",
+    title: "ps5-4",
     description:
-      "Controlla facilmente film, servizi di streaming e altro ancora sulla tua console PS5 grazie a un'interfaccia intuitiva.",
+      "description4",
     image: mediaRemote ,
-    btnString: "Scopri di più",
+    btnString: "btn-explore",
   },
   {
     id: 5,
-    title: "Telecamera HD",
+    title: "ps5-5",
     description:
-      "Partecipa in prima persona alle tue trasmissioni e ai video della tua azione di gioco grazie alla nitidissima acquisizione di immagini Full HD.",
+      "description5",
     image: camera,
-    btnString: "Scopri di più",
+    btnString: "btn-explore",
   },
   {
     id: 6,
-    title: "PS5 Covers Console",
+    title: "ps5-6",
     description:
-      "Personalizza la tua console PlayStation 5 o PlayStation 5 Digital Edition con una vivace gamma di nuove opzioni di colore.",
+      "description6",
     image: covers ,
-    btnString: "Scopri di più",
+    btnString: "btn-explore",
   },
 ];

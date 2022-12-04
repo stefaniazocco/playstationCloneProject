@@ -7,20 +7,20 @@ import playslim768 from '../../../../assets/images/homepage/ExplorePlay/playslim
 import vrplay320 from '../../../../assets/images/homepage/ExplorePlay/vrplay320px.webp'
 import vrplay768 from '../../../../assets/images/homepage/ExplorePlay/vrplay768px.webp'
 import "../exploreplay/ExplorePlay.scss"
+import { useTranslation } from "react-i18next";
 
 
 export function ExplorePlay() {
-
+    
+    const { t } = useTranslation();
 
     return (
         <div className="big-cont">
             <div className="principal">
                 <section className="first_cont">
 
-                    <h1 className="title">Esplora PlayStation®4</h1>
-                    <p className="sub">Giochi incredibili e intrattenimento senza fine. Non c'è mai stato un momento
-                        migliore per giocare sulla tua PS4.
-                    </p>
+                    <h1 className="title">{t("title-explore")}</h1>
+                    <p className="sub">{t("sub-explore")}</p>
 
                 </section>
                 <div className="second_cont">
@@ -37,8 +37,8 @@ export function ExplorePlay() {
 
                             <div className="text_box">
                                 <h1 id="title1">PlayStation 4</h1>
-                                <p id="sub1">Giochi incredibili live su PS4, con 1 TB di spazio di archiviazione.</p>
-                                <Button className="button-blue btn-block" link="#" string="Scopri di più" />
+                                <p id="sub1">{t("sub1")}</p>
+                                <Button className="button-blue btn-block" link="#" string={t("btn-explore")} />
                             </div>
                         </div>
 
@@ -52,8 +52,8 @@ export function ExplorePlay() {
 
                             <div class="text_box">
                                 <h1 id="title2">PlayStation VR</h1>
-                                <p id="sub2">Oltre 500 titoli ed esperienze di gioco. Scoprili tutti.</p>
-                                <Button className="button-blue btn-block" link="#" string="Scopri di più" />
+                                <p id="sub2">{t("sub2")}</p>
+                                <Button className="button-blue btn-block" link="#" string={t("btn-explore")} />
                             </div>
                             
                         </div>
@@ -66,9 +66,9 @@ export function ExplorePlay() {
                             </picture>
 
                             <div class="text_box">
-                                <h1 id="title3">Accessori</h1>
-                                <p id="sub3">Migliora la tua esperienza PS4 con una gamma di accessori ufficiali.</p>
-                                <Button className="button-blue btn-block" link="#" string="Scopri di più" />
+                                <h1 id="title3">{t("accessories")}</h1>
+                                <p id="sub3">{t("sub3")}</p>
+                                <Button className="button-blue btn-block" link="#" string={t("btn-explore")} />
                             </div>
 
                             

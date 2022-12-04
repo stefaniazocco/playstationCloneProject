@@ -1,0 +1,50 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+.wrapper .contentWrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wrapper .contentWrapper h3 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 200;
+}
+.wrapper .contentWrapper p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 100;
+}
+.wrapper .contentWrapper .searchBar {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 50px;
+  border: 1px solid black;
+  width: 700px;
+  height: 50px;
+  text-align: center;
+  text-align: left;
+  border: none;
+  box-shadow: 1px 5px 15px 2px rgba(0, 0, 0, 0.171);
+}
+.wrapper .contentWrapper .searchBar:hover {
+  outline: rgba(45, 101, 230, 0.6784313725) solid 3px;
+  outline-offset: 4px;
+  transition: ease-in;
+}
+.wrapper .contentWrapper .searchBar:focus {
+  outline: rgba(45, 101, 230, 0.6784313725) solid 3px;
+  outline-offset: 4px;
+}
+.wrapper .contentWrapper .searchBar input {
+  border: none;
+  font-size: 22px;
+  font-weight: 100;
+}
+.wrapper .contentWrapper .searchBar input:focus {
+  outline: none;
+}/*# sourceMappingURL=headerSupport.css.map */

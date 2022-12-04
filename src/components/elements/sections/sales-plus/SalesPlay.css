@@ -64,7 +64,8 @@
     margin: 0;
   }
   .cont .grid-cont .picture {
-    width: 90%;
+    width: 100%;
+    margin-left: 30px;
   }
   .cont .grid-cont .picture img {
     width: 325px;
@@ -109,6 +110,7 @@
   }
   .cont .grid-cont .picture {
     width: 90%;
+    margin-left: 0;
   }
   .cont .grid-cont .picture img {
     width: 700px;
@@ -215,7 +217,7 @@
     font-size: 40px;
     font-weight: lighter;
     color: black;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   .cont .grid-cont .text-cont .subtitle {
     width: 50%;
@@ -227,6 +229,6 @@
     color: gray;
   }
   .cont .grid-cont .text-cont .btn-block {
-    margin-right: 180px;
+    margin-right: 175px;
   }
 }/*# sourceMappingURL=SalesPlay.css.map */

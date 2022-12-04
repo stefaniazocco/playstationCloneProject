@@ -1,0 +1,74 @@
+.flexa {
+  width: 370px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  line-height: 1.7em;
+}
+.flexa label {
+  display: block;
+  font-weight: 500;
+  color: black;
+  font-size: 14px;
+}
+.flexa a {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.select-container {
+  position: relative;
+  width: 370px;
+  height: 50px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em;
+  outline: none;
+}
+.select-container .value {
+  flex-grow: 1;
+}
+.select-container .stock {
+  color: #00a2ff;
+}
+.select-container .caret {
+  translate: 0 25%;
+  border: 0.25em solid transparent;
+  border-top-color: #777;
+}
+.select-container .options {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  max-height: 16em;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 0.25em;
+  width: 100%;
+  left: 0;
+  top: 44px;
+  background-color: white;
+  z-index: 2;
+}
+.select-container .options .option {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5em;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.select-container .options.show {
+  display: block;
+}
+
+.select-container:focus {
+  border: 3px solid rgba(0, 123, 255, 0.25);
+}/*# sourceMappingURL=select.css.map */

@@ -1,0 +1,27 @@
+.month-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 25%;
+  height: 50%;
+  perspective: 100px;
+}
+.month-card-wrapper img {
+  width: 350px;
+  height: 200px;
+  border-radius: 15px;
+  box-shadow: 1px 2px 15px 2px rgb(0, 0, 0);
+  transition: transform linear 0.2s;
+}
+.month-card-wrapper img:hover {
+  box-shadow: 1px 2px 25px 2px rgb(0, 0, 0);
+  transform: translateZ(1.5px);
+  cursor: pointer;
+}
+.month-card-wrapper h4 {
+  padding: 15px;
+  color: white;
+  text-align: center;
+}/*# sourceMappingURL=thisMonthCard.css.map */

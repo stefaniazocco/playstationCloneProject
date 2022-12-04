@@ -5,11 +5,13 @@ import stray768 from "../../../../assets/images/homepage/Stray-homepage-hero-des
 import stray320 from "../../../../assets/images/homepage/Stray-homepage-hero-mobile-min-320.webp"
 import straylogo from "../../../../assets/images/homepage/stray-white-logo-1.webp"
 import { Button } from "../../buttons/Button"
+import { useTranslation } from "react-i18next";
 
 
 
 
 export function StrayHomepage() {
+    const { t } = useTranslation();
     return(
         <section className="stray-section">
             <div className="stray-background">
@@ -26,11 +28,9 @@ export function StrayHomepage() {
             <div className="stray-fade"></div>
             <div className="stray-text">
                 <img src={straylogo} />
-                <h2>Fuggi dalla città</h2>
-                <p>Svela antichi misteri e trova la strada di casa 
-                    in questa avventura felina unica, disponibile ora 
-                    per PS5.</p>
-                <Button className="button-white" link="" string="Maggiori informazioni" />
+                <h2>{t("title-stray")}</h2>
+                <p>{t("sub-stray")}</p>
+                <Button className="button-white" link="" string={t("btn-stray")} />
             </div>
 
         </section>

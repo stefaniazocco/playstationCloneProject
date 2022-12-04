@@ -1,0 +1,106 @@
+.product-right {
+  width: 520px;
+}
+.product-right .product-info-title {
+  display: block;
+}
+.product-right .product-quantity {
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+.product-right .product-table {
+  width: 500px;
+  border: 1px solid #606060;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.product-right .product-table .product-thead {
+  background-color: #606060;
+}
+.product-right .product-table .product-thead tr th {
+  width: 170px;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  padding: 8px;
+}
+.product-right .product-table .product-tbody tr td {
+  font-size: 14px;
+  text-align: center;
+  padding: 8px;
+}
+.product-right .product-table .product-tbody tr td input {
+  width: 100px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+.product-right .product-table .product-tbody tr td input:focus {
+  outline-color: #8fd5fd;
+  outline-offset: 2px;
+  border-color: #00439c;
+}
+.product-right .product-table .product-tbody tr td input::-webkit-outer-spin-button,
+.product-right .product-table .product-tbody tr td input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+.product-right .product-table .product-tbody td:last-of-type {
+  color: #00adff;
+}
+.product-right .price-description {
+  font-size: 14px;
+}
+.product-right .add-to-cart {
+  background-color: #eb6035;
+  color: white;
+  font-size: 15px;
+  padding: 15px 30px;
+  border: none;
+  font-weight: 500;
+  margin: 20px 0px;
+  transition-duration: 0.2s;
+}
+.product-right .add-to-cart:hover {
+  background-color: #d35129;
+}
+.product-right .shipping-info {
+  font-size: 14px;
+  text-decoration: none;
+  font-style: italic;
+}
+
+@media (max-width: 991px) {
+  .product-right {
+    order: 3;
+  }
+  .product-right .product-table {
+    width: 100%;
+    margin-right: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .product-right .product-info-title {
+    display: none;
+  }
+  .product-right .product-quantity {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+@media (max-width: 545px) {
+  .product-right {
+    width: 90vw;
+  }
+  .product-right .product-info-title {
+    display: none;
+  }
+  .product-right .product-quantity {
+    flex-direction: column;
+    gap: 5px;
+  }
+}/*# sourceMappingURL=productRight.css.map */

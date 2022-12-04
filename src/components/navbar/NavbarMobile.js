@@ -1,8 +1,13 @@
 import { BiSearchAlt2 } from "react-icons/bi";
 import { AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 
 const NavbarMobile = () => {
+  
+  const { t, i18n } = useTranslation();
+
   return (
     <nav id="nav-mobile">
       <div className="container-fluid ">
@@ -48,7 +53,7 @@ const NavbarMobile = () => {
             </svg>
             </Link>
             <div className="my-3">
-              <button className="accedi-btn mx-3"> Accedi </button>
+              <button className="accedi-btn mx-3"> {t("sign-in")} </button>
             </div>
             <div
               className="dropdown-menu w-100 h-100 mnavcontent  "
@@ -68,7 +73,7 @@ const NavbarMobile = () => {
                         alt
                         height="30px"
                       />{" "}
-                      Giochi
+                      {t("games")}
                     </p>
                     <i className="fa fa-angle-down" aria-hidden="true" />
                   </a>
@@ -83,7 +88,7 @@ const NavbarMobile = () => {
                         alt
                         height="30px"
                       />{" "}
-                      Hardware
+                      {t("hardware")}
                     </p>
                     <i className="fa fa-angle-down" aria-hidden="true" />
                   </a>
@@ -98,7 +103,7 @@ const NavbarMobile = () => {
                         alt
                         height="30px"
                       />{" "}
-                      Servizi
+                      {t("service")}
                     </p>
                     <i className="fa fa-angle-down" aria-hidden="true" />
                   </a>
@@ -113,7 +118,7 @@ const NavbarMobile = () => {
                         alt
                         height="30px"
                       />{" "}
-                      Novità
+                      {t("new")}
                     </p>
                     <i className="fa fa-angle-down" aria-hidden="true" />
                   </a>
@@ -128,7 +133,7 @@ const NavbarMobile = () => {
                         alt
                         height="30px"
                       />{" "}
-                      Fai acquisti
+                      {t("shopping")}
                     </p>
                     <i className="fa fa-angle-down" aria-hidden="true" />
                   </a>
@@ -143,7 +148,7 @@ const NavbarMobile = () => {
                         alt
                         height="30px"
                       />{" "}
-                      Supporto
+                      {t("supports")}
                     </p>
                     <i className="fa fa-angle-down" aria-hidden="true" />
                   </a>

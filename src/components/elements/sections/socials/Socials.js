@@ -3,12 +3,14 @@ import facebook from "../../../../assets/images/homepage/social-facebook.webp"
 import instagram from "../../../../assets/images/homepage/social-instagram.webp"
 import youtube from "../../../../assets/images/homepage/social-youtube.webp"
 import twitch from "../../../../assets/images/homepage/social-twitch.webp"
+import { useTranslation } from "react-i18next";
 
 export function Socials() {
+    const { t } = useTranslation();
     return(
         <section className="social-section">
             <div>
-                <h3 className="social-title">Seguici sui social media</h3>
+                <h3 className="social-title">{t("follow")}</h3>
                 <div className="social-icons">
                     <a href="#"><img className="social-twitter" alt="Twitter" src={twitter} /></a>
                     <a href="#"><img className="social-facebook" alt="Facebook" src={facebook} /></a>

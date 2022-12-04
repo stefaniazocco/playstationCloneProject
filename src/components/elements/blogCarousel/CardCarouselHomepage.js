@@ -1,8 +1,12 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import "./cardCarouselHomepage.scss";
 
 const CardCarouselHomepage = (props) => {
+
+  const { t } = useTranslation();
+  
   return (
     <div>
       <div className="slider-card">
@@ -13,8 +17,8 @@ const CardCarouselHomepage = (props) => {
         <div className="slider-description">
           
           <article>
-            <h4 className="card-title">{props.info.title}</h4>
-            <p className="card-p">{props.info.bannerPara}</p>
+            <h4 className="card-title">{t(props.info.title)}</h4>
+            <p className="card-p">{t(props.info.bannerPara)}</p>
           </article>
 
           <footer className="slider-footer">
@@ -23,9 +27,9 @@ const CardCarouselHomepage = (props) => {
               src={props.info.icon}
             />
             <div className="footer-info">
-              <p>{props.info.author}</p>
-              <p>{props.info.description}</p>
-              <p>{props.info.date}</p>
+              <p>{t(props.info.author)}</p>
+              <p>{t(props.info.description)}</p>
+              <p>{t(props.info.date)}</p>
             </div>
           </footer>
         </div>
