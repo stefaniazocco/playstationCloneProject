@@ -2,9 +2,15 @@ import sony from "../../assets/images/homepage/sony-logo.png"
 import logo from "../../assets/images/homepage/logo-black.svg"
 import "./countrySelector.scss"
 import { useNavigate } from "react-router-dom"
+// import { useTranslation } from "react-i18next";
 
 
 export function CountrySelector() {
+    // const { t, i18n } = useTranslation();
+
+    // const onChangeLanguage = (e) => {
+    //   i18n.changeLanguage(e.target.value);
+    // };
     
     const navigate= useNavigate()
 
@@ -100,7 +106,7 @@ export function CountrySelector() {
                             <a href="#">Hungary (Magyarország)</a>
                         </div>
 
-                        <div className="letter-i">
+                        <div className="letter-i" >
                             <div className="letterbox">I</div>
                             <a href="#">Iceland (English)</a>
                             <a href="#">India</a>
@@ -108,7 +114,7 @@ export function CountrySelector() {
                             <a href="#">Ireland</a>
                             <a href="#">Israel (English)</a>
                             <a href="#">Israel</a>
-                            <a href="../homepage/index.html">Italy</a>
+                            <a href="/" value="it" >Italy</a>
                         </div>
 
                         <div className="letter-j">
@@ -206,14 +212,14 @@ export function CountrySelector() {
                             <a href="#">Turkey (Türkiye)</a>
                         </div>
 
-                        <div className="letter-u">
+                        <div className="letter-u" >
                             <div className="letterbox">U</div>
                             <a href="#">Ukraine (Російська мова)</a>
                             <a href="#">Ukraine (Українська мова)</a>
                             <a href="#">United Arab Emirates/ Middle East (Arabic)</a>
                             <a href="#">United Arab Emirates/ Middle East (English)</a>
                             <a href="#">United States</a>
-                            <a href="#">United Kingdom</a>
+                            <a href="/" value="en">United Kingdom</a>
                             <a href="#">Uruguay</a>
                         </div>
                         <div className="letter-v">

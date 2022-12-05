@@ -14,9 +14,12 @@ import logo1024 from '../../../../assets/images/homepage/pluslogo1024px.webp'
 import logo from '../../../../assets/images/homepage/pluslogosrc.webp'
 import { Button } from "../../buttons/Button";
 import '../sales-plus/PlayPlus.scss'
+import { useTranslation } from "react-i18next";
 
 
 export function PlayPlus() {
+
+    const { t } = useTranslation();
 
     return (
 
@@ -52,11 +55,11 @@ export function PlayPlus() {
                             <img src={logo} />
                         </picture>
                         <p className="paragraph">
-                            Migliora la tua esperienza PlayStation con l'accesso a multigiocatore online, giochi mensili, sconti esclusivi e altro ancora.
+                           {t("title-plus")}
                         </p>
                     </div>
 
-                    <Button className="button-blue btn-block" link="#" string="Esplora PlayStation Plus" />
+                    <Button className="button-blue btn-block" link="#" string={t("btn-plus")} />
                 </div>
             </div>
         </section>

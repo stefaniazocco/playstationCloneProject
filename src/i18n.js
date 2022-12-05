@@ -69,6 +69,9 @@ const resources = {
         "description5":"Partecipa in prima persona alle tue trasmissioni e ai video della tua azione di gioco grazie alla nitidissima acquisizione di immagini Full HD.",
         "ps5-6":"PS5 Covers Console",
         "description6":"Personalizza la tua console PlayStation 5 o PlayStation 5 Digital Edition con una vivace gamma di nuove opzioni di colore.",
+        //PLAY PLUS
+        "title-plus":"Migliora la tua esperienza PlayStation con l'accesso a multigiocatore online, giochi mensili, sconti esclusivi e altro ancora.",
+        "btn-plus":"Esplora Playstation Plus",
         //EXPLORE PLAY
         "title-explore":"Esplora PlayStation®4",
         "sub-explore":"Giochi incredibili e intrattenimento senza fine. Non c'è mai stato un momento migliore per giocare sulla tua PS4.",
@@ -217,6 +220,9 @@ const resources = {
        "description5":"Add yourself to your gameplay videos and broadcasts with smooth, sharp, full-HD capture.",
        "ps5-6":"PS5 Console Covers",
        "description6":"Personalise your PlayStation 5 or PlayStation 5 Digital Edition console with a vibrant array of new colour options.",
+        //PLAY PLUS
+        "title-plus":"Enhance your PlayStation experience with access to online multiplayer, monthly games, exclusive discounts and more.",
+        "btn-plus":"Explore Playstation Plus",
         //EXPLORE PLAY
        "title-explore":"Explore PlayStation®4",
        "sub-explore":"Incredible games, non-stop entertainment. There's never been a better time to enjoy PS4.",
