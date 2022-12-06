@@ -56,7 +56,9 @@ export function Login() {
                 Problemi di accesso?
               </a>
               <br />
-              <button className="account">Crea nuovo account</button>
+              <Link to="/registration">
+                <button className="account">Crea nuovo account</button>
+              </Link>
             </div>
           </div>
 

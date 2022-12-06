@@ -6,10 +6,12 @@ import { StoreGames } from "./pages/storeGames/StoreGames";
 
 import Support from "./pages/support/Support";
 import { Login } from "./pages/login/Login";
+
 import { Presentation } from "./pages/presentation/Presentation";
 import { Product } from "./pages/product/Product";
-
 import { NotFound } from "./pages/notFound/NotFound";
+import { CreateAccount } from "./pages/registration/CreateAccount";
+import { Form } from "./pages/registration/Form";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/product/:name" element={<Product />} />
         <Route path="/support" element={<Support />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/registration" element={<CreateAccount />} />
+        <Route path="/Form" element={<Form />} />
         <Route path="/presentation" element={<Presentation />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
