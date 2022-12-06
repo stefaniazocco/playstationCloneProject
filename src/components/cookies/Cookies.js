@@ -1,10 +1,14 @@
+import { useEffect, useState } from "react";
 import cookies from "../../assets/images/homepage/logo-cookies.png";
 import xIcon from "../../assets/images/homepage/x-icon.png";
 
-export function Cookies({hide}){
+export function Cookies({hide, accept}){
 
+    
+   
 
     return(
+        <>      
         <section id="cookies-section">
             <img className="logo-cookies" src={cookies} />
             <div className="cookies-text">Sony Interactive Entertainment Europe Limited utilizza i cookie per personalizzare la
@@ -18,7 +22,7 @@ export function Cookies({hide}){
                         <div>Rifiuta</div>
                     </a>
                 </div>
-                <div className="cookies-Button" onClick={hide}>
+                <div className="cookies-Button" onClick={accept}>
                     <a href="#">
                         <div>Accetta</div>
                     </a>
@@ -27,5 +31,6 @@ export function Cookies({hide}){
 
             <button className="close-tab" onClick={hide}><img src={xIcon} /></button>
         </section>
+        </>
     )
 }

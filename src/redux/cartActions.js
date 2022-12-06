@@ -1,7 +1,9 @@
+import { data } from "flickity";
 import { products } from "../pages/product/products";
 
 export const ADDPRODUCT = "PRODUCT@ADDPRODUCT";
 export const REMOVEPRODUCT = "PRODUCT@REMOVEPRODUCT";
+export const EDITPRODUCT = "PRODUCT@EDITPRODUCT";
 
 export const addToCart = (name) => {
   const data = products[name];
@@ -24,5 +26,15 @@ export const removeFromCart = (name) => {
   return {
     type: REMOVEPRODUCT,
     payload: name
+  }
+}
+
+export const editCart = (name, event) => {
+  return {
+    type: EDITPRODUCT, 
+    payload: {
+      name: name,
+      quantity: event.target.value
+    }
   }
 }

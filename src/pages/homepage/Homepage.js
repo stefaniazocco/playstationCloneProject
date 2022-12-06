@@ -26,6 +26,11 @@ export function Homepage() {
     setClose(false);
   }
 
+  function hideAccept(){
+    sessionStorage.setItem("token", 123)
+    setClose(false)
+  }
+
   function fixedNav() {
     let navbar = document.getElementById("navbar");
     let fixed = navbar.offsetTop;
@@ -57,7 +62,7 @@ export function Homepage() {
       <Socials />
       <FooterMain />
 
-      {close === true && <Cookies hide={hideSection} />}
+      {close === true && !sessionStorage.getItem("token") && <Cookies hide={hideSection} accept={hideAccept} />}
     </>
   );
 }

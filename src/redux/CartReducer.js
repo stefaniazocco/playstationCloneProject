@@ -1,4 +1,4 @@
-import { ADDPRODUCT, REMOVEPRODUCT } from "./cartActions"
+import { ADDPRODUCT, EDITPRODUCT, REMOVEPRODUCT } from "./cartActions"
 
 const defaultStateProd = []
 const defaultStateCount = 1
@@ -12,14 +12,14 @@ export function productReducer(state = defaultStateProd, action){
         case REMOVEPRODUCT: {
             return state.filter(product => product.name !== action.payload)
         }        
-        // case EDIT: {
-        //     return state.map(todo =>{
-        //         if(todo.id === action.payload.id) {
-        //             return {...todo, ...action.payload}
-        //         }
-        //         return todo
-        //     })
-        // }
+        case EDITPRODUCT: {
+            return state.map(product =>{
+                if(product.name === action.payload.name) {
+                    return {...product, ...action.payload}
+                }
+                return product
+            })
+        }
         default : {
             return state
         }

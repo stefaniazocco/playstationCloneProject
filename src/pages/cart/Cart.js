@@ -1,9 +1,8 @@
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { ProductNav } from "../../components/elements/sections/productNav/ProductNav";
 import { FooterProduct } from "../../components/footer/FooterProduct";
-import { removeFromCart } from "../../redux/cartActions";
+import { editCart, removeFromCart } from "../../redux/cartActions";
 import { store } from "../../redux/store";
 
 import "./cart.scss"
@@ -13,7 +12,7 @@ export function Cart(){
     const product = useSelector((state) => state.product);
     const productPrice = product.map((item) => item.price * item.quantity)
     let total = productPrice.reduce((a, b) => a + b, 0);
-    console.log(total)
+
     return(
         <>
             <ProductNav />
@@ -47,10 +46,10 @@ export function Cart(){
                             </div>
                         </div>
                         <div className="cart-prod-right">
-                            <div className="prod-price">{p.price},00€</div>
-                            <input type="number" value={p.quantity} />
+                            <div className="prod-price">{p.price.toFixed(2)}€</div>
+                            <input type="number" value={p.quantity} onChange={(event) => store.dispatch(editCart(p.name, event))} />
                             <div className="prod-total">
-                                <div className="tot-price">{p.price * p.quantity},00€</div>
+                                <div className="tot-price">{(p.price * p.quantity).toFixed(2)}€</div>
                                 <div className="tot-iva">(IVA inclusa)</div>
                             </div>
                         </div>
@@ -64,7 +63,7 @@ export function Cart(){
                         <div className="sub-art">Hai {product.length === 1 ? <span>1 articolo</span> : <span>{product.length} articoli</span>}  nel carrello</div>
                         <div className="sub-sub">
                             <div>Subtotale:</div>
-                            <div>{total},00€</div>
+                            <div>{total.toFixed(2)}€</div>
                         </div>
                         <button className="cart-button-orange but-width">Checkout</button>
                         <button className="cart-button but-width">Continua gli acquisti</button>
