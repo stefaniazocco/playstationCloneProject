@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ProductNav } from "../../components/elements/sections/productNav/ProductNav";
 import { FooterProduct } from "../../components/footer/FooterProduct";
 import { editCart, removeFromCart } from "../../redux/cartActions";
+import { counterModify } from "../../redux/counterActions";
 import { store } from "../../redux/store";
 
 import "./cart.scss"
@@ -10,9 +11,19 @@ import "./cart.scss"
 export function Cart(){
     
     const product = useSelector((state) => state.product);
-    const productPrice = product.map((item) => item.price * item.quantity)
+    const size = useSelector(state => state.size)
+    const counter = useSelector((state) => state.counter)
+    const productPrice = product.map((item) => item.price * findCounter(item))
     let total = productPrice.reduce((a, b) => a + b, 0);
 
+    function findSize(product){
+        const filter = size.find(prod => prod.name === product.name) 
+        return filter.size
+    }
+    function findCounter(product){
+        const filter = counter.find(prod => prod.name === product.name)
+        return filter.quantity
+    }
     return(
         <>
             <ProductNav />
@@ -37,7 +48,7 @@ export function Cart(){
                                 <div>
                                     <Link to={`/product/${p.name}`}>{p.title}</Link>
                                     <div className="art-number">Articolo n°.:{p.number}</div>
-                                    {p.size && <div>{p.size}</div>}
+                                    {p.size && <div>{findSize(p)}</div>}
                                 </div>
                                 <div>
                                     <div className="remove-prod" onClick={() => store.dispatch(removeFromCart(p.name))}>Rimuovi</div>
@@ -47,9 +58,9 @@ export function Cart(){
                         </div>
                         <div className="cart-prod-right">
                             <div className="prod-price">{p.price.toFixed(2)}€</div>
-                            <input type="number" value={p.quantity} onChange={(event) => store.dispatch(editCart(p.name, event))} />
+                            <input type="number" value={findCounter(p)} onChange={(event) => store.dispatch(counterModify(p.name, event))} />
                             <div className="prod-total">
-                                <div className="tot-price">{(p.price * p.quantity).toFixed(2)}€</div>
+                                <div className="tot-price">{(p.price * findCounter(p)).toFixed(2)}€</div>
                                 <div className="tot-iva">(IVA inclusa)</div>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
-import { useState } from "react"
+import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
-import { addToCart } from "../../../../redux/cartActions"
+import { addToCart} from "../../../../redux/cartActions"
 import { store } from "../../../../redux/store"
 import { Counter } from "../../counter/StoreCounter"
 import { Select } from "../../select/Select"
@@ -8,16 +8,11 @@ import "./productRight.scss"
 import { ProductTable } from "./ProductTable"
 import { ProductTitle } from "./ProductTitle"
 
-const options = [
-    {label : "S adulto - 70.00€", value: "S adulto", available: true},
-    {label : "M adulto - 70.00€", value: "M adulto", available: true},
-    {label : "L adulto - 70.00€", value: "L adulto", available: true},
-    {label : "XL adulto - 70.00€", value: "XL adulto", available: true},
-    {label : "2XL adulto - 72.00€", value: "2XL adulto", available: true},
-  ]
 export function ProductRight({product}){
-
-    const [value, setValue] = useState(options[0])
+    const productR = useSelector((state) => state.product);
+    const myprod = productR.find(prod => prod.name === product.name)
+    console.log(myprod)
+    // const [value, setValue] = useState(options[0])
 
     return(
         <div className="product-right">
@@ -27,7 +22,7 @@ export function ProductRight({product}){
 
                 {product.hasSize ?
                     <>
-                        <Select product={product} value={value} onChange={o => setValue(o)} options={options} />
+                        <Select product={product} />
                         
                         <div className="quantity-div">
                             <Counter product={product} />

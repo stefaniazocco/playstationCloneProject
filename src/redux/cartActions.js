@@ -1,13 +1,14 @@
-import { data } from "flickity";
 import { products } from "../pages/product/products";
+
 
 export const ADDPRODUCT = "PRODUCT@ADDPRODUCT";
 export const REMOVEPRODUCT = "PRODUCT@REMOVEPRODUCT";
 export const EDITPRODUCT = "PRODUCT@EDITPRODUCT";
 
+
 export const addToCart = (name) => {
   const data = products[name];
-  
+ 
   return {
     type: ADDPRODUCT,
     payload: {
@@ -16,8 +17,7 @@ export const addToCart = (name) => {
         image: data.img.big1,
         price: data.priceN,
         number: data.number,
-        quantity: localStorage.getItem(`Quantity${data.name}`),
-        size: localStorage.getItem(`Size${data.name}`)
+        size: data.size
     },
   };
 };
@@ -29,12 +29,6 @@ export const removeFromCart = (name) => {
   }
 }
 
-export const editCart = (name, event) => {
-  return {
-    type: EDITPRODUCT, 
-    payload: {
-      name: name,
-      quantity: event.target.value
-    }
-  }
-}
+
+
+

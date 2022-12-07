@@ -1,13 +1,13 @@
 import { combineReducers, createStore } from "redux";
-import { productReducer, counterReducer } from "./CartReducer.js";
+import { productReducer, selectReducer } from "./CartReducer.js";
+import { counterReducer } from "./CounterReducer.js";
 
 
 
 const rootReducer = combineReducers({
     product: productReducer,
-    // counter: counterReducer,
-    // size: sizeReducer,
-    // quantity: quantityReducer,
+    size: selectReducer,
+    counter: counterReducer
 })
 
 export const store = createStore(rootReducer)

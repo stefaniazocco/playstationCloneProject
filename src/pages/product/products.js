@@ -13,7 +13,6 @@ import hatB3 from "../../assets/images/product/hat-big-front.jpg"
 import mugS from "../../assets/images/product/mug-small.jpg"
 import mugB from "../../assets/images/product/mug-big.jpg"
 
-
 export const products= { 
     hoodie : {
         name: "hoodie",
@@ -35,7 +34,15 @@ export const products= {
             big1: hoodieB,
             big2: "",
             big3: "",
-        }
+        },
+        size: true,
+        options : [
+            {value: "S adulto", available: true},
+            {value: "M adulto", available: true},
+            {value: "L adulto", available: true},
+            {value: "XL adulto", available: true},
+            {value: "2XL adulto", available: true},
+        ]
     },
 
     tshirt : {
@@ -58,7 +65,15 @@ export const products= {
             big1: tshirtBf,
             big2: tshirtBb,
             big3: "",
-        }
+        },
+        size: true,
+        options : [
+            {value: "S adulto", available: true},
+            {value: "M adulto", available: true},
+            {value: "L adulto", available: true},
+            {value: "XL adulto", available: true},
+            {value: "2XL adulto", available: true},
+        ]
     },
 
     hat : {
@@ -81,7 +96,8 @@ export const products= {
             big1: hatB1,
             big2: hatB2,
             big3: hatB3,
-        }
+        },
+        size: false,
     },
 
     mug : {
@@ -104,6 +120,7 @@ export const products= {
             big1: mugB,
             big2: "",
             big3: "",
-        }
+        },
+        size: false
     }
 }

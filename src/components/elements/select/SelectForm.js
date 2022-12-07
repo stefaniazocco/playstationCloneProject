@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { chooseSize } from "../../../redux/selectActions";
-import { store } from "../../../redux/store";
 import "./select.scss"
 
-export function Select({ product }) {
-    const size = useSelector((state) => state.size);
-    const prodSize = size.find(prod => prod.name === product.name)
+const options = [
+    "Italy", "France", "Germany", "China"
+  ]
 
+export function SelectForm() {
+    const [value, setValue] = useState(options[0])
     const [isOpen, setIsOpen] = useState(false)
     const [highlightedIndex, setHighlightedIndex] = useState(0)
-    
-    function selectOption(option, e) {
-        console.log()
-        if (option !== prodSize) store.dispatch(chooseSize(product.name, option))
+
+    function selectOption(option) {
+        if (option !== value) setValue(option)
     }
 
     function isOptionSelected(option) {
-        return option === prodSize
+        return option === value
     }
 
     useEffect(() => {
@@ -26,30 +24,25 @@ export function Select({ product }) {
 
     return (
         <div>
-            <div className="flexa">
-                <label><strong>Scegli quantità</strong></label>
-                <a href="#"><span>Guida alle taglie</span></a>
-            </div>
-
             <div
                 onBlur={() => setIsOpen(false)}         //close when click off
                 onClick={() => setIsOpen(prev => !prev)} // toggle
                 tabIndex={0}
                 className="select-container">
-                <span className="value">{`${prodSize.size} - ${product.price}`}<span className="stock">{product.options[0].available ? " - In magazzino" : " - Non disponibile"}</span></span>
+                <span className="value">{value}</span>
                 <div className="caret"></div>
                 <ul className={`${"options"} ${isOpen ? "show" : ""}`}>
-                    {product.options.map((option, index) => (
+                    {options.map((option, index) => (
                         <li onClick={e => {
                             e.stopPropagation()
-                            selectOption(option, e)
+                            selectOption(option)
                             setIsOpen(false)
                         }}
                             onMouseEnter={() => setHighlightedIndex(index)}
-                            key={option.value}
+                            key={option}
                             className={`${"option"} ${isOptionSelected(option) ?
                                 "selected" : ""} ${index === highlightedIndex ?
-                                    "highlighted" : ""} `}>{`${option.value} - ${product.price}`}<span className="stock">{option.available ? " - In magazzino" : " - Non disponibile"}</span></li>
+                                    "highlighted" : ""} `}>{option}</li>
                     )
                     )}
                 </ul>
