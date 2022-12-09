@@ -121,7 +121,8 @@ export const Form = () => {
                   if (step === FormSteps.length - 1) {
                     const res = await userRequest.post("/auth/register", {
                       formData,
-                    });
+                    })
+
                     res.status === 200 ? navigate("/login") : alert("Error");
                   } else {
                     if (step === 0) {
