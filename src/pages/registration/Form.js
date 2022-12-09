@@ -13,9 +13,33 @@ import { Profile } from "./createAcc/Profile";
 import { Privacy } from "./createAcc/Privacy";
 import { Link } from "react-router-dom";
 import { StepBar } from "./createAcc/StepBar";
+import { Modal } from "../../components/elements/modal/Modal";
+
+import { userRequest } from "../../requestMethod";
 
 export const Form = () => {
   const [step, setStep] = useState(0);
+  const [openModal, setOpenModal] = useState(false);
+  const [error, setError] = useState(null);
+
+  const [formData, setFormData] = useState({
+    email: null,
+    password: null,
+    confirmPassword: null,
+    firstName: null,
+    lastName: null,
+    userName: null,
+
+    month: null,
+    day: null,
+    year: null,
+
+    stateProvince: null,
+    country: null,
+    city: null,
+    postalCode: null,
+  });
+
   const navigate = useNavigate();
 
   const FormSteps = [
@@ -29,15 +53,15 @@ export const Form = () => {
 
   const StepDisplay = () => {
     if (step === 0) {
-      return <CountryLanguage />;
+      return <CountryLanguage formData={formData} setFormData={setFormData} />;
     } else if (step === 1) {
-      return <BirthDate />;
+      return <BirthDate formData={formData} setFormData={setFormData} />;
     } else if (step === 2) {
-      return <EmailPass />;
+      return <EmailPass formData={formData} setFormData={setFormData} />;
     } else if (step === 3) {
-      return <Address />;
+      return <Address formData={formData} setFormData={setFormData} />;
     } else if (step === 4) {
-      return <Profile />;
+      return <Profile formData={formData} setFormData={setFormData} />;
     } else {
       return <Privacy />;
     }
@@ -45,6 +69,7 @@ export const Form = () => {
 
   return (
     <div>
+      <Modal open={openModal} onClose={() => setOpenModal(false)} />
       <div
         className="registration-form"
         style={{
@@ -59,7 +84,10 @@ export const Form = () => {
             <div className="back-header">
               <img className="logo-sony" src={pslogo} />
 
-              <button className="back-button">
+              <button
+                className="back-button"
+                onClick={() => setOpenModal(true)}
+              >
                 <AiOutlineClose />
               </button>
             </div>
@@ -89,18 +117,84 @@ export const Form = () => {
 
               <button
                 className="next"
-                onClick={() => {
-                  step === FormSteps.length - 1
-                    ? alert("Form Submitted")
-                    : setStep((currStep) => currStep + 1);
+                onClick={async () => {
+                  if (step === FormSteps.length - 1) {
+                    const res = await userRequest.post("/auth/register", {
+                      formData,
+                    });
+                    res.status === 200 ? navigate("/login") : alert("Error");
+                  } else {
+                    if (step === 0) {
+                      if (formData.country !== null) {
+                        setStep((currPage) => currPage + 1);
+                      } else {
+                        alert("Compila tutti i campi");
+                      }
+                    } else if (step === 1) {
+                      if (
+                        formData.day !== null &&
+                        formData.month !== null &&
+                        formData.year !== null
+                      ) {
+                        setStep((currPage) => currPage + 1);
+                      } else {
+                        alert("Compila tutti i campi");
+                      }
+                    } else if (step === 2) {
+                      if (
+                        formData.email !== null &&
+                        formData.password !== null &&
+                        formData.confirmPassword !== null
+                      ) {
+                        if (formData.password === formData.confirmPassword) {
+                          if (!/\S+@\S+\.\S+/.test(formData.email)) {
+                            alert("Inserisci una mail valida");
+                          } else {
+                            setStep((currPage) => currPage + 1);
+                          }
+                        } else {
+                          alert("Le Password non coincidono");
+                        }
+                      } else {
+                        alert("Compila tutti i campi");
+                      }
+                    } else if (step === 3) {
+                      if (
+                        formData.city !== null &&
+                        formData.stateProvince !== null &&
+                        formData.postalCode !== null
+                      ) {
+                        if (!/^[0-9]+$/.test(formData.postalCode)) {
+                          alert(
+                            "Puoi inserire solo numeri per il codice postale"
+                          );
+                        } else {
+                          setStep((currPage) => currPage + 1);
+                        }
+                      } else {
+                        alert("Compila tutti i campi");
+                      }
+                    } else if (step === 4) {
+                      if (
+                        formData.userName !== null &&
+                        formData.firstName !== null &&
+                        formData.postalCode !== null
+                      ) {
+                        setStep((currPage) => currPage + 1);
+                      } else {
+                        alert("Compila tutti i campi");
+                      }
+                    }
+                  }
                 }}
               >
-                Next
+                {step === FormSteps.length - 1 ? "Submit" : "Next"}
               </button>
             </div>
 
             <Link className="link" to="/support">
               <p>Help</p>
+              {/* {error !== null && error} */}
             </Link>
           </div>
         </div>

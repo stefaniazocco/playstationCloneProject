@@ -1,0 +1,44 @@
+.birthdate-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h6 {
+    font-weight: 450;
+    font-size: 15px;
+  }
+
+  .birthdate-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .birthdate-single-input {
+      display: flex;
+      justify-content: space-between;
+
+      .form-date-select-container {
+        width: 32%;
+        height: 40px;
+      }
+    }
+  }
+
+  .division-line {
+    width: 100%;
+    height: 0.5px;
+    background-color: rgb(222, 222, 222);
+  }
+
+  .birthdate-info {
+    h6 {
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+}
