@@ -24,6 +24,22 @@ export function Cart(){
         const filter = counter.find(prod => prod.name === product.name)
         return filter.quantity
     }
+   
+    async function submitOrder() {
+        const formDataJsonString = JSON.stringify(product);
+        const url = "http://localhost:5000/cart/checkout"
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: formDataJsonString,
+            // credentials: "include",
+        });
+        const result = await response.json();
+        console.dir(result)
+    }
+
     return(
         <>
             <ProductNav />
@@ -75,8 +91,8 @@ export function Cart(){
                         <div className="sub-sub">
                             <div>Subtotale:</div>
                             <div>{total.toFixed(2)}€</div>
-                        </div>
-                        <button className="cart-button-orange but-width">Checkout</button>
+                        </div>                        
+                        <button className="cart-button-orange but-width" onClick={submitOrder}>Checkout</button> 
                         <button className="cart-button but-width">Continua gli acquisti</button>
                     </div>
                 </div>
