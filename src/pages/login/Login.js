@@ -4,23 +4,20 @@ import wallpaper from "../../assets/images/homepage/login-wallpaper.jpg";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { userRequest } from "../../requestMethod";
 
 export function Login() {
   const navigate = useNavigate();
-  const [input, setInput] = useState("");
-  function handleInput(e) {
-    let value = e.target.value;
-    setInput(value);
-  }
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleClick = async (e) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:5000/api/users/login", {
-      email: input,
+    const res = await userRequest.post("http://localhost:5000/api/auth/login", {
+      email: email,
+      password: password,
     });
     res.status === 200 && navigate("/");
-
-    console.log(res);
   };
 
   return (
@@ -42,21 +39,28 @@ export function Login() {
             <div className="d-flex flex-column align-items-center">
               <form onSubmit={handleClick}>
                 <input
-                  type="email"
                   placeholder="ID di accesso (indirizzo di e-mail)"
-                  value={input}
-                  onChange={handleInput}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
                 <br />
-                <button type="submit" style={{ opacity: !input && 0.3 }}>
-                  Avanti
-                </button>
+                <div className="input-container">
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </div>
+                <button type="submit">Avanti</button>
               </form>
               <a className="access" href="">
                 Problemi di accesso?
               </a>
               <br />
-              <button className="account">Crea nuovo account</button>
+              <Link to="/registration">
+                <button className="account">Crea nuovo account</button>
+              </Link>
             </div>
           </div>
 

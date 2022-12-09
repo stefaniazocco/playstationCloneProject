@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
-import "./select.scss";
+import { yearOptions } from "./SelectData";
+import "./selectForm.scss";
 
-export function Select({ value, onChange, options }) {
+export function SelectForm({ options, setFormData, formData, name }) {
+  const [value, setValue] = useState(options[0]);
   const [isOpen, setIsOpen] = useState(false);
   const [highlightedIndex, setHighlightedIndex] = useState(0);
 
   function selectOption(option) {
-    if (option !== value) onChange(option);
+    if (option !== value) {
+      setValue(option);
+      setFormData({ ...formData, [name]: option });
+    }
   }
 
   function isOptionSelected(option) {
@@ -16,29 +21,16 @@ export function Select({ value, onChange, options }) {
   useEffect(() => {
     if (isOpen) setHighlightedIndex(0); // highlight first li every time it opens
   }, [isOpen]);
+
   return (
     <div>
-      <div className="flexa">
-        <label>
-          <strong>Scegli quantità</strong>
-        </label>
-        <a href="#">
-          <span>Guida alle taglie</span>
-        </a>
-      </div>
-
       <div
         onBlur={() => setIsOpen(false)} //close when click off
         onClick={() => setIsOpen((prev) => !prev)} // toggle
         tabIndex={0}
-        className="select-container"
+        className="form-select-container"
       >
-        <span className="value">
-          {value?.label}
-          <span className="stock">
-            {value.available ? " - In magazzino" : " - Non disponibile"}
-          </span>
-        </span>
+        <span className="value">{value}</span>
         <div className="caret"></div>
         <ul className={`${"options"} ${isOpen ? "show" : ""}`}>
           {options.map((option, index) => (
@@ -49,15 +41,12 @@ export function Select({ value, onChange, options }) {
                 setIsOpen(false);
               }}
               onMouseEnter={() => setHighlightedIndex(index)}
-              key={option.label}
+              key={option}
               className={`${"option"} ${
                 isOptionSelected(option) ? "selected" : ""
               } ${index === highlightedIndex ? "highlighted" : ""} `}
             >
-              {option.label}
-              <span className="stock">
-                {option.available ? " - In magazzino" : " - Non disponibile"}
-              </span>
+              {option}
             </li>
           ))}
         </ul>

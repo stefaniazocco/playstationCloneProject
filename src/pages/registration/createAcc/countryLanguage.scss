@@ -1,0 +1,20 @@
+.conutry-language-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h6 {
+    font-weight: 450;
+    font-size: 15px;
+  }
+
+  .country-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .country-single-input {
+      padding: 0;
+    }
+  }
+}

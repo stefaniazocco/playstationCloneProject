@@ -21,6 +21,7 @@ export const NotFound404 = () => {
           Questa pagina non esiste. Prima di richiedere l'intervento di Astro
           Bot, verifica l'URL o torna a playstation.com
         </p>
+
         <Button
           className={"button-white"}
           link={"/"}
