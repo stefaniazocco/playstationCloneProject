@@ -10,10 +10,20 @@ import { Presentation } from "./pages/presentation/Presentation";
 import { Product } from "./pages/product/Product";
 
 import { NotFound } from "./pages/notFound/NotFound";
+import { Suspense } from "react";
+import Loading from "./pages/Loading";
+// import i18n from "i18next";
+// import LocaleContext from "./locales/LocaleContext";
 
 function App() {
+  
+  // const [locale, setLocale] = useState(i18n.language);
+  // i18n.on('languageChanged', (lng) => setLocale(i18n.language));
+
   return (
     <div>
+      {/* <LocaleContext.Provider value={{locale, setLocale}}> */}
+      <Suspense fallback={<Loading/>}>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/store-games" element={<StoreGames />} />
@@ -24,6 +34,8 @@ function App() {
         <Route path="/presentation" element={<Presentation />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </Suspense>
+      {/*</LocaleContext.Provider> */}
     </div>
   );
 }

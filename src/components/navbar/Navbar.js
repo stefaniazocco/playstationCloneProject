@@ -10,10 +10,7 @@ import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
-
-  const onChangeLanguage = (e) => {
-    i18n.changeLanguage(e.target.value);
-  };
+ 
 
   const [navItem, setNavItem] = useState([]);
 
@@ -71,19 +68,9 @@ const Navbar = () => {
           </ul>
           
             <div className="mx-2 d-flex">
-              <div className="dropdown">
                 <Link to="/country-selector" style={{ alignSelf: "center" }}>
                   <GoGlobe style={{ fontSize: 30, fill: "black" }} />
                 </Link>
-                <select className="dropdown-content" aria-label="Default select example" onChange={onChangeLanguage}>
-                  <option class="opt" value="it" >
-                  Italian
-                  </option>
-                  <option class="opt" value="en">
-                  English
-                  </option>
-                </select>
-              </div>
             </div>
 
             <Link to="/login" className="accedi-btn mx-3 my-3">

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import i18n from "i18next";
+
 import { Cookies } from "../../components/cookies/Cookies";
 import { ExplorePlay } from "../../components/elements/sections/exploreplay/ExplorePlay";
 import { PlayPlus } from "../../components/elements/sections/sales-plus/PlayPlus";
@@ -20,6 +22,8 @@ import NavbarMobile from "../../components/navbar/NavbarMobile";
 
 
 export function Homepage() {
+  
+
   const [close, setClose] = useState(true);
 
   function hideSection() {
@@ -42,6 +46,7 @@ export function Homepage() {
 
   return (
     <>
+     
       <Navbar />
       <NavbarMobile/>
       <Hero />
@@ -56,6 +61,7 @@ export function Homepage() {
       <BlogCarousel />
       <Socials />
       <FooterMain />
+     
 
       {close === true && <Cookies hide={hideSection} />}
     </>

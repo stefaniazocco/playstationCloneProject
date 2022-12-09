@@ -12,8 +12,10 @@
     "axios": "^1.2.0",
     "flickity": "^2.3.0",
     "i18next": "^22.0.6",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "i18next-http-backend": "^2.0.2",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.6.0",
+    "react-bootstrap": "^2.5.0-beta.1",
     "react-dom": "^18.2.0",
     "react-i18next": "^12.0.0",
     "react-icons": "^4.6.0",
@@ -52,7 +54,7 @@
     ]
   },
   "devDependencies": {
-    "bootstrap": "^5.2.2",
+    "bootstrap": "^5.1.0",
     "sass": "^1.56.0"
   }
 }
