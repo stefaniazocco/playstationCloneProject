@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { ProductNav } from "../../components/elements/sections/productNav/ProductNav";
@@ -25,19 +26,17 @@ export function Cart(){
         return filter.quantity
     }
    
-    async function submitOrder() {
-        const formDataJsonString = JSON.stringify(product);
-        const url = "http://localhost:5000/cart/checkout"
-        const response = await fetch(url, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: formDataJsonString,
-            // credentials: "include",
-        });
-        const result = await response.json();
-        console.dir(result)
+    const submitOrder = () => {
+        // const formDataJsonString = JSON.stringify(product);
+        const url = "http://localhost:5000/api/stripe/create-checkout-session"
+        axios.post(url, {product, size, counter}
+        ).then((res) =>{
+            if(res.data.url){
+                window.location.href = res.data.url
+            }
+        }).catch((err) => console.log(err.message))
+        
+
     }
 
     return(
