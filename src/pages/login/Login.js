@@ -5,19 +5,35 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { userRequest } from "../../requestMethod";
+import { loginFailure, loginStart, loginSuccess } from "../../redux/userRedux";
+import { useDispatch, useSelector } from "react-redux";
 
 export function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  const { error } = useSelector((state) => state.user);
 
   const handleClick = async (e) => {
     e.preventDefault();
-    const res = await userRequest.post("http://localhost:5000/api/auth/login", {
-      email: email,
-      password: password,
-    });
-    res.status === 200 && navigate("/");
+    dispatch(loginStart());
+    try {
+      const res = await userRequest.post(
+        "http://localhost:5000/api/auth/login",
+        {
+          email: email,
+          password: password,
+        }
+      );
+      console.log(res);
+      res.status === 200 &&
+        dispatch(loginSuccess(res.data.user)) &&
+        navigate("/");
+    } catch (error) {
+      error.response.data === "Credenziali errate" && alert("Dati Errati");
+      dispatch(loginFailure());
+    }
   };
 
   return (
@@ -63,7 +79,6 @@ export function Login() {
               </Link>
             </div>
           </div>
-
           <a href="" className="map">
             Guida/Mappa del sito
           </a>
