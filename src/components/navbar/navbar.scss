@@ -260,6 +260,19 @@
     border: none;
   }
 }
+.userIconHover {
+  color: black;
+  &:hover {
+    color: #2d64e6;
+  }
+}
+.heartUserHover {
+  color: black;
+  &:hover {
+    fill: red;
+
+  }
+}
 
 @keyframes storeNavActive {
   0% {
@@ -413,15 +426,14 @@
   }
 }
 
-
 //DROPDOWN GLOBE
-.dropdown-content  {
+.dropdown-content {
   display: none;
   position: absolute;
   background-color: #f1f1f1d3;
   min-width: 150px;
   min-height: 40px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -433,6 +445,10 @@
   list-style: none;
 }
 
-.dropdown-content .opt:hover {background-color: rgba(150, 150, 150, 0.74);}
+.dropdown-content .opt:hover {
+  background-color: rgba(150, 150, 150, 0.74);
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}

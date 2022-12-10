@@ -2,20 +2,25 @@ import React, { useState, useEffect } from "react";
 import "./navbar.scss";
 import Dropdown from "./Dropdown";
 import { BiSearchAlt2 } from "react-icons/bi";
+import { TiShoppingCart } from "react-icons/ti";
+import { BsFillHeartFill } from "react-icons/bs";
+import { GiDiamondsSmile } from "react-icons/gi";
 import Sonybar from "./Sonybar";
 import { navItems } from "./NavItemList";
 import { Link } from "react-router-dom";
 import { GoGlobe } from "react-icons/go";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
- 
+  const user = useSelector((state) => state.user.currentUser);
 
   const [navItem, setNavItem] = useState([]);
 
   useEffect(() => {
     setNavItem(navItems);
+    console.log(user);
   }, []);
 
   return (
@@ -66,27 +71,45 @@ const Navbar = () => {
               );
             })}
           </ul>
-          
-            <div className="mx-2 d-flex">
-                <Link to="/country-selector" style={{ alignSelf: "center" }}>
-                  <GoGlobe style={{ fontSize: 30, fill: "black" }} />
-                </Link>
-            </div>
 
-            <Link to="/login" className="accedi-btn mx-3 my-3">
-              {" "}
-              {t("sign-in")}{" "}
+          <div className="mx-2 d-flex">
+            <Link to="/country-selector" style={{ alignSelf: "center" }}>
+              <GoGlobe style={{ fontSize: 30 }} className="userIconHover" />
             </Link>
-            <a
-              className="btn-search btn rounded-0 my-2 "
-              href="/"
-              type="submit"
-              style={{ fontSize: 16 }}
-            >
-              {t("search")}
-              <BiSearchAlt2 size={22} className="mx-2" />
-            </a>
-         
+          </div>
+          {!user ? (
+            <>
+              <Link to="/login" className="accedi-btn mx-3 my-3">
+                {" "}
+                {t("sign-in")}{" "}
+              </Link>
+            </>
+          ) : (
+            <>
+            <Link to="/profile" className="mx-3 my-3">
+                {" "}
+                <GiDiamondsSmile className="userIconHover" size={25} />
+              </Link>
+              <Link to="/cart" className="mx-3 my-3">
+                {" "}
+                <TiShoppingCart className="userIconHover" size={30} />
+              </Link>
+              <Link to="/" className="mx-3 my-3">
+                {" "}
+                <BsFillHeartFill className="heartUserHover" size={25} />
+              </Link>
+
+            </>
+          )}
+          <a
+            className="btn-search btn rounded-0 my-2 "
+            href="/"
+            type="submit"
+            style={{ fontSize: 16 }}
+          >
+            {t("search")}
+            <BiSearchAlt2 size={22} className="mx-2" />
+          </a>
         </div>
       </nav>
     </>
