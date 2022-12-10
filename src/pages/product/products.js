@@ -34,6 +34,7 @@ export const products= {
             big1: hoodieB,
             big2: "",
             big3: "",
+            web: "https://c.bdac.co/bdac/PLAYSTATIONEU/ProductImages/1530159_b.jpg?v=637728811603240150"
         },
         size: true,
         options : [
@@ -65,6 +66,7 @@ export const products= {
             big1: tshirtBf,
             big2: tshirtBb,
             big3: "",
+            web: "https://c.bdac.co/bdac/PLAYSTATIONEU/ProductImages/1525126_b.jpg?v=637563679892785443"
         },
         size: true,
         options : [
@@ -96,6 +98,7 @@ export const products= {
             big1: hatB1,
             big2: hatB2,
             big3: hatB3,
+            web: "https://c.bdac.co/bdac/PLAYSTATIONEU/ProductImages/1525129_b.jpg?v=637588578004590116"
         },
         size: false,
     },
@@ -120,6 +123,7 @@ export const products= {
             big1: mugB,
             big2: "",
             big3: "",
+            web: "https://c.bdac.co/bdac/PLAYSTATIONEU/ProductImages/1530165_b.jpg?v=637728811367300270"
         },
         size: false
     }

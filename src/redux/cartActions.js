@@ -14,7 +14,7 @@ export const addToCart = (name) => {
     payload: {
         name: data.name,
         title: data.title,
-        image: data.img.big1,
+        image: data.img.web,
         price: data.priceN,
         number: data.number,
         size: data.size
