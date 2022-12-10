@@ -17,7 +17,11 @@ export function Product(){
     const {name} = useParams()
    
     const product = products[name]
-    console.log(product.title)
+    
+    // const AddToCartHandle = (e) => {
+    //     e.preventDefault();
+    //     history.push(`/cart/${productId}?qty=${qty}`);
+    //   };
     return(
         <>
             <ProductNav />
