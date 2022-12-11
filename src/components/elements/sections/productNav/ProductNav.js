@@ -49,9 +49,9 @@ export function ProductNav() {
             <div className="header-top"><a href="#">Consegna gratuita per ordini oltre €90</a></div>
             <div className="header-div-logo">
                 <div className="immagine-logo">
-                    <a href="#">
+                    <Link to="/products">
                         <img src={logo} />
-                    </a>
+                    </Link>
                 </div>
 
                 <nav className="nav-mobile">
@@ -78,7 +78,7 @@ export function ProductNav() {
                             </button>
                         </div>
                         <ul className={`${"ul-2"} ${drop1}`} id="ul-2">
-                            <li className="li-2"><Link to="/">PlayStation</Link></li>
+                            <li className="li-2"><Link to="/products">PlayStation</Link></li>
                             <li className="li-2"><a href="#">Icone dei personaggi di PlayStation Studios</a></li>
                             <li className="li-2"><a href="#">ASTRO BOT Rescue Mission</a></li>
                             <li className="li-2"><a href="#">Demon's Souls</a></li>

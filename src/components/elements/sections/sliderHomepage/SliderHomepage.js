@@ -49,7 +49,7 @@ export function SliderHomepage(){
                 <ButtonClick className="button-white arr" click={clickPrev} string={<IoIosArrowBack style={{fontSize: 32, marginTop: 5}} />}/>
                 <ButtonClick className="button-white arr" click={clickNext} string={<IoIosArrowForward style={{fontSize: 32, marginTop: 5}} />}/>
             </div>   
-            <div className="dark"></div>         
+            {/* <div className="dark"></div>          */}
         </section>
     )
 }

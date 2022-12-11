@@ -32,7 +32,7 @@ export function Product(){
                             <ul className="d-flex">
                                 <li><Link to="/">Home</Link></li>
                                 <li><Link to="/">PROPRIETÀ</Link></li>
-                                <li><Link to="/">PlayStation</Link></li>
+                                <li><Link to="/products">PlayStation</Link></li>
                                 <li>{product.title}</li>
                             </ul>
                         </div>

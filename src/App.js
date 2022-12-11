@@ -17,6 +17,7 @@ import Loading from "./pages/Loading";
 import { CreateAccount } from "./pages/registration/CreateAccount";
 import { Form } from "./pages/registration/Form";
 import { Cart } from "./pages/cart/Cart";
+import { Products } from "./pages/products/Products";
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/store-games" element={<StoreGames />} />
         <Route path="/country-selector" element={<CountrySelector />} />
+        <Route path="/products" element={<Products />} />
         <Route path="/product/:name" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/support" element={<Support />} />

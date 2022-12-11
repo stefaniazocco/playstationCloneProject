@@ -1,0 +1,26 @@
+.message-box{
+    width: 100%;
+    height: fit-content;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;
+    position: relative;
+    .message-close{
+        position: absolute;
+        right: 5px;
+        top: 0px;
+    }
+    .message-script{
+        font-size: 20px;
+    }
+}
+@media (max-width: 400px){
+   .message-box{
+    width: 100%;
+    padding: 10px 10px;
+    .message-script{
+        font-size: 14px;
+    }
+   }
+}

@@ -1,22 +1,12 @@
+import { products } from "../pages/product/products"
 import { DECREMENT, INCREMENT, MODIFY } from "./counterActions"
 
-const defaultStateCounter = [{
-    name: "hoodie",
-    quantity: 1
-},
-{
-    name: "tshirt",
-    quantity: 1
-},
-{
-    name: "hat",
-    quantity: 1
-},
-{
-    name: "mug",
-    quantity: 1
-}
-]
+const defaultStateCounter = Object.values(products).map(prod => {
+    return {
+        name: prod.name,
+        quantity: 1
+    }
+})
 
 export function counterReducer(state = defaultStateCounter, action){
     switch(action.type){

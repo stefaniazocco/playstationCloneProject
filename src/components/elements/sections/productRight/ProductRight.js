@@ -27,7 +27,7 @@ export function ProductRight({product}){
                         <div className="quantity-div">
                             <Counter product={product} />
                         </div> 
-                    </> :
+                    </> : 
                     <ProductTable product={product} />
                 }
 

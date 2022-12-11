@@ -1,16 +1,17 @@
 import axios from "axios";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Message, useMessage } from "../../components/elements/sections/message/Message";
 import { ProductNav } from "../../components/elements/sections/productNav/ProductNav";
 import { FooterProduct } from "../../components/footer/FooterProduct";
-import { editCart, removeFromCart } from "../../redux/cartActions";
+import { clearCart, removeFromCart } from "../../redux/cartActions";
 import { counterModify } from "../../redux/counterActions";
 import { store } from "../../redux/store";
 
 import "./cart.scss"
 
 export function Cart(){
-    
+    const {message, closeMessage} = useMessage()
     const product = useSelector((state) => state.product);
     const size = useSelector(state => state.size)
     const counter = useSelector((state) => state.counter)
@@ -35,25 +36,24 @@ export function Cart(){
                 window.location.href = res.data.url
             }
         }).catch((err) => console.log(err.message))
-        
-
     }
-
+    const navigate = useNavigate();
     return(
         <>
             <ProductNav />
             <div className="cart-main">
           
-            
+            {message && <Message message={message} closeMessage={closeMessage} />}
             {product.length === 0
             ?   <div className="cart-center">
                     <h1>Carrello</h1>
                     <div>Il tuo carrello è vuoto</div>
-                    <button className="cart-button">Continua gli acquisti</button>
+                    <button className="cart-button" onClick={()=>navigate("/products")}>Continua gli acquisti</button>
                 </div>
             
             :<div className="cart-center"> 
                 <h1>Carrello</h1>
+                
                 <div className="d-flex">
                     <div>
                     {product.map(p => <div className="cart-prod">
@@ -92,7 +92,8 @@ export function Cart(){
                             <div>{total.toFixed(2)}€</div>
                         </div>                        
                         <button className="cart-button-orange but-width" onClick={submitOrder}>Checkout</button> 
-                        <button className="cart-button but-width">Continua gli acquisti</button>
+                        <button className="cart-button but-width" onClick={()=>navigate("/products")}>Continua gli acquisti</button>
+                        
                     </div>
                 </div>
 

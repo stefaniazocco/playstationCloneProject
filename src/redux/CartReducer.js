@@ -1,5 +1,5 @@
 import { products } from "../pages/product/products"
-import { ADDPRODUCT, EDITPRODUCT, REMOVEPRODUCT } from "./cartActions"
+import { ADDPRODUCT, EDITPRODUCT, REMOVEPRODUCT, CLEARPRODUCT } from "./cartActions"
 import { CHANGESIZE } from "./selectActions"
 
 const defaultStateProd = []
@@ -21,6 +21,9 @@ export function productReducer(state = defaultStateProd, action){
                 return product
             })
         }
+        case CLEARPRODUCT: {
+            return []
+        }
 
         default : {
             return state
@@ -28,14 +31,13 @@ export function productReducer(state = defaultStateProd, action){
     }
 }
 
-const defaultStateSize = [{
-    name: "hoodie",
-    size: "S adulto",
-}, {
-    name:"tshirt",
-    size: "S adulto",
-}
-]
+const defaultStateSize = Object.values(products).map(prod => {
+    return prod.hasSize && {
+        name: prod.name,
+        size: prod.options[0].value
+    }
+})
+
 
 export function selectReducer(state = defaultStateSize, action){
     switch (action.type){

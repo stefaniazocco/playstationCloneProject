@@ -1,0 +1,94 @@
+.p-card-bg{
+    position: fixed;
+    background-color: rgba(5, 5, 5, 0.431);
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .p-card-box{
+        width: 950px;
+        height: fit-content;
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        padding: 20px;
+        gap: 20px;
+        position: relative;
+        .p-card-close{
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: none;
+            background-color: transparent;
+            font-size: 30px;
+            padding: 0px;
+            line-height: 0;
+            color: gray;
+            &:hover{
+                color: black;
+            }
+        }
+        .p-card-img{
+            width: 450px;
+        }
+        .p-card-right{
+            flex: 1;
+            .p-card-right-up{
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 10px;
+                .p-card-right-up-title{
+                    font-size: 28px;
+                    text-decoration: none;
+                    color: black;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                .p-card-right-up-price{
+                    font-size: 20px;
+                    padding-top: 20px;
+                }
+                .p-card-right-up-number{
+                    font-size: 16px;
+                    color: grey
+                }
+            } 
+            .p-card-right-details{
+                padding: 10px 0px;
+            }
+            .p-card-price-description{
+                padding: 10px 0px;
+            }
+            .p-add-to-cart{
+                background-color: #eb6035;
+                color: white;
+                font-size: 15px;
+                width: 100%;
+                padding: 15px 30px;
+                border: none;
+                font-weight: 500;
+                transition-duration: 0.2s;
+            }
+            .p-add-to-cart:hover{
+                background-color: #d35129;
+            }
+            .p-card-more{
+                padding-top: 5px;
+                float: right;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+        }
+
+    }
+}
+@media (max-width: 1000px){
+    .p-card-bg{
+        display: none;
+    }
+}

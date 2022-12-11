@@ -3,6 +3,7 @@ import { useState } from "react"
 import { useSelector } from "react-redux";
 import { counterModify } from "../../../../redux/counterActions";
 import { store } from "../../../../redux/store";
+import "./productTable.scss"
 
 export function ProductTable({product}){
     // const [quantity, setQuantity] = useState(1)
@@ -21,17 +22,17 @@ export function ProductTable({product}){
 
 
     return(
-        <table class="product-table">
-            <thead class="product-thead">
+        <table className="product-table">
+            <thead className="product-thead">
                 <tr>
                     <th>Quantità</th>
                     <th>Prezzo</th>
                     <th>Inventario</th>
                 </tr>
             </thead>
-            <tbody class="product-tbody">
+            <tbody className="product-tbody">
                 <tr>
-                    <td><input class="product-input" type="number" value={prodCounter.quantity} onChange={(e) => store.dispatch(counterModify(product.name, e))}/></td>
+                    <td><input className="product-input" type="number" value={prodCounter.quantity} onChange={(e) => store.dispatch(counterModify(product.name, e))}/></td>
                     <td>{product.price}</td>
                     <td>In magazzino</td>
                 </tr>

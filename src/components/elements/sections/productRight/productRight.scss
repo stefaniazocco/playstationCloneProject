@@ -8,50 +8,6 @@
         margin-top: 40px;
         margin-bottom: 15px;
     }
-    .product-table{
-        width: 500px;
-        border: 1px solid #606060;
-        margin-top: 30px;
-        margin-bottom: 20px;
-        .product-thead{
-            background-color: #606060;
-            tr th{
-                width: 170px;
-                color: white;
-                font-size: 14px;
-                text-align: center;
-                padding: 8px;
-
-            }
-        }
-        .product-tbody{
-            tr td{
-                font-size: 14px;
-                text-align: center;
-                padding: 8px;
-                input {
-                    width: 100px;
-                    height: fit-content;
-                    text-align: center;
-                    border: 1px solid #ddd;
-                }
-                input:focus{
-                    outline-color: #8fd5fd;
-                    outline-offset: 2px;
-                    border-color: #00439c;
-                }
-                input::-webkit-outer-spin-button,
-                input::-webkit-inner-spin-button {
-                    appearance: none;
-                    margin: 0;
-                }
-            }
-            td:last-of-type{
-                color:#00adff;
-            }
-            
-        }
-    }
     .price-description{
         font-size: 14px;
     }
@@ -78,10 +34,6 @@
 @media(max-width: 991px){
     .product-right{
         order: 3;
-        .product-table{
-            width: 100%;
-            margin-right: 30px;
-        }
     }
 }
 

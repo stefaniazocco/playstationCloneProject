@@ -13,7 +13,7 @@ import bg768 from "../../../../assets/images/homepage/storeSection-background-mi
 import bg320 from "../../../../assets/images/homepage/storeSection-background-min320.webp"
 import logo from "../../../../assets/images/homepage/store-tshirt-logo.webp"
 import { Button } from "../../buttons/Button";
-import { useParams } from "react-router-dom";
+
 
 
 
@@ -50,7 +50,7 @@ export function StoreHomepage() {
                     <CardsStoreHomepage img={mug} product={t("product4")} link="/product/mug" string={t("acquista")}/>
                 </div>
                 {/* BOTTONE */}
-                <Button className="button-white store-Button" link="#" string={t("collection")} />
+                <Button className="button-white store-Button" link="/products" string={t("collection")} />
 
             </div>
 
