@@ -8,7 +8,7 @@ import i18n from "../../i18n";
 
 export function CountrySelector() {
 
-    const navigate= useNavigate()
+    const navigate = useNavigate()
 
     function changeLocale (lang) {
         i18n.changeLanguage(lang);
@@ -43,13 +43,13 @@ export function CountrySelector() {
 
                         <div className="letterb">
                             <div className="letterbox">B</div>
-                            <a href="#">Bahrain (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Bahrain (English)</a>
                             <a href="#">Bahrain (Arabic)</a>
                             <a href="#">Belgium (Français)</a>
                             <a href="#">Belgium (Nederlands)</a>
                             <a href="#">Bolivia</a>
                             <a href="#">Brasil</a>
-                            <a href="#">Bulgaria (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Bulgaria (English)</a>
                             <a href="#">Bulgaria (България)</a>
                         </div>
 
@@ -61,17 +61,17 @@ export function CountrySelector() {
                             <a href="#">中国大陆 (简体中文)</a>
                             <a href="#">Colombia</a>
                             <a href="#">Costa Rica</a>
-                            <a href="#">Croatia (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Croatia (English)</a>
                             <a href="#">Croatia (Hrvatska)</a>
                             <a href="#">Cyprus</a>
-                            <a href="#">Czech Republic (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Czech Republic (English)</a>
                             <a href="#">Czech Republic (Ceská Republika)</a>
                         </div>
 
                         <div className="letter-d">
                             <div className="letterbox">D</div>
                             <a href="#">Denmark (Danmark)</a>
-                            <a href="#">Denmark (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Denmark (English)</a>
                         </div>
 
                         <div className="letter-e">
@@ -82,7 +82,7 @@ export function CountrySelector() {
 
                         <div className="letter-f">
                             <div className="letterbox">F</div>
-                            <a href="#">Finland (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Finland (English)</a>
                             <a href="#">Finland (Suomi)</a>
                             <a href="#">France</a>
                         </div>
@@ -90,7 +90,7 @@ export function CountrySelector() {
                         <div className="letter-g">
                             <div className="letterbox">G</div>
                             <a href="#">Germany (Deutschland)</a>
-                            <a href="#">Greece (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Greece (English)</a>
                             <a href="#">Greece (Ελλαδα)</a>
                             <a href="#">Guatemala</a>
                         </div>
@@ -98,22 +98,22 @@ export function CountrySelector() {
                         <div className="letter-h">
                             <div className="letterbox">H</div>
                             <a href="#">Honduras</a>
-                            <a href="#">Hong Kong (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Hong Kong (English)</a>
                             <a href="#">Hong Kong (简体中文)</a>
                             <a href="#">Hong Kong (繁體中文)</a>
                             <a href="#">香港 (繁體中文)</a>
                             <a href="#">香港 (简体中文)</a>
-                            <a href="#">Hungary (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Hungary (English)</a>
                             <a href="#">Hungary (Magyarország)</a>
                         </div>
 
                         <div className="letter-i" >
                             <div className="letterbox">I</div>
-                            <a href="#">Iceland (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Iceland (English)</a>
                             <a href="#">India</a>
-                            <a href="#">Indonesia (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Indonesia (English)</a>
                             <a href="#">Ireland</a>
-                            <a href="#">Israel (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Israel (English)</a>
                             <a href="#">Israel</a>
                             <a href="/" value='it' onClick={() => changeLocale('it')}>Italy</a>
                         </div>
@@ -127,20 +127,20 @@ export function CountrySelector() {
                             <div className="letterbox">K</div>
                             <a href="#">Korea (한국어)</a>
                             <a href="#">Kuwait (Arabic)</a>
-                            <a href="#">Kuwait (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Kuwait (English)</a>
                         </div>
 
                         <div className="letter-l">
                             <div className="letterbox">L</div>
                             <a href="#">Lebanon (Arabic)</a>
-                            <a href="#">Lebanon (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Lebanon (English)</a>
                             <a href="#">Luxembourg (Deutsch)</a>
                             <a href="#">Luxembourg (Français)</a>
                         </div>
 
                         <div className="letter-m">
                             <div className="letterbox">M</div>
-                            <a href="#">Malaysia (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Malaysia (English)</a>
                             <a href="#">Malta</a>
                             <a href="#">Mexico (México)</a>
                         </div>
@@ -150,14 +150,14 @@ export function CountrySelector() {
                             <a href="#">Nederland</a>
                             <a href="#">New Zealand</a>
                             <a href="#">Nicaragua</a>
-                            <a href="#">Norway (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Norway (English)</a>
                             <a href="#">Norway (Norge)</a>
                         </div>
 
                         <div className="letter-o">
                             <div className="letterbox">O</div>
                             <a href="#">Oman (Arabic)</a>
-                            <a href="#">Oman (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Oman (English)</a>
                         </div>
 
                         <div className="letter-p">
@@ -165,8 +165,8 @@ export function CountrySelector() {
                             <a href="#">Panama (Panamá)</a>
                             <a href="#">Paraguay</a>
                             <a href="#">Peru (Perú)</a>
-                            <a href="#">Philippines (English)</a>
-                            <a href="#">Poland (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Philippines (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Poland (English)</a>
                             <a href="#">Poland (Polska)</a>
                             <a href="#">Portugal</a>
                         </div>
@@ -174,12 +174,12 @@ export function CountrySelector() {
                         <div className="letter-q">
                             <div className="letterbox">Q</div>
                             <a href="#">Qatar (Arabic)</a>
-                            <a href="#">Qatar (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Qatar (English)</a>
                         </div>
 
                         <div className="letter-r">
                             <div className="letterbox">R</div>
-                            <a href="#">Romania (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Romania (English)</a>
                             <a href="#">Romania (România)</a>
                             <a href="#">Russia (Россия)</a>
                         </div>
@@ -187,29 +187,29 @@ export function CountrySelector() {
                         <div className="letter-s">
                             <div className="letterbox">S</div>
                             <a href="#">Saudi Arabia (Arabic)</a>
-                            <a href="#">Saudi Arabia (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Saudi Arabia (English)</a>
                             <a href="#">Serbia (Srbija)</a>
-                            <a href="#">Singapore (English)</a>
-                            <a href="#">Slovenia (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Singapore (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Slovenia (English)</a>
                             <a href="#">Slovenia (Slovenija)</a>
-                            <a href="#">Slovakia (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Slovakia (English)</a>
                             <a href="#">Slovakia (Slovenská Republika)</a>
                             <a href="#">South Africa</a>
                             <a href="#">Spain (España)</a>
-                            <a href="#">Sweden (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Sweden (English)</a>
                             <a href="#">Sweden (Sverige)</a>
                             <a href="#">Switzerland (Deutsch)</a>
                             <a href="#">Switzerland (Français)</a>
-                            <a href="#">Switzerland (Italiano)</a>
+                            <a href="/" value='it' onClick={() => changeLocale('it')}>Switzerland (Italiano)</a>
                         </div>
 
                         <div className="letter-t">
                             <div className="letterbox">T</div>
-                            <a href="#">Taiwan (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Taiwan (English)</a>
                             <a href="#">Taiwan (台灣繁體中文)</a>
-                            <a href="#">Thailand (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Thailand (English)</a>
                             <a href="#">Thailand (ภาษาไทย)</a>
-                            <a href="#">Turkey (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Turkey (English)</a>
                             <a href="#">Turkey (Türkiye)</a>
                         </div>
 
@@ -218,14 +218,14 @@ export function CountrySelector() {
                             <a href="#">Ukraine (Російська мова)</a>
                             <a href="#">Ukraine (Українська мова)</a>
                             <a href="#">United Arab Emirates/ Middle East (Arabic)</a>
-                            <a href="#">United Arab Emirates/ Middle East (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>United Arab Emirates/ Middle East (English)</a>
                             <a href="#">United States</a>
                             <a href="/" value='en' onClick={() => changeLocale('en')}>United Kingdom</a>
                             <a href="#">Uruguay</a>
                         </div>
                         <div className="letter-v">
                             <div className="letterbox">V</div>
-                            <a href="#">Vietnam (English)</a>
+                            <a href="/" value='en' onClick={() => changeLocale('en')}>Vietnam (English)</a>
                         </div>
                     </div>
                 </div>
