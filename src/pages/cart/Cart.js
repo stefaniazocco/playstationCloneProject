@@ -15,6 +15,7 @@ export function Cart(){
     const product = useSelector((state) => state.product);
     const size = useSelector(state => state.size)
     const counter = useSelector((state) => state.counter)
+    const user = useSelector((state) => state.user)
     const productPrice = product.map((item) => item.price * findCounter(item))
     let total = productPrice.reduce((a, b) => a + b, 0);
 
@@ -26,11 +27,12 @@ export function Cart(){
         const filter = counter.find(prod => prod.name === product.name)
         return filter.quantity
     }
-   
+    
     const submitOrder = () => {
-        // const formDataJsonString = JSON.stringify(product);
+       
+       
         const url = "http://localhost:5000/api/stripe/create-checkout-session"
-        axios.post(url, {product, size, counter}
+        axios.post(url, {product, size, counter, userId: user.currentUser}
         ).then((res) =>{
             if(res.data.url){
                 window.location.href = res.data.url
@@ -51,7 +53,7 @@ export function Cart(){
                     <button className="cart-button" onClick={()=>navigate("/products")}>Continua gli acquisti</button>
                 </div>
             
-            :<div className="cart-center"> 
+            :  <div className="cart-center"> 
                 <h1>Carrello</h1>
                 
                 <div className="d-flex">

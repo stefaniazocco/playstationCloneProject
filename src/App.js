@@ -18,6 +18,7 @@ import { CreateAccount } from "./pages/registration/CreateAccount";
 import { Form } from "./pages/registration/Form";
 import { Cart } from "./pages/cart/Cart";
 import { Products } from "./pages/products/Products";
+import { Orders } from "./pages/orders/Order";
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/product/:name" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/orders" element={<Orders />} />
         <Route path="/support" element={<Support />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<CreateAccount />} />

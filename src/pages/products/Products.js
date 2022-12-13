@@ -12,6 +12,7 @@ import { ProductCard } from "./ProductCard";
 export function Products() {
     const {message, closeMessage} = useMessage();
     const [card, setCard] = useState(null)
+ 
     
     return (
         <div style={{position: "relative"}}>

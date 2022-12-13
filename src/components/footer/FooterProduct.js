@@ -6,6 +6,7 @@ import ps from "../../assets/images/product/mini-ps-footer.png";
 import psp from "../../assets/images/product/mini-psp-footer.png";
 
 import "./footerProduct.scss"
+import { Link } from "react-router-dom";
 
 export function FooterProduct(){
     return(
@@ -14,8 +15,8 @@ export function FooterProduct(){
                 <div className="footer-top-left">
                     <a href="#">ACCOUNT</a>
                     <a href="#">ACCEDI</a>
-                    <a href="#">I MIEI ORDINI</a>
-                    <a href="#">IL MIO CARRELLO</a>
+                    <Link to="/orders">I MIEI ORDINI</Link>
+                    <Link to="/cart">IL MIO CARRELLO</Link>
                 </div>
                 <div className="footer-top-right">
                     <a href="#"><img src={fb} alt="facebook"/></a>
