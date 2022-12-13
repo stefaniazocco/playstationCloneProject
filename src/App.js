@@ -19,6 +19,7 @@ import { Form } from "./pages/registration/Form";
 import { Cart } from "./pages/cart/Cart";
 import { Products } from "./pages/products/Products";
 import { Orders } from "./pages/orders/Order";
+import UserPage from "./pages/registration/profile page/UserPage";
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
         <Route path="/support" element={<Support />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<CreateAccount />} />
+        <Route path="/profile" element={<UserPage />} />
         <Route path="/Form" element={<Form />} />
         <Route path="/presentation" element={<Presentation />} />
         <Route path="*" element={<NotFound />} />
