@@ -17,6 +17,7 @@ import Hero from "../../components/elements/sections/sliderHero/Hero";
 import PS5 from "../../components/elements/sliderPS5/PS5";
 import { SalesPlay } from "../../components/elements/sections/sales-plus/SalesPlay"
 import NavbarMobile from "../../components/navbar/NavbarMobile";
+import UserPage from "../registration/profile page/UserPage";
 
 
 
