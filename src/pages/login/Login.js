@@ -59,7 +59,6 @@ export function Login() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                <br />
                 <div className="input-container">
                   <input
                     type="password"
