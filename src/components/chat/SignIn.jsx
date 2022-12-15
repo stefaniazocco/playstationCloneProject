@@ -20,8 +20,5 @@ export const handleSignIn = () => {
       });
   } catch (err) {
     console.log(err);
-  } finally {
-    sessionStorage.removeItem("chatUserEmail")
-    sessionStorage.removeItem("chatUserPassword");
-  }
+  } 
 };

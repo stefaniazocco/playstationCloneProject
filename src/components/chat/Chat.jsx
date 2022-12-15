@@ -28,21 +28,24 @@ export const Chat = ({ onClose, ref }) => {
 
   return (
     <div className="chat-box" name="chat">
-      <div className="chat-nav">
-        Ask something...
-        <button className="chat-close" onClick={() => onClose(false)}>
-          <AiOutlineClose />
-        </button>
-      </div>
-      <div>
-        {messages &&
-          messages.map((message) => (
-            <Message key={message.id} message={message} />
-          ))}
-      </div>
-      <div>
+      <div className="chat-wrapper">
+        <div className="chat-nav">
+          Ask something...
+          <button className="chat-close" onClick={() => onClose(false)}>
+            <AiOutlineClose />
+          </button>
+        </div>
+        <div className="mess-box">
+          {messages &&
+            messages.map((message) => (
+              <Message key={message.id} message={message} />
+            ))}
+        </div>
+      
+      <div className="chat-bottom">
         <SendMessage scroll={scroll} />
         <span ref={scroll}></span>
+      </div>
       </div>
     </div>
   );

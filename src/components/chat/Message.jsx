@@ -1,13 +1,12 @@
 import React from "react";
+import "./message.scss"
 
 const Message = ({ message }) => {
   return (
-    <div>
-      <div>
-        <p>{message.name}</p>
-        <p>{message.text}</p>
+      <div className="message-div">
+        <p className="message-name">{message.name}</p>
+        <p className="message-txt">{message.text}</p>
       </div>
-    </div>
   );
 };
 
