@@ -1,0 +1,28 @@
+.chat-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid rgb(173, 172, 172);
+  .chat-nav {
+    background-color: #2d64e6;
+    color: white;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .chat-close {
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 22px;
+      &:hover {
+        color: #ddd;
+      }
+    }
+  }
+}
