@@ -41,11 +41,11 @@ export const Chat = ({ onClose, ref }) => {
               <Message key={message.id} message={message} />
             ))}
         </div>
-      
-      <div className="chat-bottom">
-        <SendMessage scroll={scroll} />
-        <span ref={scroll}></span>
-      </div>
+
+        <div className="chat-bottom">
+          <SendMessage scroll={scroll} />
+          <span ref={scroll}></span>
+        </div>
       </div>
     </div>
   );

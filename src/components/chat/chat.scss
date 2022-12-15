@@ -38,11 +38,15 @@
     }
 
     .mess-box{
-      padding-bottom: 50px;
+      padding: 60px 0px;
+      display: flex;
+      flex-direction: column;
+      gap:10px;
     }
     .chat-bottom{
       position: fixed;
       bottom: 20px;
+      right: 24px;
     }
   
 }
