@@ -1,6 +1,7 @@
 import React from "react";
 import sonyBar from "../../../assets/images/homepage/SalesPlay/sony bar.jpg";
 import iconUser from "../../../assets/images/homepage/SalesPlay/user icon.jpg";
+import { FooterMain } from "../../../components/footer/FooterMain";
 import {
     MDBCol,
     MDBContainer,
@@ -12,8 +13,6 @@ import {
     MDBBtn,
     MDBBreadcrumb,
     MDBBreadcrumbItem,
-    MDBProgress,
-    MDBProgressBar,
     MDBIcon,
     MDBListGroup,
     MDBListGroupItem
@@ -33,20 +32,21 @@ const UserPage = () => {
 
     return (
         <section style={{ backgroundColor: '#eee' }}>
-        <picture srcset={sonyBar} alt=""/>    
-        <MDBContainer className="py-5">
+        <img src={sonyBar} alt=""/>
+        <MDBContainer className="py-5 px-5" style={{ width: '1020px', color:'black'}}>
+              
           <MDBRow>
             <MDBCol>
-              <MDBBreadcrumb className="bg-light rounded-3 p-3 mb-4">
+              <MDBBreadcrumb className="bg-light rounded-3 p-3 mb-4" >
                 <MDBBreadcrumbItem>
-                  <a href='/'>Home</a>
+                  <a href='/' style={{textDecoration: "none", borderColor:'black', color:'black'}}>Home</a>
                 </MDBBreadcrumbItem>
                 <MDBBreadcrumbItem active>User Profile</MDBBreadcrumbItem>
               </MDBBreadcrumb>
             </MDBCol>
           </MDBRow>
   
-          <MDBRow>
+          <MDBRow className="d-flex justify-content-center ">
             <MDBCol lg="4">
               <MDBCard className="mb-4">
                 <MDBCardBody className="text-center">
@@ -56,11 +56,11 @@ const UserPage = () => {
                     className="rounded-circle"
                     style={{ width: '150px' }}
                     fluid />
-                  <h4 className="text-muted mb-1">Riccardo Priolo</h4>
+                  <h4 className="text-muted mb-1">User Name</h4>
                   <hr/>
                   <div className="d-flex justify-content-center mb-2">
-                    <MDBBtn>Edit your Information</MDBBtn>
-                    <MDBBtn outline className="ms-1" onClick={()=>logout()}>Logout</MDBBtn>
+                    <MDBBtn style={{backgroundColor: '#bbb', borderColor:'black', color:'black'}}>Edit your Information</MDBBtn>
+                    <MDBBtn className="ms-1" style={{backgroundColor: '#fff', borderColor:'black', color:'black'}} onClick={()=>logout()}>Logout</MDBBtn>
                   </div>
                 </MDBCardBody>
               </MDBCard>
@@ -70,23 +70,23 @@ const UserPage = () => {
                   <MDBListGroup flush className="rounded-5">
                     <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3">
                       <MDBIcon fas icon="globe fa-lg text-warning" />
-                      <MDBCardText><a href="#">Privacy settings</a></MDBCardText>
+                      <MDBCardText><a href="#" style={{textDecoration: "none", borderColor:'black', color:'black'}}>Privacy settings</a></MDBCardText>
                     </MDBListGroupItem>
                     <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3">
                       <MDBIcon fab icon="github fa-lg" style={{ color: '#333333' }} />
-                      <MDBCardText><a href="#">Payment Method</a></MDBCardText>
+                      <MDBCardText><a href="#" style={{textDecoration: "none", borderColor:'black', color:'black'}}>Payment Method</a></MDBCardText>
                     </MDBListGroupItem>
                     <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3">
                       <MDBIcon fab icon="twitter fa-lg" style={{ color: '#55acee' }} />
-                      <MDBCardText><a href="#">Transaction history</a></MDBCardText>
+                      <MDBCardText><a href="#" style={{textDecoration: "none", borderColor:'black', color:'black'}}>Transaction history</a></MDBCardText>
                     </MDBListGroupItem>
                     <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3">
                       <MDBIcon fab icon="instagram fa-lg" style={{ color: '#ac2bac' }} />
-                      <MDBCardText><a href="#">Subscriptions</a></MDBCardText>
+                      <MDBCardText><a href="#" style={{textDecoration: "none", borderColor:'black', color:'black'}}>Subscriptions</a></MDBCardText>
                     </MDBListGroupItem>
                     <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3">
                       <MDBIcon fab icon="facebook fa-lg" style={{ color: '#3b5998' }} />
-                      <MDBCardText><a href="#">Family pack</a></MDBCardText>
+                      <MDBCardText><a href="#" style={{textDecoration: "none", borderColor:'black', color:'black'}}>Family pack</a></MDBCardText>
                     </MDBListGroupItem>
                   </MDBListGroup>
                 </MDBCardBody>
@@ -100,7 +100,7 @@ const UserPage = () => {
                       <MDBCardText>Full Name</MDBCardText>
                     </MDBCol>
                     <MDBCol sm="9">
-                      <MDBCardText className="text-muted">Riccardo Priolo</MDBCardText>
+                      <MDBCardText className="text-muted">User Name</MDBCardText>
                     </MDBCol>
                   </MDBRow>
                   <hr />
@@ -146,6 +146,7 @@ const UserPage = () => {
             </MDBCol>
           </MDBRow>
         </MDBContainer>
+        <FooterMain />
       </section>
   );
 }
