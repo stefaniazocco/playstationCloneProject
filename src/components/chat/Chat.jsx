@@ -30,7 +30,7 @@ export const Chat = ({ onClose, ref }) => {
     <div className="chat-box" name="chat">
       <div className="chat-wrapper">
         <div className="chat-nav">
-          Ask something...
+          Chiedi aiuto!
           <button className="chat-close" onClick={() => onClose(false)}>
             <AiOutlineClose />
           </button>

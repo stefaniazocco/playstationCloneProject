@@ -24,6 +24,8 @@ import { MdUnsubscribe } from "react-icons/md";
 import { AiOutlineTransaction} from "react-icons/ai";
 import { MdPayments } from "react-icons/md";
 import { MdPrivacyTip } from "react-icons/md";
+import { useSelector } from "react-redux";
+import Navbar from "../../../components/navbar/Navbar";
 
 
 const UserPage = () => {
@@ -38,20 +40,23 @@ const UserPage = () => {
       console.log(err)
     }
   }
-
+  const user = useSelector(state => state.user)
+  const currentUser = user.currentUser
+  console.log(currentUser)
 
     return (
         <section style={{ backgroundColor: '#eee' }}>
-        <img src={sonyBar} alt=""/>
-        <MDBContainer className="py-5 px-5" style={{ width: '1020px', color:'black'}}>
+        {/* <img src={sonyBar} alt=""/> */}
+        <Navbar />
+        <MDBContainer className="px-6" style={{ width: '1020px', color:'black', padding: '70px 0px'}}>
               
           <MDBRow>
             <MDBCol>
-              <MDBBreadcrumb className="bg-light rounded-3 p-3 mb-4" >
+              <MDBBreadcrumb className="bg-light rounded-3 p-3 mb-5" >
                 <MDBBreadcrumbItem>
                   <a href='/' style={{textDecoration: "none", borderColor:'black', color:'black'}}>Home</a>
                 </MDBBreadcrumbItem>
-                <MDBBreadcrumbItem active>User Profile</MDBBreadcrumbItem>
+                <MDBBreadcrumbItem active>Profilo</MDBBreadcrumbItem>
               </MDBBreadcrumb>
             </MDBCol>
           </MDBRow>
@@ -66,7 +71,7 @@ const UserPage = () => {
                     className="rounded-circle"
                     style={{ width: '150px' }}
                     fluid />
-                  <h4 className="text-muted mb-1">User Name</h4>
+                  <h4 className="text-muted mb-1">{currentUser.userName}</h4>
                   <hr/>
                   <div className="d-flex justify-content-center ">
                   <button type="button" class="btn btn-dark"><a href="/" onClick={()=>logout()} style={{textDecoration:'none', color:'white'}}>Logout</a></button>
@@ -79,13 +84,13 @@ const UserPage = () => {
                   <MDBListGroup flush className="rounded-5">
                     <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3 list-group-item list-group-item-action">
                     <MdPrivacyTip style={{marginRight: 8}}/>
-                      <MDBCardText><a href="#" style={{textDecoration: "none", borderColor:'black', color:'black'}}>Privacy settings</a></MDBCardText>
+                      <MDBCardText><a href="#" style={{textDecoration: "none", borderColor:'black', color:'black'}}>Privacy</a></MDBCardText>
                     </MDBListGroupItem>
                     <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3 list-group-item list-group-item-action">
                     <MdPayments style={{marginRight: 8}}/>
-                      <MDBCardText><a href="#" style={{textDecoration: "none", borderColor:'black', color:'black'}}>Payment Method</a></MDBCardText>
+                      <MDBCardText><a href="#" style={{textDecoration: "none", borderColor:'black', color:'black'}}>Ordini</a></MDBCardText>
                     </MDBListGroupItem>
-                    <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3 list-group-item list-group-item-action">
+                    {/* <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3 list-group-item list-group-item-action">
                     <AiOutlineTransaction style={{marginRight: 8}}/>
                       <MDBCardText><a href="#" style={{textDecoration: "none", borderColor:'black', color:'black'}}>Transaction history</a></MDBCardText>
                     </MDBListGroupItem>
@@ -95,8 +100,8 @@ const UserPage = () => {
                     </MDBListGroupItem>
                     <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3 list-group-item list-group-item-action">
                     <MdFamilyRestroom style={{marginRight: 8}}/>
-                      <MDBCardText><a href="#"  style={{textDecoration: "none", borderColor:'black', color:'black'}}>Family pack</a></MDBCardText>
-                    </MDBListGroupItem>
+                      <MDBCardText><a href="#"  style={{textDecoration: "none", borderColor:'black', color:'black'}}>Family pack</a></MDBCardText> */}
+                    {/* </MDBListGroupItem> */}
                   </MDBListGroup>
                 </MDBCardBody>
               </MDBCard>
@@ -106,10 +111,10 @@ const UserPage = () => {
                 <MDBCardBody>
                   <MDBRow>
                     <MDBCol sm="3">
-                      <MDBCardText>Full Name</MDBCardText>
+                      <MDBCardText>Nome completo</MDBCardText>
                     </MDBCol>
                     <MDBCol sm="9">
-                      <MDBCardText className="text-muted">User Name</MDBCardText>
+                      <MDBCardText className="text-muted">{currentUser.firstName} {currentUser.lastName}</MDBCardText>
                     </MDBCol>
                   </MDBRow>
                   <hr />
@@ -118,34 +123,25 @@ const UserPage = () => {
                       <MDBCardText>Email</MDBCardText>
                     </MDBCol>
                     <MDBCol sm="9">
-                      <MDBCardText className="text-muted">example@example.com</MDBCardText>
+                      <MDBCardText className="text-muted">{currentUser.email}</MDBCardText>
                     </MDBCol>
                   </MDBRow>
                   <hr />
                   <MDBRow>
                     <MDBCol sm="3">
-                      <MDBCardText>Phone</MDBCardText>
+                      <MDBCardText>Data di nascita</MDBCardText>
                     </MDBCol>
                     <MDBCol sm="9">
-                      <MDBCardText className="text-muted">(089) 234-5678</MDBCardText>
+                      <MDBCardText className="text-muted">{currentUser.day} {currentUser.month} {currentUser.year}</MDBCardText>
                     </MDBCol>
                   </MDBRow>
                   <hr />
                   <MDBRow>
                     <MDBCol sm="3">
-                      <MDBCardText>Mobile</MDBCardText>
+                      <MDBCardText>Stato</MDBCardText>
                     </MDBCol>
                     <MDBCol sm="9">
-                      <MDBCardText className="text-muted">(+39) 765-4321</MDBCardText>
-                    </MDBCol>
-                  </MDBRow>
-                  <hr />
-                  <MDBRow>
-                    <MDBCol sm="3">
-                      <MDBCardText>Address</MDBCardText>
-                    </MDBCol>
-                    <MDBCol sm="9">
-                      <MDBCardText className="text-muted">Address...</MDBCardText>
+                      <MDBCardText className="text-muted">{currentUser.country}</MDBCardText>
                     </MDBCol>
                   </MDBRow>
                 </MDBCardBody>
