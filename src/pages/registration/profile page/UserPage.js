@@ -18,17 +18,22 @@ import {
     MDBListGroupItem
   } from 'mdb-react-ui-kit';
 import axios from "axios";
+import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const UserPage = () => {
+  const nav = useNavigate()
     async function logout(){
       try {
+        localStorage.removeItem("persist:root")
         const res = await axios.post("http://localhost:5000/api/auth/logout");
         console.log(res)
-        localStorage.removeItem("persist:root")
+        
     }catch(err){
       console.log(err)
     }
   }
+
 
     return (
         <section style={{ backgroundColor: '#eee' }}>
@@ -60,7 +65,9 @@ const UserPage = () => {
                   <hr/>
                   <div className="d-flex justify-content-center mb-2">
                     <MDBBtn style={{backgroundColor: '#bbb', borderColor:'black', color:'black'}}>Edit your Information</MDBBtn>
-                    <MDBBtn className="ms-1" style={{backgroundColor: '#fff', borderColor:'black', color:'black'}} onClick={()=>logout()}>Logout</MDBBtn>
+                   
+                      <a href="/" className="ms-1" style={{backgroundColor: '#fff', borderColor:'black', color:'black'}} onClick={()=>logout()}>Logout</a>
+                   
                   </div>
                 </MDBCardBody>
               </MDBCard>

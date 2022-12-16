@@ -19,6 +19,8 @@ import { SalesPlay } from "../../components/elements/sections/sales-plus/SalesPl
 import NavbarMobile from "../../components/navbar/NavbarMobile";
 import UserPage from "../registration/profile page/UserPage";
 import { ChatButton } from "../../components/elements/buttons/ChatButton";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 export function Homepage() {
   const [close, setClose] = useState(true);
