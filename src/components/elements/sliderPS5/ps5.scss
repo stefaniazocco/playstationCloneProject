@@ -1,65 +1,147 @@
 .content-container-ps5 {
+  color: #000000;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  .title-slider-ps5 {
+    margin-top: 5px;
+    font-size: 45px;
+    font-weight: 300;
+    text-align: left;
+    width: 40%;
+  }
+  .description-slider-ps5 {
+    width: 40%;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+  }
+  .button-blue {
+    div {
+      font-size: 18px;
+    }
+  }
+}
+
+.imagePS5 {
+  width: 50%;
+  margin-left: 40%;
+  margin-top: 10%;
+}
+
+.parag {
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  // margin-left: 2rem;
+  margin-top: 2rem;
+}
+.parag2 {
+  justify-content: center;
+  width: 100%;
+  // margin-left: 62px;
+  margin-top: 2rem;
+}
+
+.dot2 {
+  margin-top: 5rem;
+  width: 100%;
+}
+@media (max-width: 1000px) {
+  .dot2 {
+    margin-top: 10px;
+  }
+  .parag,
+  .parag2 {
+    display: none;
+  }
+}
+
+.carousel-indicators button {
+  visibility: hidden;
+}
+
+@media (max-width: 1400px) {
+  .content-container-ps5 {
     color: #000000;
     position: absolute;
-    top: 40%;
-    left: 10%;
-    
-  
+    top: 22%;
+    left: 5%;
+
     .title-slider-ps5 {
       margin-top: 5px;
-      font-size: 45px;
+      font-size: 26px;
       font-weight: 300;
       text-align: left;
-      width: 500px;
     }
-  
+
     .description-slider-ps5 {
-      width: 500px;
       margin-top: 5px;
-      font-size: 18px;
+      font-size: 14px;
       font-weight: 400;
       text-align: left;
     }
-    .button-blue{
-      div{
+    .button-blue {
+      div {
         font-size: 18px;
       }
     }
-  
   }
+}
 
-  .item-Dx-ps5{
-    
-  }
-  .imagePS5{
-    width: 1000px;
-    margin-left: 800px;
-    margin-top: 8rem;
-  }
-  .ps5ConsoleImg{
+@media (max-width: 900px) {
+  .content-container-ps5 {
+    color: #000000;
+    position: absolute;
+    top: 22%;
+    left: 5%;
+    .title-slider-ps5 {
+      margin-top: 5px;
+      font-size: 26px;
+      font-weight: 300;
+      text-align: left;
+    }
 
+    .description-slider-ps5 {
+      margin-top: 5px;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: left;
+    }
+    .button-blue {
+      div {
+        font-size: 14px;
+      }
+    }
   }
+}
 
-  .parag{
-    justify-content: center;
-    width: 150px;
-    text-align: center;
-    margin-left: 2rem;
-    margin-top: 3rem;
+@media (max-width: 700px) {
+  .imagePS5 {
+    width: 70%;
+    margin-left: 30%;
+    margin-top: 10%;
   }
-  .parag2{
-    justify-content: center;
-    width: 100%;
-    margin-left: 62px;
-    margin-top: 3rem;
-  }
+  .content-container-ps5 {
+    top: 30%;
+    padding-right: 10px;
+    .title-slider-ps5 {
+      margin-top: 5px;
+      font-size: 20px;
+      font-weight: 300;
+      text-align: left;
 
-  .dot2{
-    margin-top: 5rem;
-    width: 215px;
+      width: 30%;
+    }
+    .description-slider-ps5 {
+      display: none;
+    }
+    .button-blue {
+      div {
+        font-size: 14px;
+        padding: 5px 10px;
+      }
+    }
   }
-  
-   .carousel-indicators button { 
-    visibility: hidden; 
-    
-  }
+}

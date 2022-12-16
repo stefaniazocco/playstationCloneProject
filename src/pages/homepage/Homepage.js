@@ -51,7 +51,7 @@ export function Homepage() {
   };
 
   return (
-    <>
+    <div style={{position: "relative"}}>
      
       <Navbar />
       <NavbarMobile/>
@@ -67,10 +67,10 @@ export function Homepage() {
       <BlogCarousel />
       <Socials />
       <FooterMain />
-      <UserPage />
      
 
+      
       {close === true && !sessionStorage.getItem("token") && <Cookies hide={hideSection} accept={hideAccept} />}
-    </>
+    </div>
   );
 }

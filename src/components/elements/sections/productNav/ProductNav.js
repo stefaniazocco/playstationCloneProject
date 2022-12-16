@@ -63,7 +63,7 @@ export function ProductNav() {
                     <div className="nav-icons">
                         <a href="#"><BsSearch style={{fontSize: 20, color: "black"}} /></a>
                         <a href="#"><img src={ita} /></a>
-                        <a href="#"><img src={user} /></a>
+                        <Link to="/profile"><img src={user} /></Link>
                         <Link to="/cart"><BsCart4 style={{fontSize: 20, color: "black"}} /> <span className="span">{product.length}</span></Link>
                     </div>
                 </nav>

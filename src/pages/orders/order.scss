@@ -5,19 +5,26 @@
     justify-content: center;
     
     .order-center{
-        width: 1100px;
+        width: 1300px;
         margin: 30px 0px;
+        .order-title{
+            width: 100%;
+            border-bottom: 2px solid blue;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
         .order-card{
-            border: 1px solid #ddd;
+            border: 1px solid gray;
+            border-radius: 10px;
             display: flex;
             justify-content: space-between;
             align-items: space-between;
-            padding: 20px;
-            margin-bottom: 20px;
+            padding: 10px;
+            margin: 30px 10%;
             .order-card-left{
                 display: flex;
                 justify-content: space-between;
-                width: 700px;
+                width: 650px;
                 align-items: center;
                 .order-card-box{
                     display: flex;
@@ -41,15 +48,43 @@
                 flex-direction: column;
                 text-align: end;
                 justify-content: space-between;
+                padding-left: 20px;
+                padding-right: 20px;
+                // border-left: 3px solid rgb(79, 79, 219);
                 .order-date{
                     color:black;
                 }
+                .order-address{
+                    font-size: 12px;
+                    color: gray;
+                    position: relative;
+                    &:hover{
+                        color: black;
+                    }
+                    &:hover .address-det{
+                        display: flex;
+                    }
+                    .address-det{
+                        display: none;
+                        position: absolute;
+                        right: 0;
+                        flex-direction: column;
+                        background-color: white;
+                        border: 1px solid gray;
+                        width: 80%;
+                        padding: 10px;
+                        text-align: start;
+                    }
+                }
                 .order-subtotal{
-                    font-size: 18px;
+                    font-size: 16px;
+                    padding-top: 20px;
                 }
                 .order-total{
+                    border-top: 1px solid blue;
+                    margin-top: 10px;
                     font-size: 20px;
-                    text-align: end;
+                    text-align:center;
                 }
             }
 

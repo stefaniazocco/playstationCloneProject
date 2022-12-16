@@ -53,7 +53,7 @@ export function Orders() {
         ? <section>Non hai effettuato nessun ordine</section> 
         : <section className="order-main">
             <div className="order-center">
-                <h1>I tuoi ordini</h1>
+                <h1 className="order-title">I tuoi ordini</h1>
             {order && order.map(o => (
                 <div className="order-card">
                     <div >
@@ -71,7 +71,18 @@ export function Orders() {
                     ))}
                     </div>
                     <div className="order-card-right">
-                        <div className="order-date">Data ordine: {o.updatedAt.slice(0, 10)}</div>
+                        <div>
+                        <div className="order-date">Data: {o.updatedAt.slice(0, 10)}</div>
+                        <div className="order-address">Mostra indirizzo di spedizione
+                            <div className="address-det">
+                                <span>{o.shipping.address.line1}</span>
+                                <span>{o.shipping.address.city}</span>
+                                <span>{o.shipping.address.state}</span>
+                                <span>{o.shipping.address.postal_code}</span>
+                                
+                            </div>
+                        </div>
+                        </div>
                         <div>
                         <div className="order-subtotal">Subtotale: {(o.subtotal/100).toFixed(2)}€</div>
                         <div className="order-total">Totale: <strong>{(o.total/100).toFixed(2)}€</strong></div>

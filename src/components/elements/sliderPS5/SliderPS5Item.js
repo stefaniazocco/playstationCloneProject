@@ -16,7 +16,7 @@ const SliderPS5Item = (props) => {
         <p className="description-slider-ps5">{t(props.description)}</p>
         <Button className="button-blue" string={t(props.btnString)} />
       </div>
-      <div className="item-Dx-ps5 justify-content-end">
+      <div className="item-Dx-ps5">
         <img
           className="imagePS5"
           src={props.image}
