@@ -12,7 +12,7 @@ const Message = ({ message }) => {
 
   return (<>
       <div className={messaClass}>
-        <p className="message-name">{message.name}</p>
+        <p className="message-name"><strong>{message.name}</strong></p>
         <p className="message-txt">{message.text}</p>
       </div>
       </>
