@@ -19,7 +19,12 @@ import {
   } from 'mdb-react-ui-kit';
 import axios from "axios";
 import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
+import { MdFamilyRestroom } from "react-icons/md";
+import { MdUnsubscribe } from "react-icons/md";
+import { AiOutlineTransaction} from "react-icons/ai";
+import { MdPayments } from "react-icons/md";
+import { MdPrivacyTip } from "react-icons/md";
+
 
 const UserPage = () => {
   const nav = useNavigate()
@@ -63,11 +68,8 @@ const UserPage = () => {
                     fluid />
                   <h4 className="text-muted mb-1">User Name</h4>
                   <hr/>
-                  <div className="d-flex justify-content-center mb-2">
-                    <MDBBtn style={{backgroundColor: '#bbb', borderColor:'black', color:'black'}}>Edit your Information</MDBBtn>
-                   
-                      <a href="/" className="ms-1" style={{backgroundColor: '#fff', borderColor:'black', color:'black'}} onClick={()=>logout()}>Logout</a>
-                   
+                  <div className="d-flex justify-content-center ">
+                  <button type="button" class="btn btn-dark"><a href="/" onClick={()=>logout()} style={{textDecoration:'none', color:'white'}}>Logout</a></button>
                   </div>
                 </MDBCardBody>
               </MDBCard>
@@ -75,25 +77,25 @@ const UserPage = () => {
               <MDBCard className="mb-4 mb-lg-0">
                 <MDBCardBody className="p-0">
                   <MDBListGroup flush className="rounded-5">
-                    <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3">
-                      <MDBIcon fas icon="globe fa-lg text-warning" />
+                    <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3 list-group-item list-group-item-action">
+                    <MdPrivacyTip style={{marginRight: 8}}/>
                       <MDBCardText><a href="#" style={{textDecoration: "none", borderColor:'black', color:'black'}}>Privacy settings</a></MDBCardText>
                     </MDBListGroupItem>
-                    <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3">
-                      <MDBIcon fab icon="github fa-lg" style={{ color: '#333333' }} />
+                    <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3 list-group-item list-group-item-action">
+                    <MdPayments style={{marginRight: 8}}/>
                       <MDBCardText><a href="#" style={{textDecoration: "none", borderColor:'black', color:'black'}}>Payment Method</a></MDBCardText>
                     </MDBListGroupItem>
-                    <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3">
-                      <MDBIcon fab icon="twitter fa-lg" style={{ color: '#55acee' }} />
+                    <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3 list-group-item list-group-item-action">
+                    <AiOutlineTransaction style={{marginRight: 8}}/>
                       <MDBCardText><a href="#" style={{textDecoration: "none", borderColor:'black', color:'black'}}>Transaction history</a></MDBCardText>
                     </MDBListGroupItem>
-                    <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3">
-                      <MDBIcon fab icon="instagram fa-lg" style={{ color: '#ac2bac' }} />
+                    <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3 list-group-item list-group-item-action">
+                    <MdUnsubscribe style={{marginRight: 7}}/>
                       <MDBCardText><a href="#" style={{textDecoration: "none", borderColor:'black', color:'black'}}>Subscriptions</a></MDBCardText>
                     </MDBListGroupItem>
-                    <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3">
-                      <MDBIcon fab icon="facebook fa-lg" style={{ color: '#3b5998' }} />
-                      <MDBCardText><a href="#" style={{textDecoration: "none", borderColor:'black', color:'black'}}>Family pack</a></MDBCardText>
+                    <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3 list-group-item list-group-item-action">
+                    <MdFamilyRestroom style={{marginRight: 8}}/>
+                      <MDBCardText><a href="#"  style={{textDecoration: "none", borderColor:'black', color:'black'}}>Family pack</a></MDBCardText>
                     </MDBListGroupItem>
                   </MDBListGroup>
                 </MDBCardBody>
