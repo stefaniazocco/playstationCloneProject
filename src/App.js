@@ -23,6 +23,7 @@ import UserPage from "./pages/registration/profile page/UserPage";
 import { ChatButton } from "./components/elements/buttons/ChatButton";
 import { useState, useRef, useEffect } from "react";
 import { Chat } from "./components/chat/Chat";
+import { DevsPage } from "./pages/devs/DevsPage";
 
 function App() {
   // const [locale, setLocale] = useState(i18n.language);
@@ -48,6 +49,7 @@ function App() {
           <Route path="/profile" element={<UserPage />} />
           <Route path="/Form" element={<Form />} />
           <Route path="/presentation" element={<Presentation />} />
+          <Route path="/devs" element={<DevsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

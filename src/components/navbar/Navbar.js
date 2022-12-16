@@ -85,7 +85,7 @@ const Navbar = () => {
             </>
           ) : (
             <>
-            <Link to="/profile" className="mx-3 my-3">
+              <Link to="/profile" className="mx-3 my-3">
                 {" "}
                 <GiDiamondsSmile className="userIconHover" size={25} />
               </Link>
@@ -93,13 +93,12 @@ const Navbar = () => {
                 {" "}
                 <TiShoppingCart className="userIconHover" size={30} />
               </Link>
-              <Link to="/" className="mx-3 my-3">
-                {" "}
-                <BsFillHeartFill className="heartUserHover" size={25} />
-              </Link>
-
             </>
           )}
+          <Link to="/devs" className="mx-3 my-3">
+            {" "}
+            <BsFillHeartFill className="heartUserHover" size={25} />
+          </Link>
           <a
             className="btn-search btn rounded-0 my-2 "
             href="/"
