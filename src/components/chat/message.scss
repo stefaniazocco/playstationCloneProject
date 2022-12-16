@@ -1,0 +1,39 @@
+.style-left{
+    background-color: rgb(230, 230, 236);
+    width: fit-content;
+    max-width: 210px;
+    margin: 0px 10px;
+    padding: 0px 10px;
+    border-radius: 10px;
+    .message-name{
+        color: #2d64e6;
+        font-size: 12px;
+        // line-height: 0;
+        margin: 0;
+    }
+    .message-txt{
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        margin: 0;
+    }
+}
+.style-right{
+    align-self: flex-end;
+    background-color: #2d64e6;
+    width: fit-content;
+    max-width: 210px;
+    margin: 0px 20px 0px 10px;
+    padding: 0px 10px;
+    border-radius: 10px;
+    .message-name{
+        color: rgb(208, 206, 202);
+        font-size: 12px;
+        margin: 0;
+    }
+    .message-txt{
+        color: white;
+        font-size: 16px;
+        margin: 2px;
+        word-break: break-all;
+    }
+}

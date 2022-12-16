@@ -20,7 +20,6 @@ const Navbar = () => {
 
   useEffect(() => {
     setNavItem(navItems);
-    console.log(user);
   }, []);
 
   return (

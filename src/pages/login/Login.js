@@ -1,7 +1,7 @@
 import sony from "../../assets/icons/sony-logo.png";
 import ps from "../../assets/icons/logo_playstation.png";
 import wallpaper from "../../assets/images/homepage/login-wallpaper.jpg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { userRequest } from "../../requestMethod";
@@ -15,6 +15,7 @@ export function Login() {
   const dispatch = useDispatch();
   const { error } = useSelector((state) => state.user);
 
+
   const handleClick = async (e) => {
     e.preventDefault();
     dispatch(loginStart());
@@ -27,9 +28,12 @@ export function Login() {
         }
       );
       console.log(res);
+      sessionStorage.setItem("chatUserEmail", email)
+      sessionStorage.setItem("chatUserPassword", password)
       res.status === 200 &&
         dispatch(loginSuccess(res.data.user)) &&
         navigate("/");
+      console.log(localStorage.getItem("persist:root"));
     } catch (error) {
       error.response.data === "Credenziali errate" && alert("Dati Errati");
       dispatch(loginFailure());
