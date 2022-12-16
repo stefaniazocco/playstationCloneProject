@@ -6,15 +6,16 @@ import "./message.scss"
 
 const Message = ({ message }) => {
   const user= useSelector(state => state.user)
-  const messaClass = message.name === user.currentUser.userName? "style-left": "style-right"
+  const messaClass = message.name === user?.currentUser?.userName ? "style-left": "style-right"
 
   // console.log(userCredential())
 
-  return (
+  return (<>
       <div className={messaClass}>
         <p className="message-name">{message.name}</p>
         <p className="message-txt">{message.text}</p>
       </div>
+      </>
   );
 };
 

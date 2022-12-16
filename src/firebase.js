@@ -7,12 +7,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBfo4m3N0nZX52DaaVvEnlzi5KJ87DHhA4",
-  authDomain: "playstationsupportchat.firebaseapp.com",
-  projectId: "playstationsupportchat",
-  storageBucket: "playstationsupportchat.appspot.com",
-  messagingSenderId: "418755429198",
-  appId: "1:418755429198:web:0b4503300dbf1fe653d41f",
+  apiKey: "AIzaSyA7dXCj7JPqrnY_jgGjvROYpf5lvq_UKck",
+  authDomain: "playstationsupportchat-4d3f7.firebaseapp.com",
+  projectId: "playstationsupportchat-4d3f7",
+  storageBucket: "playstationsupportchat-4d3f7.appspot.com",
+  messagingSenderId: "797807632456",
+  appId: "1:797807632456:web:510daa4780ab40f66a787d"
 };
 
 // Initialize Firebase

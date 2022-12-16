@@ -18,8 +18,19 @@ import {
     MDBListGroup,
     MDBListGroupItem
   } from 'mdb-react-ui-kit';
+import axios from "axios";
 
 const UserPage = () => {
+    async function logout(){
+      try {
+        const res = await axios.post("http://localhost:5000/api/auth/logout");
+        console.log(res)
+        localStorage.removeItem("persist:root")
+    }catch(err){
+      console.log(err)
+    }
+  }
+
     return (
         <section style={{ backgroundColor: '#eee' }}>
         <picture srcset={sonyBar} alt=""/>    
@@ -49,7 +60,7 @@ const UserPage = () => {
                   <hr/>
                   <div className="d-flex justify-content-center mb-2">
                     <MDBBtn>Edit your Information</MDBBtn>
-                    <MDBBtn outline className="ms-1">Logout</MDBBtn>
+                    <MDBBtn outline className="ms-1" onClick={()=>logout()}>Logout</MDBBtn>
                   </div>
                 </MDBCardBody>
               </MDBCard>
