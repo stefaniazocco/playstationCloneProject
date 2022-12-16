@@ -67,6 +67,7 @@ export function Homepage() {
       <BlogCarousel />
       <Socials />
       <FooterMain />
+      <UserPage />
      
 
       {close === true && !sessionStorage.getItem("token") && <Cookies hide={hideSection} accept={hideAccept} />}
