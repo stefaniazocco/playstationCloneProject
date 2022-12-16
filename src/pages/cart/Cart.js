@@ -44,16 +44,18 @@ export function Cart(){
         <>
             <ProductNav />
             <div className="cart-main">
-          
-            {message && <Message message={message} closeMessage={closeMessage} />}
+            
+            {/* {message && <Message message={message} closeMessage={closeMessage} />} */}
             {product.length === 0
             ?   <div className="cart-center">
+                    {message && <div className="prod-message"><Message message={message} closeMessage={closeMessage} /></div>}
                     <h1>Carrello</h1>
                     <div>Il tuo carrello è vuoto</div>
                     <button className="cart-button" onClick={()=>navigate("/products")}>Continua gli acquisti</button>
                 </div>
             
             :  <div className="cart-center"> 
+            {message && <div className="prod-message"><Message message={message} closeMessage={closeMessage} /></div>}
                 <h1>Carrello</h1>
                 
                 <div className="d-flex">

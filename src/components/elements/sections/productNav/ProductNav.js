@@ -49,7 +49,7 @@ export function ProductNav() {
             <div className="header-top"><a href="#">Consegna gratuita per ordini oltre €90</a></div>
             <div className="header-div-logo">
                 <div className="immagine-logo">
-                    <Link to="/products">
+                    <Link to="/">
                         <img src={logo} />
                     </Link>
                 </div>
