@@ -49,7 +49,12 @@ export function Homepage() {
   };
 
   return (
+<<<<<<< Updated upstream
     <>
+=======
+    <div style={{position: "relative"}}>
+     
+>>>>>>> Stashed changes
       <Navbar />
       <NavbarMobile />
       <Hero />
@@ -64,11 +69,19 @@ export function Homepage() {
       <BlogCarousel />
       <Socials />
       <FooterMain />
+<<<<<<< Updated upstream
       {/* <ChatButton /> */}
 
       {close === true && !sessionStorage.getItem("token") && (
         <Cookies hide={hideSection} accept={hideAccept} />
       )}
     </>
+=======
+     
+
+      
+      {close === true && !sessionStorage.getItem("token") && <Cookies hide={hideSection} accept={hideAccept} />}
+    </div>
+>>>>>>> Stashed changes
   );
 }
