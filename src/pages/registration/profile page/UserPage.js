@@ -48,7 +48,7 @@ const UserPage = () => {
         <section style={{ backgroundColor: '#eee' }}>
         {/* <img src={sonyBar} alt=""/> */}
         <Navbar />
-        <MDBContainer className="px-6" style={{ width: '1020px', color:'black', padding: '70px 0px'}}>
+        {currentUser ? <MDBContainer className="px-6" style={{ width: '1020px', color:'black', padding: '70px 0px'}}>
               
           <MDBRow>
             <MDBCol>
@@ -151,6 +151,7 @@ const UserPage = () => {
             </MDBCol>
           </MDBRow>
         </MDBContainer>
+        : <div>ciao</div>}
         <FooterMain />
       </section>
   );

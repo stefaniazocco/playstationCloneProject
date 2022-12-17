@@ -67,7 +67,6 @@ export function Homepage() {
       <Socials />
       <FooterMain />
       <ChatButton /> 
-      <UserPage />
 
       {close === true && !sessionStorage.getItem("token") && (
         <Cookies hide={hideSection} accept={hideAccept} />
