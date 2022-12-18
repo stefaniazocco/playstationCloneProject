@@ -74,7 +74,9 @@ const UserPage = () => {
                   <h4 className="text-muted mb-1">{currentUser.userName}</h4>
                   <hr/>
                   <div className="d-flex justify-content-center ">
-                  <button type="button" class="btn btn-dark"><a href="/" onClick={()=>logout()} style={{textDecoration:'none', color:'white'}}>Logout</a></button>
+                  <button type="button" style={{backgroundColor: "blue", border: "none", borderRadius: 50, padding: "5px 10px"}} >
+                    <a href="/" onClick={()=>logout()} style={{textDecoration:'none', color:'white'}}>Logout</a>
+                  </button>
                   </div>
                 </MDBCardBody>
               </MDBCard>
@@ -88,7 +90,7 @@ const UserPage = () => {
                     </MDBListGroupItem>
                     <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3 list-group-item list-group-item-action">
                     <MdPayments style={{marginRight: 8}}/>
-                      <MDBCardText><a href="#" style={{textDecoration: "none", borderColor:'black', color:'black'}}>Ordini</a></MDBCardText>
+                      <MDBCardText><a href="/orders" style={{textDecoration: "none", borderColor:'black', color:'black'}}>Ordini</a></MDBCardText>
                     </MDBListGroupItem>
                     {/* <MDBListGroupItem className="d-flex justify-content-center align-items-center p-3 list-group-item list-group-item-action">
                     <AiOutlineTransaction style={{marginRight: 8}}/>
@@ -151,7 +153,7 @@ const UserPage = () => {
             </MDBCol>
           </MDBRow>
         </MDBContainer>
-        : <div>ciao</div>}
+        : <div></div>}
         <FooterMain />
       </section>
   );

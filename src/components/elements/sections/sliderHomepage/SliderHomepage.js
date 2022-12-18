@@ -46,8 +46,8 @@ export function SliderHomepage(){
             <Slide move={next}/>
             <Slide2 move={next} />
             <div className="arrow1">
-                <ButtonClick className="button-white arr" click={clickPrev} string={<IoIosArrowBack style={{fontSize: 32, marginTop: 5}} />}/>
-                <ButtonClick className="button-white arr" click={clickNext} string={<IoIosArrowForward style={{fontSize: 32, marginTop: 5}} />}/>
+                <ButtonClick className="button-white arr" click={clickPrev} string={<IoIosArrowBack style={{fontSize: 32, marginTop: 2}} />}/>
+                <ButtonClick className="button-white arr" click={clickNext} string={<IoIosArrowForward style={{fontSize: 32, marginTop: 2}} />}/>
             </div>   
             {/* <div className="dark"></div>          */}
         </section>
