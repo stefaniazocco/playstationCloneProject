@@ -173,5 +173,12 @@
     "class-age":"Age ratings",
     "terms-software":"Software usage terms",
     "work-play":"PlayStation careers",
-    "website-map":"Site map"
+    "website-map":"Site map",
+
+    "COMMENT":"COOKIES",
+
+    "first-cookies":"Sony Interactive Entertainment Europe Limited uses cookies to personalize the your experience and advertisements on this website and third-party websites, analyze i data, improve site performance and enable sharing on social media. For further information or to change settings,",
+    "link-cookies":"see our Cookie Policy",
+    "btn1":"Deny",
+    "btn2":"Accept"
 }

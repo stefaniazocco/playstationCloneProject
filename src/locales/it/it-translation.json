@@ -172,6 +172,13 @@
     "class-age":"Classificazioni per età",
     "terms-software":"Termini d'uso del Software",
     "work-play":"Lavora con PlayStation",
-    "website-map":"Mappa del sito"
+    "website-map":"Mappa del sito",
+
+    "COMMENT":"COOKIES",
+
+    "first-cookies":"Sony Interactive Entertainment Europe Limited utilizza i cookie per personalizzare la tua esperienza e gli annunci pubblicitari su questo sito Web e su siti Web di terze parti, analizzare idati, migliorare le prestazioni del sito e consentire la condivisione sui social media. Per ulteriori informazioni o per modificare le impostazioni,",
+    "link-cookies":"consulta la nostra Informativa sui cookie",
+    "btn1":"Rifiuta",
+    "btn2":"Accetta"
 
 }
